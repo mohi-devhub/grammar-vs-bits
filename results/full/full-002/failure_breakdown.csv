@@ -1,0 +1,25 @@
+model,precision,decoder,attempts,token_limit,grammar_trigger_replay_error,excluded,remaining,failure_categories
+Qwen/Qwen3-0.6B,F16,free,1000,0,0,0,1000,{}
+Qwen/Qwen3-0.6B,F16,loose,1000,0,0,0,1000,{}
+Qwen/Qwen3-0.6B,F16,trigger_strict,1000,0,0,0,1000,{}
+Qwen/Qwen3-0.6B,F16,whole_strict,1000,0,0,0,1000,{}
+Qwen/Qwen3-0.6B,Q4_K_M,free,1000,0,0,0,1000,{}
+Qwen/Qwen3-0.6B,Q4_K_M,loose,1000,0,0,0,1000,{}
+Qwen/Qwen3-0.6B,Q4_K_M,trigger_strict,1000,0,0,0,1000,{}
+Qwen/Qwen3-0.6B,Q4_K_M,whole_strict,1000,0,0,0,1000,{}
+meta-llama/Llama-3.2-1B-Instruct,F16,free,1000,0,0,0,1000,{}
+meta-llama/Llama-3.2-1B-Instruct,F16,loose,1000,0,0,0,1000,{}
+meta-llama/Llama-3.2-1B-Instruct,F16,trigger_strict,1000,24,0,24,976,"{'irrelevance': 5, 'parallel': 19}"
+meta-llama/Llama-3.2-1B-Instruct,F16,whole_strict,1000,0,0,0,1000,{}
+meta-llama/Llama-3.2-1B-Instruct,Q4_K_M,free,1000,9,0,9,991,"{'multiple': 3, 'parallel': 6}"
+meta-llama/Llama-3.2-1B-Instruct,Q4_K_M,loose,1000,12,0,12,988,"{'multiple': 5, 'parallel': 7}"
+meta-llama/Llama-3.2-1B-Instruct,Q4_K_M,trigger_strict,1000,52,1,53,947,"{'irrelevance': 4, 'multiple': 1, 'parallel': 48}"
+meta-llama/Llama-3.2-1B-Instruct,Q4_K_M,whole_strict,1000,4,0,4,996,{'parallel': 4}
+meta-llama/Llama-3.2-3B-Instruct,F16,free,1000,5,0,5,995,{'simple': 5}
+meta-llama/Llama-3.2-3B-Instruct,F16,loose,1000,5,0,5,995,{'simple': 5}
+meta-llama/Llama-3.2-3B-Instruct,F16,trigger_strict,1000,5,0,5,995,{'parallel': 5}
+meta-llama/Llama-3.2-3B-Instruct,F16,whole_strict,1000,5,0,5,995,{'parallel': 5}
+meta-llama/Llama-3.2-3B-Instruct,Q4_K_M,free,1000,5,0,5,995,{'simple': 5}
+meta-llama/Llama-3.2-3B-Instruct,Q4_K_M,loose,1000,5,0,5,995,{'simple': 5}
+meta-llama/Llama-3.2-3B-Instruct,Q4_K_M,trigger_strict,1000,6,0,6,994,{'parallel': 6}
+meta-llama/Llama-3.2-3B-Instruct,Q4_K_M,whole_strict,1000,2,0,2,998,{'parallel': 2}

@@ -1,0 +1,974 @@
+[
+  {
+    "object_id": "ap-TyaTMLLyjAIVtucihhLzhj",
+    "description": "notebook-kernel",
+    "environment": "main",
+    "interval_start": "2026-10-19T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00924536",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-TyaTMLLyjAIVtucihhLzhj",
+    "description": "notebook-kernel",
+    "environment": "main",
+    "interval_start": "2026-10-19T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00000608",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-TyaTMLLyjAIVtucihhLzhj",
+    "description": "notebook-kernel",
+    "environment": "main",
+    "interval_start": "2026-10-19T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00322769",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-LZa3th7sxn0WhNUGIVAPTM",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00419675",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-LZa3th7sxn0WhNUGIVAPTM",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00000204",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-LZa3th7sxn0WhNUGIVAPTM",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "L4",
+    "cost": "0.06088903",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-LZa3th7sxn0WhNUGIVAPTM",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00157591",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-YIz0xwk6vHgW52CvLFVIQW",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "CPU",
+    "cost": "0.01270915",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-YIz0xwk6vHgW52CvLFVIQW",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00818105",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-YIz0xwk6vHgW52CvLFVIQW",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "L4",
+    "cost": "0.08372874",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-YIz0xwk6vHgW52CvLFVIQW",
+    "description": "cachekit-smoke",
+    "environment": "main",
+    "interval_start": "2026-10-22T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00255562",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-38pb9V1HRqw9y4bbIdYpRN",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00244462",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-38pb9V1HRqw9y4bbIdYpRN",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00000304",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-38pb9V1HRqw9y4bbIdYpRN",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.02977790",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-38pb9V1HRqw9y4bbIdYpRN",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00050285",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-9AmZmXVcAbOjhMYdZXKAnI",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00462076",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-9AmZmXVcAbOjhMYdZXKAnI",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00002100",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-9AmZmXVcAbOjhMYdZXKAnI",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.07955539",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-9AmZmXVcAbOjhMYdZXKAnI",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00183575",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-BGSCBCupne3gqzEgdwR46q",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00399909",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-BGSCBCupne3gqzEgdwR46q",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00002218",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-BGSCBCupne3gqzEgdwR46q",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.06755539",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-BGSCBCupne3gqzEgdwR46q",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00160633",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-NYh65NuAcaw9aEb4BwhW2O",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00385091",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-NYh65NuAcaw9aEb4BwhW2O",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00002220",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-NYh65NuAcaw9aEb4BwhW2O",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.06711257",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-NYh65NuAcaw9aEb4BwhW2O",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00156912",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-QzmEj8qCjlKqf0fKmxrjBH",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00495210",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-QzmEj8qCjlKqf0fKmxrjBH",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00023945",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-QzmEj8qCjlKqf0fKmxrjBH",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.20400006",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-QzmEj8qCjlKqf0fKmxrjBH",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00557357",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-UE52mXdJ4HARvbb2Uxk3e1",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00417529",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-UE52mXdJ4HARvbb2Uxk3e1",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00002470",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-UE52mXdJ4HARvbb2Uxk3e1",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.07511133",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-UE52mXdJ4HARvbb2Uxk3e1",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00176222",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-dDhDAfHQMVkEyg0E10UxVk",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00441416",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-dDhDAfHQMVkEyg0E10UxVk",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00017547",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-dDhDAfHQMVkEyg0E10UxVk",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.13866807",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-dDhDAfHQMVkEyg0E10UxVk",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00367748",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-fKF6aBjhdKiSVRCqkkNpb6",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00462912",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-fKF6aBjhdKiSVRCqkkNpb6",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00017980",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-fKF6aBjhdKiSVRCqkkNpb6",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.13777776",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-fKF6aBjhdKiSVRCqkkNpb6",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00364920",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-g5CsnLDzc5YWXM0O96D451",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00404674",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-g5CsnLDzc5YWXM0O96D451",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00002232",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-g5CsnLDzc5YWXM0O96D451",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.06622222",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-g5CsnLDzc5YWXM0O96D451",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00154066",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-gai2wAqHALXUkyoTLUqTur",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00464791",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-gai2wAqHALXUkyoTLUqTur",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00002085",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-gai2wAqHALXUkyoTLUqTur",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.07155703",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-gai2wAqHALXUkyoTLUqTur",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00162682",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-ki5txiQUZ1RgT8tRb0Qaub",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00526156",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-ki5txiQUZ1RgT8tRb0Qaub",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00010704",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-ki5txiQUZ1RgT8tRb0Qaub",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.14711100",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-ki5txiQUZ1RgT8tRb0Qaub",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00389263",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-lIzkeO1drduBA8FpoGbWMQ",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00324116",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-lIzkeO1drduBA8FpoGbWMQ",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00005653",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-lIzkeO1drduBA8FpoGbWMQ",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.08533461",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-lIzkeO1drduBA8FpoGbWMQ",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00219612",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-xjkmbXg9yniyoKw1RoXRDq",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00360100",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-xjkmbXg9yniyoKw1RoXRDq",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00018278",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-xjkmbXg9yniyoKw1RoXRDq",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "L4",
+    "cost": "0.13689041",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-xjkmbXg9yniyoKw1RoXRDq",
+    "description": "cachekit-benchmark",
+    "environment": "main",
+    "interval_start": "2026-10-24T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00367450",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-4YPU4IQHKaeKTGLvXYz1I7",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00482835",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-4YPU4IQHKaeKTGLvXYz1I7",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00037965",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-4YPU4IQHKaeKTGLvXYz1I7",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "L4",
+    "cost": "0.01066654",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-4YPU4IQHKaeKTGLvXYz1I7",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00017866",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-wOYiTmYBKAlm3gnWaX8MBo",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00941955",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-wOYiTmYBKAlm3gnWaX8MBo",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00400384",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-wOYiTmYBKAlm3gnWaX8MBo",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "L4",
+    "cost": "0.28444573",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-wOYiTmYBKAlm3gnWaX8MBo",
+    "description": "merlin-phase4-vllm",
+    "environment": "main",
+    "interval_start": "2026-10-26T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00867517",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.05857556",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "A10G",
+    "cost": "0.01711082",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00001106",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00391901",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-27090tv4stgi7opQZHMtyj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00099855",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-27090tv4stgi7opQZHMtyj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00005394",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-27090tv4stgi7opQZHMtyj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00135111",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-A7HQVe4jv9ziB3fm9Zurhz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00001970",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-A7HQVe4jv9ziB3fm9Zurhz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00000968",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-C5wjk90OslF5FvLUZzcnse",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00603489",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-C5wjk90OslF5FvLUZzcnse",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00019379",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-C5wjk90OslF5FvLUZzcnse",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00020053",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-GOrC4No5rv5D584zzf3BRj",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00697645",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-GOrC4No5rv5D584zzf3BRj",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00019913",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-GOrC4No5rv5D584zzf3BRj",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00022973",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-HFprm1QnjNLtmwqNColgEk",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00000985",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-HFprm1QnjNLtmwqNColgEk",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00000167",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-Kvar7vq97OXLDbBeZJV7eb",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.14956976",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-Kvar7vq97OXLDbBeZJV7eb",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00419288",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.08304052",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00034570",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00276410",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.01799174",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "2.5E-7",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00339266",
+    "tags": "{\"stage\": \"pilot\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00175634",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00012174",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "L4",
+    "cost": "0.01377763",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00110388",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-hvvuFh9xeHNtF8GaDyZktL",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "CPU",
+    "cost": "0.01646254",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-hvvuFh9xeHNtF8GaDyZktL",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "A10G",
+    "cost": "0.18455532",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-hvvuFh9xeHNtF8GaDyZktL",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00252093",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-hvvuFh9xeHNtF8GaDyZktL",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "Memory",
+    "cost": "0.01075610",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-lXLYPpHWy4ZPpnVPRcGyAE",
+    "description": "qunti-check-full",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "CPU",
+    "cost": "0.01313316",
+    "tags": "{\"stage\": \"full\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-lXLYPpHWy4ZPpnVPRcGyAE",
+    "description": "qunti-check-full",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "A10G",
+    "cost": "0.12527752",
+    "tags": "{\"stage\": \"full\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-lXLYPpHWy4ZPpnVPRcGyAE",
+    "description": "qunti-check-full",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00009582",
+    "tags": "{\"stage\": \"full\", \"project\": \"qunti-check\"}"
+  },
+  {
+    "object_id": "ap-lXLYPpHWy4ZPpnVPRcGyAE",
+    "description": "qunti-check-full",
+    "environment": "main",
+    "interval_start": "2026-10-28T00:00:00",
+    "resource": "Memory",
+    "cost": "0.01744331",
+    "tags": "{\"stage\": \"full\", \"project\": \"qunti-check\"}"
+  }
+]

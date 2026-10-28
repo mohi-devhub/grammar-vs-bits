@@ -1,0 +1,28 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 195.65it/s]
+✓ Initialized. View run at 
+https://modal.com/apps/achumohith14/main/ap-A7HQVe4jv9ziB3fm9Zurhz
+Aborting app initialization...
+
+Stopping app - keyboard interrupt received. Use `modal run --detach` to prevent KeyboardInterrupts from killing apps.
+Traceback (most recent call last):
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/synchronicity/synchronizer.py", line 547, in _run_function_sync
+    value = fut.result()
+            ^^^^^^^^^^^^
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 454, in result
+    raise CancelledError()
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 142, in <module>
+    main()
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 111, in main
+    with app.run():
+         ^^^^^^^^^
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt

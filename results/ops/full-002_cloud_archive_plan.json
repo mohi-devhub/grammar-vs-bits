@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-28T17:19:03.069962+00:00",
+  "volume": "qunti-check-artifacts",
+  "files": 66,
+  "bytes_to_archive": 613211157,
+  "excluded_reproducible_model_cache_bytes": 14572987953,
+  "deletion_performed": false
+}

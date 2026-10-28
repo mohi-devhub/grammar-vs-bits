@@ -1,0 +1,178 @@
+{
+  "run_id": "full-002",
+  "started_at": "2026-10-28T05:45:07.332042+00:00",
+  "historical_reported_cost_usd": 0.49930836999999995,
+  "model_sessions": [
+    {
+      "batch_id": "full-002-1",
+      "model": "Qwen/Qwen3-0.6B",
+      "attempted": 8000,
+      "complete": true,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.39501664,
+      "timed_body_resource_cost_usd": 0.38869970465466747,
+      "conservative_model_cost_usd": 0.5386997046546674,
+      "reported_project_cost_usd": 0.8943250099999999,
+      "app_id": "ap-7X1euBa0ElmGX1NIkoGPoc",
+      "transport_recovered": true
+    },
+    {
+      "batch_id": "full-002-2-concurrent1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 8000,
+      "complete": true,
+      "exit_code": 0,
+      "reported_model_cost_usd": 0.40674246,
+      "timed_body_resource_cost_usd": 0.3998832377008961,
+      "conservative_model_cost_usd": 0.5498832377008961,
+      "reported_project_cost_usd": 1.7970453100000001,
+      "app_id": "ap-oKt92Thp21lavCSbyI7pXF"
+    },
+    {
+      "batch_id": "full-002-3-concurrent1",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "attempted": 8000,
+      "complete": true,
+      "exit_code": 0,
+      "reported_model_cost_usd": 0.80198424,
+      "timed_body_resource_cost_usd": 0.8091437240930517,
+      "conservative_model_cost_usd": 0.9591437240930517,
+      "reported_project_cost_usd": 2.59902955,
+      "app_id": "ap-x1Xcbr6399vyHnDHstkqbh"
+    }
+  ],
+  "cap_usd": 12,
+  "gpu": "A10",
+  "initial_forecast_source": "results/pilot/pilot-008/budget_forecast.json",
+  "last_reported_project_cost_usd": 2.59902955,
+  "complete": true,
+  "previous_stops": [
+    {
+      "stop_reason": "Model session incomplete or operationally failed"
+    },
+    {
+      "finished_at": "2026-10-28T06:06:40.436909+00:00"
+    },
+    {
+      "stop_reason": "Model session incomplete or operationally failed"
+    },
+    {
+      "finished_at": "2026-10-28T06:50:52.970072+00:00"
+    },
+    {
+      "stop_reason": "Model session incomplete or operationally failed"
+    },
+    {
+      "finished_at": "2026-10-28T07:02:14.588814+00:00"
+    },
+    {
+      "stop_reason": "Model session incomplete or operationally failed"
+    },
+    {
+      "finished_at": "2026-10-28T09:20:12.906168+00:00"
+    },
+    {
+      "stop_reason": "Model session incomplete or operationally failed"
+    },
+    {
+      "finished_at": "2026-10-28T10:55:29.313068+00:00"
+    },
+    {
+      "stop_reason": "Model session incomplete or operationally failed"
+    },
+    {
+      "finished_at": "2026-10-28T13:20:57.049946+00:00"
+    }
+  ],
+  "resumed_at": [
+    "2026-10-28T06:21:50.093670+00:00",
+    "2026-10-28T06:58:14.262562+00:00",
+    "2026-10-28T09:12:30.325185+00:00",
+    "2026-10-28T09:26:58.981995+00:00",
+    "2026-10-28T13:05:04.415184+00:00",
+    "2026-10-28T14:04:09.397174+00:00",
+    "2026-10-28T14:50:22.426993+00:00",
+    "2026-10-28T16:09:25.324612+00:00"
+  ],
+  "failed_model_attempts": [
+    {
+      "batch_id": "full-002-2",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 0,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": null,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 0.8943250099999999,
+      "app_id": "ap-bafp1vpfvkwF6UL7Mdt5Ro",
+      "failure_phase": "control-plane connection before preparation; zero GPU generations",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-retry1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 0,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.00855848,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 0.90288349,
+      "app_id": "ap-L6khhPsDAxPMeDgvLm10xA",
+      "failure_phase": "evalnoise started during CPU preparation; stopped before benchmark generations",
+      "original_controller_attempt_count": 0,
+      "raw_source": "results/full/full-002-2-retry1/cloud_events_download_0.jsonl",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-retry2",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 800,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.06342331999999999,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 0.9741725099999999,
+      "app_id": "ap-plBb2Td7LwJGen0LVUs3ge",
+      "failure_phase": "duplicate native Llama BOS identified before task scoring; known lazy replay errors retained separately",
+      "original_controller_attempt_count": 800,
+      "raw_source": "results/full/full-002-2-retry2/cloud_events_download_0.jsonl",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-native1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 4339,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.24810815999999997,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 1.22849287,
+      "app_id": "ap-WoXXKyta5599G2bi5kCmbs",
+      "failure_phase": "generator cancellation; precise stopping actor/cause unconfirmed; durable partial checkpoint retained",
+      "original_controller_attempt_count": 3592,
+      "raw_source": "results/full/full-002-2-native1/cloud_events_download_0.jsonl",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-spawn1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 2811,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.15333497000000001,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 1.3821235100000004,
+      "app_id": "ap-c4Al6QGX7zeyolAD0aQ5ak",
+      "failure_phase": "evalnoise launched a new app; our cloud interlock stopped only our app",
+      "raw_source": "results/full/full-002-2-spawn1/cloud_events_download_0.jsonl",
+      "original_controller_attempt_count": 2811,
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    }
+  ],
+  "finished_at": "2026-10-28T17:16:06.453472+00:00"
+}

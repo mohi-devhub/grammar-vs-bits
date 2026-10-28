@@ -1,0 +1,88 @@
+{
+  "protocol_version": "direction1-v1",
+  "question": "Does strict schema enforcement recover an incremental quantization loss that loose or trigger-gated grammars fail to recover?",
+  "dataset_seed": 20261027,
+  "category_counts": {
+    "simple": 60,
+    "multiple": 60,
+    "parallel": 60,
+    "irrelevance": 20
+  },
+  "models": [
+    "Qwen/Qwen3-0.6B",
+    "meta-llama/Llama-3.2-1B-Instruct",
+    "meta-llama/Llama-3.2-3B-Instruct"
+  ],
+  "precisions": [
+    "F16",
+    "Q4_K_M"
+  ],
+  "arms": [
+    "free",
+    "whole_strict"
+  ],
+  "run_seeds": [
+    101,
+    211,
+    307,
+    401,
+    503
+  ],
+  "temperature": 0.0,
+  "cache_type_k": "f16",
+  "cache_type_v": "f16",
+  "parallel_slots": 4,
+  "context_per_slot": 4096,
+  "max_output_tokens": 512,
+  "pilot": {
+    "model": "Qwen/Qwen3-0.6B",
+    "precisions": [
+      "F16",
+      "Q8_0",
+      "Q4_K_M"
+    ],
+    "arms": [
+      "free",
+      "whole_strict"
+    ],
+    "items": 50,
+    "run_seed": 101,
+    "expected_generations": 300,
+    "gpu_fallbacks": [
+      "L4",
+      "A10"
+    ],
+    "queue_wait_seconds": 1800,
+    "same_gpu_for_entire_run": true,
+    "serialize_with_evalnoise": true
+  },
+  "full_run_generations": 4800,
+  "full_run_approved": true,
+  "budget": {
+    "october_project_cap_usd": 12.0,
+    "shared_october_credits_user_reported_usd": 28.0,
+    "noise_check_october_cap_usd": 12.0,
+    "batch_approval_threshold_usd": 5.0,
+    "november_execution_approved": false
+  },
+  "stage": "full",
+  "execution": {
+    "gpu": "A10",
+    "gpu_fallbacks": [],
+    "queue_wait_seconds": 1800,
+    "serialize_with_evalnoise": true,
+    "finish_by_utc": "2026-10-31T00:00:00+00:00",
+    "hard_project_cap_usd": 12.0,
+    "spend_stop_buffer_usd": 0.75,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261028,
+    "allow_concurrent_evalnoise_studies": true,
+    "concurrency_authorized_at": "2026-10-28T16:09:22.543498+00:00",
+    "gpu_deadline_seconds": 2500
+  },
+  "output_contract": "pythonic_list",
+  "trigger_preflight": false,
+  "sensitivity_only": true,
+  "items_per_model": 120,
+  "optional_spend_cap_usd": 3
+}

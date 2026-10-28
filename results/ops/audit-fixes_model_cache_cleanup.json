@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28T20:33:24.509643+00:00",
+  "volume": "qunti-check-artifacts",
+  "complete": true,
+  "scope": "Regenerable GGUF weight files only; manifests and all raw cloud outputs retained.",
+  "verified_archive": "results/ops/full-002_cloud_archive.json",
+  "targets": [
+    {
+      "path": "models/Llama-3.2-3B-Instruct/Q4_K_M.gguf",
+      "bytes": 2019377568
+    },
+    {
+      "path": "models/Llama-3.2-3B-Instruct/F16.gguf",
+      "bytes": 6433687968
+    },
+    {
+      "path": "models/Llama-3.2-1B-Instruct/Q4_K_M.gguf",
+      "bytes": 807694304
+    },
+    {
+      "path": "models/Llama-3.2-1B-Instruct/F16.gguf",
+      "bytes": 2479595488
+    }
+  ],
+  "finished_at": "2026-10-28T20:33:30.462028+00:00",
+  "removed_bytes": 11740355328
+}

@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-28T06:21:02.248607+00:00",
+  "source": "results/full/full-002-1/cloud_events.jsonl",
+  "source_sha256": "6b0486896de373b953341dec01a0ea10172b33db9d54ddde349eeeec16cb7cab",
+  "verified_generations": 8000,
+  "method": "Complete cloud matrix and GPU completion event verified; original truncated client stream retained. No inference repeated."
+}

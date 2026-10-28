@@ -1,0 +1,11 @@
+{
+  "app_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+  "status": "cpu_prepared_gpu_queue_stopped_without_generation",
+  "reason": "L4 function remained queued for approximately 15 minutes with backlog 1, zero runners and zero running inputs at final check; stopped app. No benchmark generation executed. Queue cause not established.",
+  "queue_evidence": "results/ops/pilot-006_queue_final_check.json",
+  "shutdown_apps": "results/ops/session_final_apps.json",
+  "shutdown_containers": "results/ops/session_final_containers.json",
+  "measured_cost_per_generation": null,
+  "full_run_projection": null,
+  "full_run_approved": false
+}

@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-28T20:34:17.973338+00:00",
+  "run_id": "full-002",
+  "sources": [
+    "summary.json",
+    "costs.json",
+    "integrity.json"
+  ],
+  "generated_report": "docs/FULL_REPORT.md"
+}

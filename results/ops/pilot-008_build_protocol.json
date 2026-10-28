@@ -1,0 +1,14 @@
+{
+  "app_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+  "parent_audited_image": "im-9fka2nV2OfiyVZP8chYC1i",
+  "cloud_source_sha256": "49b735ce02adb253fe73a6c7fe996750d1682f6bdb726316e9b9af34ca1a3f83",
+  "native_cuda_architecture": 86,
+  "gpu_fallbacks": [
+    "L4",
+    "A10"
+  ],
+  "same_major_minor_cubin_compatibility_source": "https://docs.nvidia.com/cuda/ada-compatibility-guide/index.html",
+  "queue_limit_seconds": 1800,
+  "cloud_supervisor_timeout_seconds": 4000,
+  "app_mode": "detached_with_cloud_watchdog_and_self_shutdown"
+}

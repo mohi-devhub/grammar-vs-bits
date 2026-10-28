@@ -1,0 +1,44 @@
+root ::= ws "[" ws (call (ws "," ws call)*)? ws "]" ws
+ws ::= [ \t\n\r]*
+string ::= "\"" ([^"\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "\"" | "'" ([^'\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "'"
+number ::= "-"? ("0" | [1-9] [0-9]*) ("." [0-9]+)? ([eE] [+-]? [0-9]+)?
+integer ::= "-"? ("0" | [1-9] [0-9]*)
+boolean ::= "True" | "False"
+null ::= "None"
+value ::= string | number | boolean | null | any-object | any-array
+any-object ::= "{" ws (string ws ":" ws value (ws "," ws string ws ":" ws value)*)? ws "}"
+any-array ::= "[" ws (value (ws "," ws value)*)? ws "]"
+node-2 ::= string
+node-3 ::= string
+node-4 ::= integer
+node-1-0 ::= "airline" ws "=" ws node-2 node-1-1 | "flightClass" ws "=" ws node-3 node-1-2 | "passengers" ws "=" ws node-4 node-1-4
+node-1-1 ::= ws "," ws "flightClass" ws "=" ws node-3 node-1-3 | ws "," ws "passengers" ws "=" ws node-4 node-1-5
+node-1-2 ::= ws "," ws "airline" ws "=" ws node-2 node-1-3 | ws "," ws "passengers" ws "=" ws node-4 node-1-6
+node-1-3 ::= ws "," ws "passengers" ws "=" ws node-4 node-1-7
+node-1-4 ::= ws "," ws "airline" ws "=" ws node-2 node-1-5 | ws "," ws "flightClass" ws "=" ws node-3 node-1-6
+node-1-5 ::= ws "," ws "flightClass" ws "=" ws node-3 node-1-7
+node-1-6 ::= ws "," ws "airline" ws "=" ws node-2 node-1-7
+node-1-7 ::= ""
+node-6 ::= string
+node-7 ::= string
+node-8 ::= integer
+node-5-0 ::= "rentalCompany" ws "=" ws node-6 node-5-1 | "carType" ws "=" ws node-7 node-5-2 | "days" ws "=" ws node-8 node-5-4
+node-5-1 ::= ws "," ws "carType" ws "=" ws node-7 node-5-3 | ws "," ws "days" ws "=" ws node-8 node-5-5
+node-5-2 ::= ws "," ws "rentalCompany" ws "=" ws node-6 node-5-3 | ws "," ws "days" ws "=" ws node-8 node-5-6
+node-5-3 ::= ws "," ws "days" ws "=" ws node-8 node-5-7
+node-5-4 ::= ws "," ws "rentalCompany" ws "=" ws node-6 node-5-5 | ws "," ws "carType" ws "=" ws node-7 node-5-6
+node-5-5 ::= ws "," ws "carType" ws "=" ws node-7 node-5-7
+node-5-6 ::= ws "," ws "rentalCompany" ws "=" ws node-6 node-5-7
+node-5-7 ::= ""
+node-10 ::= string
+node-11 ::= string
+node-12 ::= integer
+node-9-0 ::= "hotelName" ws "=" ws node-10 node-9-1 | "roomType" ws "=" ws node-11 node-9-2 | "nights" ws "=" ws node-12 node-9-4
+node-9-1 ::= ws "," ws "roomType" ws "=" ws node-11 node-9-3 | ws "," ws "nights" ws "=" ws node-12 node-9-5
+node-9-2 ::= ws "," ws "hotelName" ws "=" ws node-10 node-9-3 | ws "," ws "nights" ws "=" ws node-12 node-9-6
+node-9-3 ::= ws "," ws "nights" ws "=" ws node-12 node-9-7
+node-9-4 ::= ws "," ws "hotelName" ws "=" ws node-10 node-9-5 | ws "," ws "roomType" ws "=" ws node-11 node-9-6
+node-9-5 ::= ws "," ws "roomType" ws "=" ws node-11 node-9-7
+node-9-6 ::= ws "," ws "hotelName" ws "=" ws node-10 node-9-7
+node-9-7 ::= ""
+call ::= ("flight_ticket_pricing.get" ws "(" ws node-1-0 ws ")") | ("car_rental_pricing.get" ws "(" ws node-5-0 ws ")") | ("hotel_room_pricing.get" ws "(" ws node-9-0 ws ")")

@@ -1,0 +1,15 @@
+{
+  "app_id": "ap-Kvar7vq97OXLDbBeZJV7eb",
+  "cloud_source_sha256": "955c6b453b765e2d528eabb91e289405710fc9603e94c4322e3f763c32381dce",
+  "gpu_fallbacks": [
+    "L4",
+    "A10"
+  ],
+  "cuda_native_architectures": [
+    86,
+    89
+  ],
+  "queue_wait_seconds": 1800,
+  "worker_source_manifest": "results/ops/pilot-007_worker_source.json",
+  "official_gpu_fallback_documentation": "https://modal.com/docs/guide/gpu#gpu-fallbacks"
+}

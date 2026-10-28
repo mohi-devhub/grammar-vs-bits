@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-27T13:12:06.890166+00:00",
+  "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+  "validator_sha256": "89df9e6032570a83848d880c5926a6f8e08b230ec2e17d42e9584991178d31f7",
+  "cases": 6194,
+  "passed": 6194,
+  "failed": 0,
+  "examples_of_failure": [],
+  "no_model_loaded": true,
+  "gold_values_used_to_construct_tests": false,
+  "scope": "Finite char-level membership checks, not a proof of token-level runtime coverage or semantic accuracy."
+}

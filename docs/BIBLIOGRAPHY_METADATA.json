@@ -1,0 +1,59 @@
+{
+  "checked_on": "2026-10-28",
+  "scope": "Author names copied from primary arXiv/IJCAI/PMLR metadata; software ownership is not guessed as paper authorship.",
+  "entries": {
+    "flat": {
+      "authors": "Jiwon Jang and Kisu Yang and Heuiseok Lim and Hyunwoo Park",
+      "source": "https://arxiv.org/abs/2607.27275v1"
+    },
+    "bf16": {
+      "authors": "Eldar Kurtic and Alexandre Marques and Shubhra Pandit and Mark Kurtz and Dan Alistarh",
+      "source": "https://arxiv.org/abs/2411.02355v4"
+    },
+    "wu": {
+      "authors": "Zekun Wu and Swati Dhiman and Adriano Koshiyama",
+      "source": "https://arxiv.org/abs/2608.06564v5"
+    },
+    "structure": {
+      "authors": "Xiaokun Xiong and Zhengjie Xu and Junyi Chen and Shihao Bai and Ruihao Gong and Xianglong Liu",
+      "source": "https://ijcai.org/proceedings/2026/267"
+    },
+    "chavan": {
+      "authors": "Akash Chavan",
+      "source": "https://arxiv.org/abs/2609.23742v1"
+    },
+    "repair": {
+      "authors": "Janghoon Lee",
+      "source": "https://arxiv.org/abs/2608.13959v2"
+    },
+    "bfcl": {
+      "authors": "Patil, Shishir G and Mao, Huanzhi and Yan, Fanjia and Ji, Charlie Cheng-Jie and Suresh, Vishnu and Stoica, Ion and Gonzalez, Joseph E.",
+      "source": "https://proceedings.mlr.press/v267/patil25a.html"
+    },
+    "schema": {
+      "authors": "Saibo Geng and Hudson Cooper and Micha\u0142 Moskal and Samuel Jenkins and Julian Berman and Nathan Ranchin and Robert West and Eric Horvitz and Harsha Nori",
+      "source": "https://arxiv.org/abs/2501.10868v3"
+    },
+    "constrainttax": {
+      "authors": "Fangzheng Li and Aimin Zhang and Chen Lv",
+      "source": "https://arxiv.org/abs/2606.25605v1"
+    },
+    "tooldec": {
+      "authors": "Kexun Zhang and Hongqiao Chen and Lei Li and William Wang",
+      "source": "https://arxiv.org/abs/2310.07075v3"
+    },
+    "serving": {
+      "authors": "Lijuan Tang and Yuemeng Zheng",
+      "source": "https://arxiv.org/abs/2609.26693v1"
+    },
+    "metaprompt": {
+      "authors": "Meta",
+      "source": "https://github.com/meta-llama/llama-models/blob/0e0b8c519242d5833d8c11bffc1232b77ad7f301/models/llama3_2/text_prompt_format.md"
+    },
+    "qwencard": {
+      "authors": "Qwen Team",
+      "source": "https://huggingface.co/Qwen/Qwen3-0.6B/tree/c1899de289a04d12100db370d81485cdf75e47ca"
+    }
+  },
+  "audit_fixes_checked_on": "2026-10-29"
+}

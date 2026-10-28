@@ -1,0 +1,66 @@
+2026-10-28 11:15:16+05:30 Building image im-o8XuGJN2CnQiuweBWJPkMw
+2026-10-28 11:15:20+05:30 
+2026-10-28 11:15:20+05:30 => Step 0: FROM base
+2026-10-28 11:15:20+05:30 
+2026-10-28 11:15:20+05:30 => Step 1: COPY . /
+2026-10-28 11:15:22+05:30 Saving image...
+2026-10-28 11:15:23+05:30 Image saved, took 1.09s
+2026-10-28 11:15:23+05:30 
+2026-10-28 11:15:23+05:30 Built image im-o8XuGJN2CnQiuweBWJPkMw in 7.18s
+2026-10-28 11:15:23+05:30 
+2026-10-28 11:15:23+05:30 
+2026-10-28 11:15:29+05:30 
+2026-10-28 11:15:29+05:30 ==========
+2026-10-28 11:15:29+05:30 == CUDA ==
+2026-10-28 11:15:29+05:30 ==========
+2026-10-28 11:15:29+05:30 
+2026-10-28 11:15:29+05:30 CUDA Version 12.8.1
+2026-10-28 11:15:29+05:30 
+2026-10-28 11:15:29+05:30 Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-10-28 11:15:29+05:30 
+2026-10-28 11:15:29+05:30 This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-10-28 11:15:29+05:30 By pulling and using the container, you accept the terms and conditions of this license:
+2026-10-28 11:15:29+05:30 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-10-28 11:15:29+05:30 
+2026-10-28 11:15:29+05:30 A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-10-28 11:15:29+05:30 
+2026-10-28 11:15:29+05:30 WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+2026-10-28 11:15:29+05:30    Use the NVIDIA Container Toolkit to start this container with GPU support; see
+2026-10-28 11:15:29+05:30    https://docs.nvidia.com/datacenter/cloud-native/ .
+2026-10-28 11:15:29+05:30 
+2026-10-28 11:16:03+05:30 
+2026-10-28 11:16:03+05:30 ==========
+2026-10-28 11:16:03+05:30 == CUDA ==
+2026-10-28 11:16:03+05:30 ==========
+2026-10-28 11:16:03+05:30 
+2026-10-28 11:16:03+05:30 CUDA Version 12.8.1
+2026-10-28 11:16:03+05:30 
+2026-10-28 11:16:03+05:30 Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-10-28 11:16:03+05:30 
+2026-10-28 11:16:03+05:30 This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-10-28 11:16:03+05:30 By pulling and using the container, you accept the terms and conditions of this license:
+2026-10-28 11:16:03+05:30 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-10-28 11:16:03+05:30 
+2026-10-28 11:16:03+05:30 A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-10-28 11:16:03+05:30 
+2026-10-28 11:16:03+05:30 WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+2026-10-28 11:16:03+05:30    Use the NVIDIA Container Toolkit to start this container with GPU support; see
+2026-10-28 11:16:03+05:30    https://docs.nvidia.com/datacenter/cloud-native/ .
+2026-10-28 11:16:03+05:30 
+2026-10-28 11:16:17+05:30 
+2026-10-28 11:16:17+05:30 ==========
+2026-10-28 11:16:17+05:30 == CUDA ==
+2026-10-28 11:16:17+05:30 ==========
+2026-10-28 11:16:17+05:30 
+2026-10-28 11:16:17+05:30 CUDA Version 12.8.1
+2026-10-28 11:16:17+05:30 
+2026-10-28 11:16:17+05:30 Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-10-28 11:16:17+05:30 
+2026-10-28 11:16:17+05:30 This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-10-28 11:16:17+05:30 By pulling and using the container, you accept the terms and conditions of this license:
+2026-10-28 11:16:17+05:30 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-10-28 11:16:17+05:30 
+2026-10-28 11:16:17+05:30 A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-10-28 11:16:17+05:30 
+2026-10-28 11:33:55+05:30 Stopping app - user stopped from CLI.
+2026-10-28 11:34:00+05:30 Runner terminated.

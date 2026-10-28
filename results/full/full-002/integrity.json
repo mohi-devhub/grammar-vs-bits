@@ -1,0 +1,1144 @@
+{
+  "created_at": "2026-10-28T17:16:09.041153+00:00",
+  "run_id": "full-002",
+  "complete": true,
+  "controlled_inference_settings": {
+    "temperature": 0.0,
+    "parallel_slots": 4,
+    "context_per_slot": 4096,
+    "max_output_tokens": 512,
+    "cache_type_k": "f16",
+    "cache_type_v": "f16"
+  },
+  "models": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "complete": true,
+      "attempts": 8000,
+      "missing_observations": 0,
+      "problems": [],
+      "cells": [
+        {
+          "precision": "F16",
+          "decoder": "free",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.42915023949999664,
+          "elapsed_seconds_range": [
+            0.05694175300004645,
+            1.9986740299999894
+          ],
+          "predicted_tokens_total": 50959,
+          "predicted_tokens_median": 38.5
+        },
+        {
+          "precision": "F16",
+          "decoder": "loose",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.42287937600001513,
+          "elapsed_seconds_range": [
+            0.04234328899997308,
+            1.7507039550000059
+          ],
+          "predicted_tokens_total": 50939,
+          "predicted_tokens_median": 38.5
+        },
+        {
+          "precision": "F16",
+          "decoder": "trigger_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.427036484999995,
+          "elapsed_seconds_range": [
+            0.055419206999999915,
+            1.9334439620000126
+          ],
+          "predicted_tokens_total": 51434,
+          "predicted_tokens_median": 39.0
+        },
+        {
+          "precision": "F16",
+          "decoder": "whole_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.4304375180000015,
+          "elapsed_seconds_range": [
+            0.05387602700000116,
+            1.8405720219999964
+          ],
+          "predicted_tokens_total": 51414,
+          "predicted_tokens_median": 39.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "free",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.4104753299999402,
+          "elapsed_seconds_range": [
+            0.05059092299995882,
+            1.6246203660000447
+          ],
+          "predicted_tokens_total": 52412,
+          "predicted_tokens_median": 39.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "loose",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.414105103000054,
+          "elapsed_seconds_range": [
+            0.03996826799993869,
+            1.6251409110000168
+          ],
+          "predicted_tokens_total": 52661,
+          "predicted_tokens_median": 39.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "trigger_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.4109466004999831,
+          "elapsed_seconds_range": [
+            0.059207702999970024,
+            1.6389318289999437
+          ],
+          "predicted_tokens_total": 52734,
+          "predicted_tokens_median": 39.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "whole_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.40784092699993835,
+          "elapsed_seconds_range": [
+            0.04460460999996485,
+            1.6943742890000522
+          ],
+          "predicted_tokens_total": 52778,
+          "predicted_tokens_median": 39.0
+        }
+      ],
+      "source": "results/full/full-002-1/events.jsonl",
+      "source_sha256": "6b0486896de373b953341dec01a0ea10172b33db9d54ddde349eeeec16cb7cab",
+      "gpu_names": [
+        "NVIDIA A10"
+      ],
+      "llama_cpp_commits": [
+        "8542e94350f0ade01644db6f1d1520da3814dafd"
+      ],
+      "runtime_probe_events": [
+        {
+          "kind": "trigger_preflight",
+          "probes": [
+            {
+              "prefix": "<tool_call>",
+              "target": "<tool_call>{\"name\":\"allowed\",\"arguments\":{}}</tool_call>",
+              "payload": {
+                "prompt": "Output a tool call now.",
+                "temperature": 0,
+                "seed": 101,
+                "n_predict": 128,
+                "cache_prompt": false,
+                "grammar": "root ::= \"<tool_call>{\\\"name\\\":\\\"allowed\\\",\\\"arguments\\\":{}}</tool_call>\"\n",
+                "grammar_lazy": true,
+                "grammar_triggers": [
+                  {
+                    "type": 1,
+                    "value": "<tool_call>"
+                  }
+                ],
+                "preserved_tokens": [
+                  "<tool_call>"
+                ],
+                "logit_bias": [
+                  [
+                    151657,
+                    1000
+                  ]
+                ]
+              },
+              "response": {
+                "index": 0,
+                "content": "<tool_call>{\"name\":\"allowed\",\"arguments\":{}}</tool_call>",
+                "tokens": [],
+                "id_slot": 1,
+                "stop": true,
+                "model": "/artifacts/models/Qwen3-0.6B/F16.gguf",
+                "tokens_predicted": 18,
+                "tokens_evaluated": 6,
+                "generation_settings": {
+                  "seed": 101,
+                  "temperature": 0.0,
+                  "dynatemp_range": 0.0,
+                  "dynatemp_exponent": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.949999988079071,
+                  "min_p": 0.05000000074505806,
+                  "top_n_sigma": -1.0,
+                  "xtc_probability": 0.0,
+                  "xtc_threshold": 0.10000000149011612,
+                  "typical_p": 1.0,
+                  "repeat_last_n": 64,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "dry_multiplier": 0.0,
+                  "dry_base": 1.75,
+                  "dry_allowed_length": 2,
+                  "dry_penalty_last_n": 64,
+                  "dry_sequence_breakers": [
+                    "\n",
+                    ":",
+                    "\"",
+                    "*"
+                  ],
+                  "mirostat": 0,
+                  "mirostat_tau": 5.0,
+                  "mirostat_eta": 0.10000000149011612,
+                  "adaptive_target": -1.0,
+                  "adaptive_decay": 0.8999999761581421,
+                  "stop": [],
+                  "max_tokens": 128,
+                  "n_predict": 128,
+                  "n_keep": 0,
+                  "n_discard": 0,
+                  "ignore_eos": false,
+                  "stream": false,
+                  "logit_bias": [
+                    {
+                      "bias": 1000.0,
+                      "token": 151657
+                    }
+                  ],
+                  "n_probs": 0,
+                  "min_keep": 0,
+                  "grammar": "root ::= \"<tool_call>{\\\"name\\\":\\\"allowed\\\",\\\"arguments\\\":{}}</tool_call>\"\n",
+                  "grammar_lazy": true,
+                  "grammar_triggers": [
+                    {
+                      "type": 0,
+                      "value": "<tool_call>",
+                      "token": 151657
+                    }
+                  ],
+                  "preserved_tokens": [
+                    151657
+                  ],
+                  "chat_format": "Content-only",
+                  "reasoning_format": "deepseek",
+                  "reasoning_in_content": false,
+                  "generation_prompt": "",
+                  "samplers": [
+                    "penalties",
+                    "dry",
+                    "top_n_sigma",
+                    "top_k",
+                    "typ_p",
+                    "top_p",
+                    "min_p",
+                    "xtc",
+                    "temperature"
+                  ],
+                  "speculative.types": "none",
+                  "timings_per_token": false,
+                  "post_sampling_probs": false,
+                  "backend_sampling": false,
+                  "lora": []
+                },
+                "prompt": "Output a tool call now.",
+                "has_new_line": false,
+                "truncated": false,
+                "stop_type": "eos",
+                "stopping_word": "",
+                "tokens_cached": 23,
+                "timings": {
+                  "cache_n": 0,
+                  "prompt_n": 6,
+                  "prompt_ms": 16.287,
+                  "prompt_per_token_ms": 2.7144999999999997,
+                  "prompt_per_second": 368.39196905507464,
+                  "predicted_n": 18,
+                  "predicted_ms": 326.765,
+                  "predicted_per_token_ms": 19.22147058823529,
+                  "predicted_per_second": 52.02515569292917
+                }
+              },
+              "passed": true
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "complete": true,
+      "attempts": 8000,
+      "missing_observations": 0,
+      "problems": [],
+      "cells": [
+        {
+          "precision": "F16",
+          "decoder": "free",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.4773035754999917,
+          "elapsed_seconds_range": [
+            0.18418958200004454,
+            4.400907460000042
+          ],
+          "predicted_tokens_total": 52852,
+          "predicted_tokens_median": 38.5
+        },
+        {
+          "precision": "F16",
+          "decoder": "loose",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.47986880999999926,
+          "elapsed_seconds_range": [
+            0.16783072500000173,
+            4.867227963999994
+          ],
+          "predicted_tokens_total": 52551,
+          "predicted_tokens_median": 38.5
+        },
+        {
+          "precision": "F16",
+          "decoder": "trigger_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 976,
+            "token_limit": 24
+          },
+          "completed": 976,
+          "elapsed_seconds_median": 0.4527656694999962,
+          "elapsed_seconds_range": [
+            0.20643835699991087,
+            6.440709572000003
+          ],
+          "predicted_tokens_total": 47556,
+          "predicted_tokens_median": 35.0
+        },
+        {
+          "precision": "F16",
+          "decoder": "whole_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 1000
+          },
+          "completed": 1000,
+          "elapsed_seconds_median": 0.45138907950000373,
+          "elapsed_seconds_range": [
+            0.21970075000001543,
+            4.844791283000063
+          ],
+          "predicted_tokens_total": 37941,
+          "predicted_tokens_median": 34.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "free",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 991,
+            "token_limit": 9
+          },
+          "completed": 991,
+          "elapsed_seconds_median": 0.3591680524999674,
+          "elapsed_seconds_range": [
+            0.12495858299996598,
+            4.65263900299999
+          ],
+          "predicted_tokens_total": 59070,
+          "predicted_tokens_median": 40.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "loose",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 988,
+            "token_limit": 12
+          },
+          "completed": 988,
+          "elapsed_seconds_median": 0.36211258699995597,
+          "elapsed_seconds_range": [
+            0.11828447899995354,
+            4.406571156999917
+          ],
+          "predicted_tokens_total": 59389,
+          "predicted_tokens_median": 40.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "trigger_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 947,
+            "token_limit": 52,
+            "grammar_trigger_replay_error": 1
+          },
+          "completed": 947,
+          "elapsed_seconds_median": 0.33601914200005467,
+          "elapsed_seconds_range": [
+            0.158480964999967,
+            4.812958279999975
+          ],
+          "predicted_tokens_total": 61190,
+          "predicted_tokens_median": 35
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "whole_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 996,
+            "token_limit": 4
+          },
+          "completed": 996,
+          "elapsed_seconds_median": 0.33755521799997723,
+          "elapsed_seconds_range": [
+            0.15848574599999665,
+            4.538881371999992
+          ],
+          "predicted_tokens_total": 38150,
+          "predicted_tokens_median": 34.0
+        }
+      ],
+      "source": "results/full/full-002-2-concurrent1/events.jsonl",
+      "source_sha256": "d31c5c033a0be484eeb1c1845f982db3d86c208f49e316ca758cffdbf40b1fa5",
+      "gpu_names": [
+        "NVIDIA A10"
+      ],
+      "llama_cpp_commits": [
+        "8542e94350f0ade01644db6f1d1520da3814dafd"
+      ],
+      "runtime_probe_events": [
+        {
+          "kind": "trigger_preflight",
+          "probes": [
+            {
+              "prefix": "{",
+              "target": "{\"name\":\"allowed\",\"parameters\":{}}",
+              "payload": {
+                "prompt": "Output a tool call now.",
+                "temperature": 0,
+                "seed": 101,
+                "n_predict": 128,
+                "cache_prompt": false,
+                "grammar": "root ::= \"{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}\"\n",
+                "grammar_lazy": true,
+                "grammar_triggers": [
+                  {
+                    "type": 2,
+                    "value": "(\\[|\\{)"
+                  }
+                ],
+                "preserved_tokens": [],
+                "logit_bias": [
+                  [
+                    5018,
+                    1000
+                  ]
+                ]
+              },
+              "response": {
+                "index": 0,
+                "content": "{\"name\":\"allowed\",\"parameters\":{}}",
+                "tokens": [],
+                "id_slot": 0,
+                "stop": true,
+                "model": "/artifacts/models/Llama-3.2-1B-Instruct/F16.gguf",
+                "tokens_predicted": 15,
+                "tokens_evaluated": 7,
+                "generation_settings": {
+                  "seed": 101,
+                  "temperature": 0.0,
+                  "dynatemp_range": 0.0,
+                  "dynatemp_exponent": 1.0,
+                  "top_k": 40,
+                  "top_p": 0.8999999761581421,
+                  "min_p": 0.05000000074505806,
+                  "top_n_sigma": -1.0,
+                  "xtc_probability": 0.0,
+                  "xtc_threshold": 0.10000000149011612,
+                  "typical_p": 1.0,
+                  "repeat_last_n": 64,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "dry_multiplier": 0.0,
+                  "dry_base": 1.75,
+                  "dry_allowed_length": 2,
+                  "dry_penalty_last_n": 64,
+                  "dry_sequence_breakers": [
+                    "\n",
+                    ":",
+                    "\"",
+                    "*"
+                  ],
+                  "mirostat": 0,
+                  "mirostat_tau": 5.0,
+                  "mirostat_eta": 0.10000000149011612,
+                  "adaptive_target": -1.0,
+                  "adaptive_decay": 0.8999999761581421,
+                  "stop": [],
+                  "max_tokens": 128,
+                  "n_predict": 128,
+                  "n_keep": 0,
+                  "n_discard": 0,
+                  "ignore_eos": false,
+                  "stream": false,
+                  "logit_bias": [
+                    {
+                      "bias": 1000.0,
+                      "token": 5018
+                    }
+                  ],
+                  "n_probs": 0,
+                  "min_keep": 0,
+                  "grammar": "root ::= \"{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}\"\n",
+                  "grammar_lazy": true,
+                  "grammar_triggers": [
+                    {
+                      "type": 2,
+                      "value": "(\\[|\\{)"
+                    }
+                  ],
+                  "preserved_tokens": [],
+                  "chat_format": "Content-only",
+                  "reasoning_format": "deepseek",
+                  "reasoning_in_content": false,
+                  "generation_prompt": "",
+                  "samplers": [
+                    "penalties",
+                    "dry",
+                    "top_n_sigma",
+                    "top_k",
+                    "typ_p",
+                    "top_p",
+                    "min_p",
+                    "xtc",
+                    "temperature"
+                  ],
+                  "speculative.types": "none",
+                  "timings_per_token": false,
+                  "post_sampling_probs": false,
+                  "backend_sampling": false,
+                  "lora": []
+                },
+                "prompt": "<|begin_of_text|>Output a tool call now.",
+                "has_new_line": false,
+                "truncated": false,
+                "stop_type": "eos",
+                "stopping_word": "",
+                "tokens_cached": 21,
+                "timings": {
+                  "cache_n": 0,
+                  "prompt_n": 7,
+                  "prompt_ms": 18.552,
+                  "prompt_per_token_ms": 2.6502857142857144,
+                  "prompt_per_second": 377.3178094006037,
+                  "predicted_n": 15,
+                  "predicted_ms": 274.341,
+                  "predicted_per_token_ms": 19.595785714285714,
+                  "predicted_per_second": 51.03138065400359
+                }
+              },
+              "passed": true
+            },
+            {
+              "prefix": "[",
+              "target": "[{\"name\":\"allowed\",\"parameters\":{}}]",
+              "payload": {
+                "prompt": "Output a tool call now.",
+                "temperature": 0,
+                "seed": 101,
+                "n_predict": 128,
+                "cache_prompt": false,
+                "grammar": "root ::= \"[{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}]\"\n",
+                "grammar_lazy": true,
+                "grammar_triggers": [
+                  {
+                    "type": 2,
+                    "value": "(\\[|\\{)"
+                  }
+                ],
+                "preserved_tokens": [],
+                "logit_bias": [
+                  [
+                    58,
+                    1000
+                  ]
+                ]
+              },
+              "response": {
+                "index": 0,
+                "content": "[{\"name\":\"allowed\",\"parameters\":{}}]",
+                "tokens": [],
+                "id_slot": 0,
+                "stop": true,
+                "model": "/artifacts/models/Llama-3.2-1B-Instruct/F16.gguf",
+                "tokens_predicted": 18,
+                "tokens_evaluated": 7,
+                "generation_settings": {
+                  "seed": 101,
+                  "temperature": 0.0,
+                  "dynatemp_range": 0.0,
+                  "dynatemp_exponent": 1.0,
+                  "top_k": 40,
+                  "top_p": 0.8999999761581421,
+                  "min_p": 0.05000000074505806,
+                  "top_n_sigma": -1.0,
+                  "xtc_probability": 0.0,
+                  "xtc_threshold": 0.10000000149011612,
+                  "typical_p": 1.0,
+                  "repeat_last_n": 64,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "dry_multiplier": 0.0,
+                  "dry_base": 1.75,
+                  "dry_allowed_length": 2,
+                  "dry_penalty_last_n": 64,
+                  "dry_sequence_breakers": [
+                    "\n",
+                    ":",
+                    "\"",
+                    "*"
+                  ],
+                  "mirostat": 0,
+                  "mirostat_tau": 5.0,
+                  "mirostat_eta": 0.10000000149011612,
+                  "adaptive_target": -1.0,
+                  "adaptive_decay": 0.8999999761581421,
+                  "stop": [],
+                  "max_tokens": 128,
+                  "n_predict": 128,
+                  "n_keep": 0,
+                  "n_discard": 0,
+                  "ignore_eos": false,
+                  "stream": false,
+                  "logit_bias": [
+                    {
+                      "bias": 1000.0,
+                      "token": 58
+                    }
+                  ],
+                  "n_probs": 0,
+                  "min_keep": 0,
+                  "grammar": "root ::= \"[{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}]\"\n",
+                  "grammar_lazy": true,
+                  "grammar_triggers": [
+                    {
+                      "type": 2,
+                      "value": "(\\[|\\{)"
+                    }
+                  ],
+                  "preserved_tokens": [],
+                  "chat_format": "Content-only",
+                  "reasoning_format": "deepseek",
+                  "reasoning_in_content": false,
+                  "generation_prompt": "",
+                  "samplers": [
+                    "penalties",
+                    "dry",
+                    "top_n_sigma",
+                    "top_k",
+                    "typ_p",
+                    "top_p",
+                    "min_p",
+                    "xtc",
+                    "temperature"
+                  ],
+                  "speculative.types": "none",
+                  "timings_per_token": false,
+                  "post_sampling_probs": false,
+                  "backend_sampling": false,
+                  "lora": []
+                },
+                "prompt": "<|begin_of_text|>Output a tool call now.",
+                "has_new_line": false,
+                "truncated": false,
+                "stop_type": "eos",
+                "stopping_word": "",
+                "tokens_cached": 24,
+                "timings": {
+                  "cache_n": 0,
+                  "prompt_n": 7,
+                  "prompt_ms": 6.994,
+                  "prompt_per_token_ms": 0.9991428571428571,
+                  "prompt_per_second": 1000.8578781812982,
+                  "predicted_n": 18,
+                  "predicted_ms": 329.023,
+                  "predicted_per_token_ms": 19.35429411764706,
+                  "predicted_per_second": 51.66812046574251
+                }
+              },
+              "passed": true
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "complete": true,
+      "attempts": 8000,
+      "missing_observations": 0,
+      "problems": [],
+      "cells": [
+        {
+          "precision": "F16",
+          "decoder": "free",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 995,
+            "token_limit": 5
+          },
+          "completed": 995,
+          "elapsed_seconds_median": 1.0569656690000215,
+          "elapsed_seconds_range": [
+            0.1411130139999841,
+            13.613924102999988
+          ],
+          "predicted_tokens_total": 51598,
+          "predicted_tokens_median": 37.5
+        },
+        {
+          "precision": "F16",
+          "decoder": "loose",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 995,
+            "token_limit": 5
+          },
+          "completed": 995,
+          "elapsed_seconds_median": 1.0693618155000024,
+          "elapsed_seconds_range": [
+            0.14413527499999645,
+            13.592247823999998
+          ],
+          "predicted_tokens_total": 51596,
+          "predicted_tokens_median": 37.5
+        },
+        {
+          "precision": "F16",
+          "decoder": "trigger_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 995,
+            "token_limit": 5
+          },
+          "completed": 995,
+          "elapsed_seconds_median": 0.9671491365000051,
+          "elapsed_seconds_range": [
+            0.1539664300000254,
+            13.913722296000003
+          ],
+          "predicted_tokens_total": 37294,
+          "predicted_tokens_median": 33.0
+        },
+        {
+          "precision": "F16",
+          "decoder": "whole_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 995,
+            "token_limit": 5
+          },
+          "completed": 995,
+          "elapsed_seconds_median": 0.9545533664999937,
+          "elapsed_seconds_range": [
+            0.16483858899994175,
+            13.519342108000046
+          ],
+          "predicted_tokens_total": 37294,
+          "predicted_tokens_median": 33.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "free",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 995,
+            "token_limit": 5
+          },
+          "completed": 995,
+          "elapsed_seconds_median": 0.7866036240000085,
+          "elapsed_seconds_range": [
+            0.2505085160000817,
+            9.79168264399982
+          ],
+          "predicted_tokens_total": 51485,
+          "predicted_tokens_median": 37.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "loose",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 995,
+            "token_limit": 5
+          },
+          "completed": 995,
+          "elapsed_seconds_median": 0.7756830454999317,
+          "elapsed_seconds_range": [
+            0.2407690109998839,
+            9.709438414000033
+          ],
+          "predicted_tokens_total": 51354,
+          "predicted_tokens_median": 37.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "trigger_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 994,
+            "token_limit": 6
+          },
+          "completed": 994,
+          "elapsed_seconds_median": 0.7095412420000002,
+          "elapsed_seconds_range": [
+            0.24182739000002584,
+            9.557127273999868
+          ],
+          "predicted_tokens_total": 36876,
+          "predicted_tokens_median": 33.0
+        },
+        {
+          "precision": "Q4_K_M",
+          "decoder": "whole_strict",
+          "attempts": 1000,
+          "status_counts": {
+            "ok": 998,
+            "token_limit": 2
+          },
+          "completed": 998,
+          "elapsed_seconds_median": 0.7026385854999262,
+          "elapsed_seconds_range": [
+            0.2797898310000164,
+            9.829532410999946
+          ],
+          "predicted_tokens_total": 35020,
+          "predicted_tokens_median": 33.0
+        }
+      ],
+      "source": "results/full/full-002-3-concurrent1/events.jsonl",
+      "source_sha256": "fd37b0c160c9d7475587ead7edb897f4a38a7c7cf125afa5db40efa49bf78d4a",
+      "gpu_names": [
+        "NVIDIA A10"
+      ],
+      "llama_cpp_commits": [
+        "8542e94350f0ade01644db6f1d1520da3814dafd"
+      ],
+      "runtime_probe_events": [
+        {
+          "kind": "trigger_preflight",
+          "probes": [
+            {
+              "prefix": "{",
+              "target": "{\"name\":\"allowed\",\"parameters\":{}}",
+              "payload": {
+                "prompt": "Output a tool call now.",
+                "temperature": 0,
+                "seed": 101,
+                "n_predict": 128,
+                "cache_prompt": false,
+                "grammar": "root ::= \"{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}\"\n",
+                "grammar_lazy": true,
+                "grammar_triggers": [
+                  {
+                    "type": 2,
+                    "value": "(\\[|\\{)"
+                  }
+                ],
+                "preserved_tokens": [],
+                "logit_bias": [
+                  [
+                    5018,
+                    1000
+                  ]
+                ]
+              },
+              "response": {
+                "index": 0,
+                "content": "{\"name\":\"allowed\",\"parameters\":{}}",
+                "tokens": [],
+                "id_slot": 0,
+                "stop": true,
+                "model": "/artifacts/models/Llama-3.2-3B-Instruct/F16.gguf",
+                "tokens_predicted": 19,
+                "tokens_evaluated": 7,
+                "generation_settings": {
+                  "seed": 101,
+                  "temperature": 0.0,
+                  "dynatemp_range": 0.0,
+                  "dynatemp_exponent": 1.0,
+                  "top_k": 40,
+                  "top_p": 0.8999999761581421,
+                  "min_p": 0.05000000074505806,
+                  "top_n_sigma": -1.0,
+                  "xtc_probability": 0.0,
+                  "xtc_threshold": 0.10000000149011612,
+                  "typical_p": 1.0,
+                  "repeat_last_n": 64,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "dry_multiplier": 0.0,
+                  "dry_base": 1.75,
+                  "dry_allowed_length": 2,
+                  "dry_penalty_last_n": 64,
+                  "dry_sequence_breakers": [
+                    "\n",
+                    ":",
+                    "\"",
+                    "*"
+                  ],
+                  "mirostat": 0,
+                  "mirostat_tau": 5.0,
+                  "mirostat_eta": 0.10000000149011612,
+                  "adaptive_target": -1.0,
+                  "adaptive_decay": 0.8999999761581421,
+                  "stop": [],
+                  "max_tokens": 128,
+                  "n_predict": 128,
+                  "n_keep": 0,
+                  "n_discard": 0,
+                  "ignore_eos": false,
+                  "stream": false,
+                  "logit_bias": [
+                    {
+                      "bias": 1000.0,
+                      "token": 5018
+                    }
+                  ],
+                  "n_probs": 0,
+                  "min_keep": 0,
+                  "grammar": "root ::= \"{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}\"\n",
+                  "grammar_lazy": true,
+                  "grammar_triggers": [
+                    {
+                      "type": 2,
+                      "value": "(\\[|\\{)"
+                    }
+                  ],
+                  "preserved_tokens": [],
+                  "chat_format": "Content-only",
+                  "reasoning_format": "deepseek",
+                  "reasoning_in_content": false,
+                  "generation_prompt": "",
+                  "samplers": [
+                    "penalties",
+                    "dry",
+                    "top_n_sigma",
+                    "top_k",
+                    "typ_p",
+                    "top_p",
+                    "min_p",
+                    "xtc",
+                    "temperature"
+                  ],
+                  "speculative.types": "none",
+                  "timings_per_token": false,
+                  "post_sampling_probs": false,
+                  "backend_sampling": false,
+                  "lora": []
+                },
+                "prompt": "<|begin_of_text|>Output a tool call now.",
+                "has_new_line": false,
+                "truncated": false,
+                "stop_type": "eos",
+                "stopping_word": "",
+                "tokens_cached": 25,
+                "timings": {
+                  "cache_n": 0,
+                  "prompt_n": 7,
+                  "prompt_ms": 27.435,
+                  "prompt_per_token_ms": 3.919285714285714,
+                  "prompt_per_second": 255.14853289593586,
+                  "predicted_n": 19,
+                  "predicted_ms": 492.01,
+                  "predicted_per_token_ms": 27.33388888888889,
+                  "predicted_per_second": 36.58462226377513
+                }
+              },
+              "passed": true
+            },
+            {
+              "prefix": "[",
+              "target": "[{\"name\":\"allowed\",\"parameters\":{}}]",
+              "payload": {
+                "prompt": "Output a tool call now.",
+                "temperature": 0,
+                "seed": 101,
+                "n_predict": 128,
+                "cache_prompt": false,
+                "grammar": "root ::= \"[{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}]\"\n",
+                "grammar_lazy": true,
+                "grammar_triggers": [
+                  {
+                    "type": 2,
+                    "value": "(\\[|\\{)"
+                  }
+                ],
+                "preserved_tokens": [],
+                "logit_bias": [
+                  [
+                    58,
+                    1000
+                  ]
+                ]
+              },
+              "response": {
+                "index": 0,
+                "content": "[{\"name\":\"allowed\",\"parameters\":{}}]",
+                "tokens": [],
+                "id_slot": 0,
+                "stop": true,
+                "model": "/artifacts/models/Llama-3.2-3B-Instruct/F16.gguf",
+                "tokens_predicted": 16,
+                "tokens_evaluated": 7,
+                "generation_settings": {
+                  "seed": 101,
+                  "temperature": 0.0,
+                  "dynatemp_range": 0.0,
+                  "dynatemp_exponent": 1.0,
+                  "top_k": 40,
+                  "top_p": 0.8999999761581421,
+                  "min_p": 0.05000000074505806,
+                  "top_n_sigma": -1.0,
+                  "xtc_probability": 0.0,
+                  "xtc_threshold": 0.10000000149011612,
+                  "typical_p": 1.0,
+                  "repeat_last_n": 64,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "dry_multiplier": 0.0,
+                  "dry_base": 1.75,
+                  "dry_allowed_length": 2,
+                  "dry_penalty_last_n": 64,
+                  "dry_sequence_breakers": [
+                    "\n",
+                    ":",
+                    "\"",
+                    "*"
+                  ],
+                  "mirostat": 0,
+                  "mirostat_tau": 5.0,
+                  "mirostat_eta": 0.10000000149011612,
+                  "adaptive_target": -1.0,
+                  "adaptive_decay": 0.8999999761581421,
+                  "stop": [],
+                  "max_tokens": 128,
+                  "n_predict": 128,
+                  "n_keep": 0,
+                  "n_discard": 0,
+                  "ignore_eos": false,
+                  "stream": false,
+                  "logit_bias": [
+                    {
+                      "bias": 1000.0,
+                      "token": 58
+                    }
+                  ],
+                  "n_probs": 0,
+                  "min_keep": 0,
+                  "grammar": "root ::= \"[{\\\"name\\\":\\\"allowed\\\",\\\"parameters\\\":{}}]\"\n",
+                  "grammar_lazy": true,
+                  "grammar_triggers": [
+                    {
+                      "type": 2,
+                      "value": "(\\[|\\{)"
+                    }
+                  ],
+                  "preserved_tokens": [],
+                  "chat_format": "Content-only",
+                  "reasoning_format": "deepseek",
+                  "reasoning_in_content": false,
+                  "generation_prompt": "",
+                  "samplers": [
+                    "penalties",
+                    "dry",
+                    "top_n_sigma",
+                    "top_k",
+                    "typ_p",
+                    "top_p",
+                    "min_p",
+                    "xtc",
+                    "temperature"
+                  ],
+                  "speculative.types": "none",
+                  "timings_per_token": false,
+                  "post_sampling_probs": false,
+                  "backend_sampling": false,
+                  "lora": []
+                },
+                "prompt": "<|begin_of_text|>Output a tool call now.",
+                "has_new_line": false,
+                "truncated": false,
+                "stop_type": "eos",
+                "stopping_word": "",
+                "tokens_cached": 22,
+                "timings": {
+                  "cache_n": 0,
+                  "prompt_n": 7,
+                  "prompt_ms": 16.077,
+                  "prompt_per_token_ms": 2.296714285714286,
+                  "prompt_per_second": 435.40461528892206,
+                  "predicted_n": 16,
+                  "predicted_ms": 401.576,
+                  "predicted_per_token_ms": 26.771733333333334,
+                  "predicted_per_second": 37.35282985038946
+                }
+              },
+              "passed": true
+            }
+          ],
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "latency_scope": "Per-request wall time including tokenization, serving and slot contention; not isolated GPU kernel time. Tokens and operational failures retained."
+}

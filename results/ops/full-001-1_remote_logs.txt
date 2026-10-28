@@ -1,0 +1,68 @@
+2026-10-28 10:43:08+05:30 Building image im-qQogCOWHShYJkzwIDxt7Wy
+2026-10-28 10:43:10+05:30 
+2026-10-28 10:43:10+05:30 => Step 0: FROM base
+2026-10-28 10:43:10+05:30 
+2026-10-28 10:43:10+05:30 => Step 1: COPY . /
+2026-10-28 10:43:15+05:30 Saving image...
+2026-10-28 10:43:16+05:30 Image saved, took 900.71ms
+2026-10-28 10:43:16+05:30 
+2026-10-28 10:43:16+05:30 Built image im-qQogCOWHShYJkzwIDxt7Wy in 8.13s
+2026-10-28 10:43:16+05:30 
+2026-10-28 10:43:16+05:30 
+2026-10-28 10:43:26+05:30 
+2026-10-28 10:43:26+05:30 ==========
+2026-10-28 10:43:26+05:30 == CUDA ==
+2026-10-28 10:43:26+05:30 ==========
+2026-10-28 10:43:26+05:30 
+2026-10-28 10:43:26+05:30 CUDA Version 12.8.1
+2026-10-28 10:43:26+05:30 
+2026-10-28 10:43:26+05:30 Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-10-28 10:43:26+05:30 
+2026-10-28 10:43:26+05:30 This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-10-28 10:43:26+05:30 By pulling and using the container, you accept the terms and conditions of this license:
+2026-10-28 10:43:26+05:30 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-10-28 10:43:26+05:30 
+2026-10-28 10:43:26+05:30 A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-10-28 10:43:26+05:30 
+2026-10-28 10:43:26+05:30 WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+2026-10-28 10:43:26+05:30    Use the NVIDIA Container Toolkit to start this container with GPU support; see
+2026-10-28 10:43:26+05:30    https://docs.nvidia.com/datacenter/cloud-native/ .
+2026-10-28 10:43:26+05:30 
+2026-10-28 10:44:14+05:30 
+2026-10-28 10:44:14+05:30 ==========
+2026-10-28 10:44:14+05:30 == CUDA ==
+2026-10-28 10:44:14+05:30 ==========
+2026-10-28 10:44:14+05:30 
+2026-10-28 10:44:14+05:30 CUDA Version 12.8.1
+2026-10-28 10:44:14+05:30 
+2026-10-28 10:44:14+05:30 Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-10-28 10:44:14+05:30 
+2026-10-28 10:44:14+05:30 This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-10-28 10:44:14+05:30 By pulling and using the container, you accept the terms and conditions of this license:
+2026-10-28 10:44:14+05:30 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-10-28 10:44:14+05:30 
+2026-10-28 10:44:14+05:30 A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-10-28 10:44:14+05:30 
+2026-10-28 10:44:14+05:30 WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+2026-10-28 10:44:14+05:30    Use the NVIDIA Container Toolkit to start this container with GPU support; see
+2026-10-28 10:44:14+05:30    https://docs.nvidia.com/datacenter/cloud-native/ .
+2026-10-28 10:44:14+05:30 
+2026-10-28 10:44:25+05:30 
+2026-10-28 10:44:25+05:30 ==========
+2026-10-28 10:44:25+05:30 == CUDA ==
+2026-10-28 10:44:25+05:30 ==========
+2026-10-28 10:44:25+05:30 
+2026-10-28 10:44:25+05:30 CUDA Version 12.8.1
+2026-10-28 10:44:25+05:30 
+2026-10-28 10:44:25+05:30 Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-10-28 10:44:25+05:30 
+2026-10-28 10:44:25+05:30 This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-10-28 10:44:25+05:30 By pulling and using the container, you accept the terms and conditions of this license:
+2026-10-28 10:44:25+05:30 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-10-28 10:44:25+05:30 
+2026-10-28 10:44:25+05:30 A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-10-28 10:44:25+05:30 
+2026-10-28 10:51:01+05:30 [modal-client] 2026-10-28T05:21:01+0000 Received a cancellation signal while processing input ('in-01M60EW8PNQYHZQEEK2GRSKXVF:1793164452569-0',)
+2026-10-28 10:51:13+05:30 Stopping app - user stopped from CLI.
+2026-10-28 10:51:19+05:30 Runner terminated.
+2026-10-28 10:51:50+05:30 Runner terminated.

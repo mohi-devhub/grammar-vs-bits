@@ -1,0 +1,245 @@
+[
+  {
+    "object_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00092201",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.03100441",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-27090tv4stgi7opQZHMtyj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00005394",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-27090tv4stgi7opQZHMtyj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00135111",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-27090tv4stgi7opQZHMtyj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00099855",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-A7HQVe4jv9ziB3fm9Zurhz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00000968",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-A7HQVe4jv9ziB3fm9Zurhz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00001970",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-C5wjk90OslF5FvLUZzcnse",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00019379",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-C5wjk90OslF5FvLUZzcnse",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00020053",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-C5wjk90OslF5FvLUZzcnse",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00603489",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-GOrC4No5rv5D584zzf3BRj",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00019913",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-GOrC4No5rv5D584zzf3BRj",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00022973",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-GOrC4No5rv5D584zzf3BRj",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00697645",
+    "tags": "{\"project\": \"evalnoise\"}"
+  },
+  {
+    "object_id": "ap-HFprm1QnjNLtmwqNColgEk",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00000167",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-HFprm1QnjNLtmwqNColgEk",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00000985",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-Kvar7vq97OXLDbBeZJV7eb",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00419288",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-Kvar7vq97OXLDbBeZJV7eb",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.14956976",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00034570",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00276410",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.08304052",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "2.5E-7",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00339266",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+    "description": "qunti-check-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.01799174",
+    "tags": "{\"project\": \"qunti-check\", \"stage\": \"pilot\"}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Network Egress",
+    "cost": "0.00012174",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "L4",
+    "cost": "0.01377763",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "Memory",
+    "cost": "0.00110388",
+    "tags": "{}"
+  },
+  {
+    "object_id": "ap-vsOQbIwnhLQjGkss8B54hw",
+    "description": "evalnoise-pilot",
+    "environment": "main",
+    "interval_start": "2026-10-27T00:00:00",
+    "resource": "CPU",
+    "cost": "0.00175634",
+    "tags": "{}"
+  }
+]

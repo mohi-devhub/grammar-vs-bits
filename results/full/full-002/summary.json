@@ -1,0 +1,7434 @@
+{
+  "created_at": "2026-10-28T17:16:48.077617+00:00",
+  "run_id": "full-002",
+  "observations": 24000,
+  "expected_observations": 24000,
+  "inference_settings": {
+    "temperature": 0.0,
+    "parallel_slots": 4,
+    "context_per_slot": 4096,
+    "max_output_tokens": 512,
+    "cache_type_k": "f16",
+    "cache_type_v": "f16"
+  },
+  "complete": true,
+  "bootstrap": {
+    "unit": "crossed original-item and operational-run resampling; shared draws across all conditions/models",
+    "replicates": 10000,
+    "seed": 20261028,
+    "interval": "paired percentile 95%; unadjusted exploratory intervals",
+    "same_indices_used_across_conditions": true,
+    "item_only_sensitivity_included": true
+  },
+  "scores": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "free",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.725,
+          "ci95": [
+            0.665,
+            0.785
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.665,
+            0.785
+          ]
+        },
+        "required": {
+          "accuracy": 0.7388888888888889,
+          "ci95": [
+            0.6722222222222223,
+            0.8
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6722222222222223,
+            0.8
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.6,
+          "ci95": [
+            0.4,
+            0.8
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.4,
+            0.8
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.7333333333333333,
+          "ci95": [
+            0.6166666666666667,
+            0.8333333333333334
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6166666666666667,
+            0.8333333333333334
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.65,
+          "ci95": [
+            0.5333333333333333,
+            0.7666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5333333333333333,
+            0.7666666666666667
+          ]
+        },
+        "simple": {
+          "accuracy": 0.8333333333333334,
+          "ci95": [
+            0.7333333333333333,
+            0.9166666666666666
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7333333333333333,
+            0.9166666666666666
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.955,
+          "ci95": [
+            0.925,
+            0.98
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.04,
+          "ci95": [
+            0.015,
+            0.07
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.065,
+          "ci95": [
+            0.035,
+            0.1
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.06,
+          "ci95": [
+            0.03,
+            0.095
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.03,
+          "ci95": [
+            0.01,
+            0.055
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "loose",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.725,
+          "ci95": [
+            0.665,
+            0.785
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.665,
+            0.785
+          ]
+        },
+        "required": {
+          "accuracy": 0.7388888888888889,
+          "ci95": [
+            0.6722222222222223,
+            0.8
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6722222222222223,
+            0.8
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.6,
+          "ci95": [
+            0.4,
+            0.8
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.4,
+            0.8
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.7333333333333333,
+          "ci95": [
+            0.6166666666666667,
+            0.8333333333333334
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6166666666666667,
+            0.8333333333333334
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.65,
+          "ci95": [
+            0.5333333333333333,
+            0.7666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5333333333333333,
+            0.7666666666666667
+          ]
+        },
+        "simple": {
+          "accuracy": 0.8333333333333334,
+          "ci95": [
+            0.7333333333333333,
+            0.9166666666666666
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7333333333333333,
+            0.9166666666666666
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.955,
+          "ci95": [
+            0.925,
+            0.98
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.04,
+          "ci95": [
+            0.015,
+            0.07
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.065,
+          "ci95": [
+            0.035,
+            0.1
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.06,
+          "ci95": [
+            0.03,
+            0.095
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.03,
+          "ci95": [
+            0.01,
+            0.055
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.75,
+          "ci95": [
+            0.69,
+            0.805
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.69,
+            0.805
+          ]
+        },
+        "required": {
+          "accuracy": 0.7666666666666667,
+          "ci95": [
+            0.7,
+            0.8277777777777777
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7,
+            0.8277777777777777
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.6,
+          "ci95": [
+            0.4,
+            0.8
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.4,
+            0.8
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.75,
+          "ci95": [
+            0.6333333333333333,
+            0.85
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6333333333333333,
+            0.85
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.7,
+          "ci95": [
+            0.5833333333333334,
+            0.8
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5833333333333334,
+            0.8
+          ]
+        },
+        "simple": {
+          "accuracy": 0.85,
+          "ci95": [
+            0.75,
+            0.9333333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.75,
+            0.9333333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.04,
+          "ci95": [
+            0.015,
+            0.07
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.065,
+          "ci95": [
+            0.035,
+            0.1
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.025,
+          "ci95": [
+            0.005,
+            0.05
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.75,
+          "ci95": [
+            0.69,
+            0.805
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.69,
+            0.805
+          ]
+        },
+        "required": {
+          "accuracy": 0.7666666666666667,
+          "ci95": [
+            0.7,
+            0.8277777777777777
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7,
+            0.8277777777777777
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.6,
+          "ci95": [
+            0.4,
+            0.8
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.4,
+            0.8
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.75,
+          "ci95": [
+            0.6333333333333333,
+            0.85
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6333333333333333,
+            0.85
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.7,
+          "ci95": [
+            0.5833333333333334,
+            0.8
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5833333333333334,
+            0.8
+          ]
+        },
+        "simple": {
+          "accuracy": 0.85,
+          "ci95": [
+            0.75,
+            0.9333333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.75,
+            0.9333333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.04,
+          "ci95": [
+            0.015,
+            0.07
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.065,
+          "ci95": [
+            0.035,
+            0.1
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.025,
+          "ci95": [
+            0.005,
+            0.05
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.686,
+          "ci95": [
+            0.620975,
+            0.7490000000000001
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.621,
+            0.7490000000000001
+          ]
+        },
+        "required": {
+          "accuracy": 0.7066666666666667,
+          "ci95": [
+            0.6399999999999999,
+            0.77
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.64,
+            0.77
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.5,
+          "ci95": [
+            0.3,
+            0.7
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.3,
+            0.7
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.76,
+          "ci95": [
+            0.65,
+            0.8666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.65,
+            0.8666666666666667
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.5633333333333334,
+          "ci95": [
+            0.43333333333333335,
+            0.6833333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.43333333333333335,
+            0.6833333333333333
+          ]
+        },
+        "simple": {
+          "accuracy": 0.7966666666666666,
+          "ci95": [
+            0.6933333333333332,
+            0.8933333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6933333333333334,
+            0.8933333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.061,
+          "ci95": [
+            0.031,
+            0.095
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.915,
+          "ci95": [
+            0.8759999999999999,
+            0.951
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.061,
+          "ci95": [
+            0.031,
+            0.095
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.058,
+          "ci95": [
+            0.028000000000000008,
+            0.09100000000000001
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.051,
+          "ci95": [
+            0.024975000000000025,
+            0.084
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.02,
+          "ci95": [
+            0.005,
+            0.04
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.077,
+          "ci95": [
+            0.042,
+            0.115
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.686,
+          "ci95": [
+            0.622,
+            0.7490000000000001
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.622,
+            0.7490000000000001
+          ]
+        },
+        "required": {
+          "accuracy": 0.7066666666666667,
+          "ci95": [
+            0.638888888888889,
+            0.77
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.64,
+            0.768888888888889
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.5,
+          "ci95": [
+            0.3,
+            0.7
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.3,
+            0.7
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.76,
+          "ci95": [
+            0.65,
+            0.8633333333333334
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6499166666666668,
+            0.8633333333333333
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.5633333333333334,
+          "ci95": [
+            0.43666666666666665,
+            0.6833333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.4366666666666667,
+            0.6833333333333333
+          ]
+        },
+        "simple": {
+          "accuracy": 0.7966666666666666,
+          "ci95": [
+            0.6933333333333332,
+            0.8933333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6933333333333334,
+            0.8933333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.058,
+          "ci95": [
+            0.028999999999999998,
+            0.091
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.918,
+          "ci95": [
+            0.88,
+            0.953
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.058,
+          "ci95": [
+            0.028999999999999998,
+            0.091
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.057,
+          "ci95": [
+            0.027999999999999997,
+            0.09000000000000002
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.002,
+          "ci95": [
+            0.0,
+            0.009
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.052,
+          "ci95": [
+            0.025,
+            0.085
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.002,
+          "ci95": [
+            0.0,
+            0.009
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.018,
+          "ci95": [
+            0.0030000000000000005,
+            0.03802499999999964
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.079,
+          "ci95": [
+            0.044000000000000004,
+            0.118
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.723,
+          "ci95": [
+            0.66,
+            0.7830000000000001
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6609999999999999,
+            0.7830000000000001
+          ]
+        },
+        "required": {
+          "accuracy": 0.7477777777777778,
+          "ci95": [
+            0.6844444444444444,
+            0.8066666666666666
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6855555555555555,
+            0.8066666666666666
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.5,
+          "ci95": [
+            0.3,
+            0.7
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.3,
+            0.7
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.76,
+          "ci95": [
+            0.65,
+            0.8633333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.65,
+            0.8633333333333333
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.6766666666666666,
+          "ci95": [
+            0.5566666666666666,
+            0.7866666666666666
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5566666666666666,
+            0.7867499999999988
+          ]
+        },
+        "simple": {
+          "accuracy": 0.8066666666666666,
+          "ci95": [
+            0.7033333333333334,
+            0.9
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7066666666666667,
+            0.8966666666666666
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.047,
+          "ci95": [
+            0.02,
+            0.078
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.051,
+          "ci95": [
+            0.024,
+            0.084
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.025,
+          "ci95": [
+            0.005,
+            0.05
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.078,
+          "ci95": [
+            0.04397500000000001,
+            0.11602499999999966
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.73,
+          "ci95": [
+            0.669,
+            0.79
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.669,
+            0.79
+          ]
+        },
+        "required": {
+          "accuracy": 0.7555555555555555,
+          "ci95": [
+            0.6922222222222222,
+            0.8144444444444444
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6933333333333334,
+            0.8144444444444444
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.5,
+          "ci95": [
+            0.3,
+            0.7
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.3,
+            0.7
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.7666666666666667,
+          "ci95": [
+            0.65,
+            0.8666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.65,
+            0.8666666666666667
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.6866666666666666,
+          "ci95": [
+            0.5700000000000001,
+            0.7933333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5700000000000001,
+            0.7933333333333333
+          ]
+        },
+        "simple": {
+          "accuracy": 0.8133333333333334,
+          "ci95": [
+            0.7133333333333333,
+            0.9033333333333334
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7133333333333333,
+            0.9066666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.046,
+          "ci95": [
+            0.02,
+            0.07602499999999965
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.024,
+          "ci95": [
+            0.005,
+            0.046
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.076,
+          "ci95": [
+            0.042,
+            0.114
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.12,
+          "ci95": [
+            0.075,
+            0.165
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.075,
+            0.165
+          ]
+        },
+        "required": {
+          "accuracy": 0.12777777777777777,
+          "ci95": [
+            0.08333333333333333,
+            0.17777777777777778
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.08333333333333333,
+            0.17777777777777778
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.05,
+          "ci95": [
+            0.0,
+            0.15
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.15
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.15,
+          "ci95": [
+            0.06666666666666667,
+            0.25
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.06666666666666667,
+            0.25
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.23333333333333334,
+          "ci95": [
+            0.13333333333333333,
+            0.35
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.13333333333333333,
+            0.35
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.195,
+          "ci95": [
+            0.14,
+            0.25
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.09,
+          "ci95": [
+            0.055,
+            0.13
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.023,
+          "ci95": [
+            0.005,
+            0.045
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.48,
+          "ci95": [
+            0.41,
+            0.5451249999999982
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.02,
+          "ci95": [
+            0.005,
+            0.04
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.02,
+          "ci95": [
+            0.005,
+            0.04
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.095,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "loose",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.12,
+          "ci95": [
+            0.075,
+            0.165
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.075,
+            0.165
+          ]
+        },
+        "required": {
+          "accuracy": 0.12777777777777777,
+          "ci95": [
+            0.08333333333333333,
+            0.17777777777777778
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.08333333333333333,
+            0.17777777777777778
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.05,
+          "ci95": [
+            0.0,
+            0.15
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.15
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.15,
+          "ci95": [
+            0.06666666666666667,
+            0.25
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.06666666666666667,
+            0.25
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.23333333333333334,
+          "ci95": [
+            0.13333333333333333,
+            0.35
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.13333333333333333,
+            0.35
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.195,
+          "ci95": [
+            0.14,
+            0.25
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.09,
+          "ci95": [
+            0.055,
+            0.13
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.023,
+          "ci95": [
+            0.005,
+            0.046
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.48,
+          "ci95": [
+            0.41,
+            0.5451249999999982
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.02,
+          "ci95": [
+            0.005,
+            0.04
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.02,
+          "ci95": [
+            0.005,
+            0.04
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.095,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 976,
+        "token_limit": 24
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.489,
+          "ci95": [
+            0.42,
+            0.557
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.42,
+            0.5579999999999999
+          ]
+        },
+        "required": {
+          "accuracy": 0.5433333333333333,
+          "ci95": [
+            0.4711111111111111,
+            0.6166666666666667
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.4711111111111111,
+            0.6155555555555555
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.78,
+          "ci95": [
+            0.6733333333333333,
+            0.88
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6766666666666666,
+            0.88
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.85,
+          "ci95": [
+            0.75,
+            0.9333333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.75,
+            0.9333333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.019,
+          "ci95": [
+            0.004,
+            0.04
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.981,
+          "ci95": [
+            0.96,
+            0.996
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.019,
+          "ci95": [
+            0.004,
+            0.04
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.12,
+          "ci95": [
+            0.075,
+            0.165
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.001,
+          "ci95": [
+            0.0,
+            0.006
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.09,
+          "ci95": [
+            0.055,
+            0.13
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.281,
+          "ci95": [
+            0.22,
+            0.345
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.024,
+          "ci95": [
+            0.005,
+            0.048
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 1000
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.503,
+          "ci95": [
+            0.434,
+            0.572
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.434,
+            0.572
+          ]
+        },
+        "required": {
+          "accuracy": 0.5588888888888889,
+          "ci95": [
+            0.48666666666666664,
+            0.6311111111111111
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.48777777777777775,
+            0.6311111111111111
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.7933333333333333,
+          "ci95": [
+            0.6833333333333333,
+            0.89
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6866666666666668,
+            0.8900000000000001
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.016666666666666666,
+          "ci95": [
+            0.0,
+            0.05
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.05
+          ]
+        },
+        "simple": {
+          "accuracy": 0.8666666666666667,
+          "ci95": [
+            0.7666666666666667,
+            0.95
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7666666666666667,
+            0.95
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.11,
+          "ci95": [
+            0.07,
+            0.155
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.092,
+          "ci95": [
+            0.055,
+            0.13299999999999998
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.29,
+          "ci95": [
+            0.23,
+            0.355
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 991,
+        "token_limit": 9
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.129,
+          "ci95": [
+            0.085,
+            0.177
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.085,
+            0.177
+          ]
+        },
+        "required": {
+          "accuracy": 0.14222222222222222,
+          "ci95": [
+            0.09333333333333334,
+            0.19444444444444445
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.09222222222222223,
+            0.19444444444444445
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.01,
+          "ci95": [
+            0.0,
+            0.06
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.030000000000000006
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.16666666666666666,
+          "ci95": [
+            0.08333333333333333,
+            0.26666666666666666
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.08333333333333333,
+            0.26666666666666666
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.26,
+          "ci95": [
+            0.15333333333333332,
+            0.3733333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.15333333333333332,
+            0.3766666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.341,
+          "ci95": [
+            0.278,
+            0.40702499999999964
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.186,
+          "ci95": [
+            0.134,
+            0.24100000000000002
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.341,
+          "ci95": [
+            0.278,
+            0.40702499999999964
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.067,
+          "ci95": [
+            0.035,
+            0.10300000000000001
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.021,
+          "ci95": [
+            0.005,
+            0.041999999999999996
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.427,
+          "ci95": [
+            0.36,
+            0.49400000000000005
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.036,
+          "ci95": [
+            0.013999999999999999,
+            0.065
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.041,
+          "ci95": [
+            0.016,
+            0.071
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.019
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.099,
+          "ci95": [
+            0.06,
+            0.141
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.009,
+          "ci95": [
+            0.0,
+            0.022000000000000002
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 988,
+        "token_limit": 12
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.127,
+          "ci95": [
+            0.08199999999999999,
+            0.175
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.08199999999999999,
+            0.175
+          ]
+        },
+        "required": {
+          "accuracy": 0.1411111111111111,
+          "ci95": [
+            0.09222222222222223,
+            0.19444444444444445
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0911111111111111,
+            0.19444444444444445
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.16666666666666666,
+          "ci95": [
+            0.08333333333333333,
+            0.26666666666666666
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.08333333333333333,
+            0.26666666666666666
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.25666666666666665,
+          "ci95": [
+            0.15,
+            0.37
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.15,
+            0.37
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.335,
+          "ci95": [
+            0.272,
+            0.4
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.186,
+          "ci95": [
+            0.134,
+            0.24100000000000002
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.335,
+          "ci95": [
+            0.272,
+            0.4
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.065,
+          "ci95": [
+            0.033,
+            0.10099999999999999
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.026,
+          "ci95": [
+            0.007975000000000024,
+            0.049
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.001,
+          "ci95": [
+            0.0,
+            0.006
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.43,
+          "ci95": [
+            0.36200000000000004,
+            0.49700000000000005
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.038,
+          "ci95": [
+            0.015,
+            0.066
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.044,
+          "ci95": [
+            0.019,
+            0.075
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.001,
+          "ci95": [
+            0.0,
+            0.006
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.012,
+          "ci95": [
+            0.0,
+            0.028000000000000004
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 947,
+        "token_limit": 52,
+        "grammar_trigger_replay_error": 1
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.467,
+          "ci95": [
+            0.397,
+            0.537
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.397,
+            0.5359999999999999
+          ]
+        },
+        "required": {
+          "accuracy": 0.5188888888888888,
+          "ci95": [
+            0.4466666666666667,
+            0.5911111111111111
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.4466666666666667,
+            0.5911111111111111
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.7533333333333333,
+          "ci95": [
+            0.64,
+            0.8566666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6433333333333332,
+            0.8566666666666667
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.8033333333333333,
+          "ci95": [
+            0.7,
+            0.8966666666666666
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7033333333333333,
+            0.8933333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.015,
+          "ci95": [
+            0.002,
+            0.033
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.985,
+          "ci95": [
+            0.9669999999999999,
+            0.9980000000000001
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.015,
+          "ci95": [
+            0.002,
+            0.033
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.11,
+          "ci95": [
+            0.07,
+            0.155
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.122,
+          "ci95": [
+            0.078,
+            0.16899999999999998
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.286,
+          "ci95": [
+            0.225,
+            0.349
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.001,
+          "ci95": [
+            0.0,
+            0.006
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.052,
+          "ci95": [
+            0.025,
+            0.084
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 996,
+        "token_limit": 4
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.474,
+          "ci95": [
+            0.405,
+            0.5419999999999999
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.405,
+            0.542
+          ]
+        },
+        "required": {
+          "accuracy": 0.5266666666666666,
+          "ci95": [
+            0.4533333333333333,
+            0.5988888888888889
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.45333333333333337,
+            0.5988888888888889
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.75,
+          "ci95": [
+            0.6333333333333333,
+            0.85
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.6333333333333333,
+            0.85
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.01,
+          "ci95": [
+            0.0,
+            0.04000000000000001
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.029999999999999995
+          ]
+        },
+        "simple": {
+          "accuracy": 0.82,
+          "ci95": [
+            0.7200000000000001,
+            0.9099999999999999
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.7233333333333333,
+            0.9066666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.11,
+          "ci95": [
+            0.07,
+            0.155
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.114,
+          "ci95": [
+            0.071975,
+            0.15899999999999997
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.296,
+          "ci95": [
+            0.235,
+            0.35900000000000004
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.101,
+          "ci95": [
+            0.061,
+            0.145
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.004,
+          "ci95": [
+            0.0,
+            0.013999999999999999
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 995,
+        "token_limit": 5
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.255,
+          "ci95": [
+            0.195,
+            0.32
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.195,
+            0.32
+          ]
+        },
+        "required": {
+          "accuracy": 0.2722222222222222,
+          "ci95": [
+            0.20555555555555555,
+            0.3388888888888889
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.20555555555555555,
+            0.3388888888888889
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.1,
+          "ci95": [
+            0.0,
+            0.25
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.25
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.4666666666666667,
+          "ci95": [
+            0.35,
+            0.6
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.35,
+            0.6
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.35,
+          "ci95": [
+            0.23333333333333334,
+            0.4666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.23333333333333334,
+            0.4666666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.295,
+          "ci95": [
+            0.235,
+            0.355
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.302,
+          "ci95": [
+            0.24,
+            0.368
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.295,
+          "ci95": [
+            0.235,
+            0.355
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.085,
+          "ci95": [
+            0.05,
+            0.125
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.395,
+          "ci95": [
+            0.325,
+            0.465
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.028,
+          "ci95": [
+            0.008,
+            0.053
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.015,
+          "ci95": [
+            0.0,
+            0.035
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.09,
+          "ci95": [
+            0.05,
+            0.13
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "loose",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 995,
+        "token_limit": 5
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.255,
+          "ci95": [
+            0.195,
+            0.32
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.195,
+            0.32
+          ]
+        },
+        "required": {
+          "accuracy": 0.2722222222222222,
+          "ci95": [
+            0.20555555555555555,
+            0.3388888888888889
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.20555555555555555,
+            0.3388888888888889
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.1,
+          "ci95": [
+            0.0,
+            0.25
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.25
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.4666666666666667,
+          "ci95": [
+            0.35,
+            0.6
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.35,
+            0.6
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.35,
+          "ci95": [
+            0.23333333333333334,
+            0.4666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.23333333333333334,
+            0.4666666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.295,
+          "ci95": [
+            0.235,
+            0.355
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.3,
+          "ci95": [
+            0.235,
+            0.365
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.295,
+          "ci95": [
+            0.235,
+            0.355
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.085,
+          "ci95": [
+            0.05,
+            0.125
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.395,
+          "ci95": [
+            0.325,
+            0.465
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.03,
+          "ci95": [
+            0.01,
+            0.055
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.015,
+          "ci95": [
+            0.0,
+            0.035
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.09,
+          "ci95": [
+            0.05,
+            0.13
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 995,
+        "token_limit": 5
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.555,
+          "ci95": [
+            0.485,
+            0.625
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.485,
+            0.625
+          ]
+        },
+        "required": {
+          "accuracy": 0.6111111111111112,
+          "ci95": [
+            0.5388888888888889,
+            0.6833333333333333
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5388888888888889,
+            0.6833333333333333
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.05,
+          "ci95": [
+            0.0,
+            0.15
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.15
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.9166666666666666,
+          "ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.9166666666666666,
+          "ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.095,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.095,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 995,
+        "token_limit": 5
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.555,
+          "ci95": [
+            0.485,
+            0.625
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.485,
+            0.625
+          ]
+        },
+        "required": {
+          "accuracy": 0.6111111111111112,
+          "ci95": [
+            0.5388888888888889,
+            0.6833333333333333
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5388888888888889,
+            0.6833333333333333
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.05,
+          "ci95": [
+            0.0,
+            0.15
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.15
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.9166666666666666,
+          "ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.9166666666666666,
+          "ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.8333333333333334,
+            0.9833333333333333
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.095,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.045,
+          "ci95": [
+            0.02,
+            0.075
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.095,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 995,
+        "token_limit": 5
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.269,
+          "ci95": [
+            0.20800000000000002,
+            0.331
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.20799999999999996,
+            0.3300249999999996
+          ]
+        },
+        "required": {
+          "accuracy": 0.2922222222222222,
+          "ci95": [
+            0.22666666666666666,
+            0.3588888888888889
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.22666666666666666,
+            0.35888888888888887
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.06,
+          "ci95": [
+            0.0,
+            0.17
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.17
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.48333333333333334,
+          "ci95": [
+            0.36666666666666664,
+            0.6166666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.36666666666666664,
+            0.6166666666666667
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.3933333333333333,
+          "ci95": [
+            0.27658333333333335,
+            0.5166666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.27666666666666667,
+            0.5166666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.296,
+          "ci95": [
+            0.235,
+            0.36
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.323,
+          "ci95": [
+            0.259,
+            0.389
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.296,
+          "ci95": [
+            0.235,
+            0.36
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.089,
+          "ci95": [
+            0.05,
+            0.13
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.371,
+          "ci95": [
+            0.305,
+            0.43799999999999994
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.025,
+          "ci95": [
+            0.005,
+            0.05
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.015,
+          "ci95": [
+            0.0,
+            0.035
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.094,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 995,
+        "token_limit": 5
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.271,
+          "ci95": [
+            0.21,
+            0.33299999999999996
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.21,
+            0.332
+          ]
+        },
+        "required": {
+          "accuracy": 0.29444444444444445,
+          "ci95": [
+            0.22777777777777777,
+            0.3611111111111111
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.2288888888888889,
+            0.3611111111111111
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.06,
+          "ci95": [
+            0.0,
+            0.17
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.17
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.4866666666666667,
+          "ci95": [
+            0.36666666666666664,
+            0.6166666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.36666666666666664,
+            0.6166666666666667
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.39666666666666667,
+          "ci95": [
+            0.27666666666666667,
+            0.5166666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.27999999999999997,
+            0.5166666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.294,
+          "ci95": [
+            0.23399999999999999,
+            0.358
+          ]
+        },
+        "schema_valid": {
+          "rate": 0.326,
+          "ci95": [
+            0.262,
+            0.3910249999999997
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.294,
+          "ci95": [
+            0.23399999999999999,
+            0.358
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.089,
+          "ci95": [
+            0.05,
+            0.13
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.37,
+          "ci95": [
+            0.305,
+            0.43700000000000006
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.026,
+          "ci95": [
+            0.006,
+            0.05
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.01,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.017,
+          "ci95": [
+            0.002,
+            0.036000000000000004
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.094,
+          "ci95": [
+            0.055,
+            0.135
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 994,
+        "token_limit": 6
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.544,
+          "ci95": [
+            0.475,
+            0.612
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.47600000000000003,
+            0.612
+          ]
+        },
+        "required": {
+          "accuracy": 0.6044444444444445,
+          "ci95": [
+            0.5333333333333333,
+            0.6755555555555556
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5344444444444445,
+            0.6755555555555556
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.92,
+          "ci95": [
+            0.8499999999999999,
+            0.98
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.85,
+            0.9766666666666667
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.8933333333333333,
+          "ci95": [
+            0.81,
+            0.9666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.81,
+            0.9666666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.051,
+          "ci95": [
+            0.024,
+            0.08199999999999999
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.017
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "expected_attempts": 1000,
+      "observed_attempts": 1000,
+      "complete": true,
+      "status_counts": {
+        "ok": 998,
+        "token_limit": 2
+      },
+      "scores": {
+        "all": {
+          "accuracy": 0.549,
+          "ci95": [
+            0.48,
+            0.617
+          ],
+          "items": 200,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.48097499999999993,
+            0.616
+          ]
+        },
+        "required": {
+          "accuracy": 0.61,
+          "ci95": [
+            0.5388888888888889,
+            0.6811111111111111
+          ],
+          "items": 180,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.5388888888888889,
+            0.6811111111111111
+          ]
+        },
+        "irrelevance": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 20,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "multiple": {
+          "accuracy": 0.93,
+          "ci95": [
+            0.8633333333333333,
+            0.9833333333333333
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.8633333333333333,
+            0.9833333333333333
+          ]
+        },
+        "parallel": {
+          "accuracy": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "simple": {
+          "accuracy": 0.9,
+          "ci95": [
+            0.8166666666666667,
+            0.9666666666666667
+          ],
+          "items": 60,
+          "operational_runs": 5,
+          "item_only_ci95": [
+            0.8200000000000001,
+            0.9666666666666667
+          ]
+        }
+      },
+      "diagnostics": {
+        "invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "schema_valid": {
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "error_invalid_json_or_format": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_function": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "error_missing_args": {
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "error_extra_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_type": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_wrong_arg_value": {
+          "rate": 0.046,
+          "ci95": [
+            0.02,
+            0.076
+          ]
+        },
+        "error_hallucinated_function": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_hallucinated_args": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "error_missing_calls": {
+          "rate": 0.3,
+          "ci95": [
+            0.24,
+            0.365
+          ]
+        },
+        "error_extra_calls": {
+          "rate": 0.1,
+          "ci95": [
+            0.06,
+            0.145
+          ]
+        },
+        "operational_grammar_trigger_replay_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_token_limit": {
+          "rate": 0.002,
+          "ci95": [
+            0.0,
+            0.009000000000000001
+          ]
+        },
+        "operational_request_error": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "operational_context_overflow": {
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  ],
+  "recovery_effects": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "all",
+      "decoder": "loose",
+      "free_loss": 0.039,
+      "free_loss_ci95": [
+        -0.007999999999999998,
+        0.087
+      ],
+      "constrained_loss": 0.039,
+      "constrained_loss_ci95": [
+        -0.007999999999999998,
+        0.08702499999999964
+      ],
+      "net_recovery": 0.0,
+      "net_recovery_ci95": [
+        -0.012,
+        0.014000000000000002
+      ],
+      "recovery_share": 0.0,
+      "recovery_share_reason": null,
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "all",
+      "decoder": "trigger_strict",
+      "free_loss": 0.039,
+      "free_loss_ci95": [
+        -0.007999999999999998,
+        0.087
+      ],
+      "constrained_loss": 0.027,
+      "constrained_loss_ci95": [
+        -0.015,
+        0.07
+      ],
+      "net_recovery": 0.012,
+      "net_recovery_ci95": [
+        -0.014000000000000002,
+        0.038
+      ],
+      "recovery_share": 0.3076923076923077,
+      "recovery_share_reason": null,
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "all",
+      "decoder": "whole_strict",
+      "free_loss": 0.039,
+      "free_loss_ci95": [
+        -0.007999999999999998,
+        0.087
+      ],
+      "constrained_loss": 0.02,
+      "constrained_loss_ci95": [
+        -0.021,
+        0.063
+      ],
+      "net_recovery": 0.019,
+      "net_recovery_ci95": [
+        -0.006000000000000003,
+        0.04502499999999965
+      ],
+      "recovery_share": 0.48717948717948717,
+      "recovery_share_reason": null,
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "required",
+      "decoder": "loose",
+      "free_loss": 0.03222222222222222,
+      "free_loss_ci95": [
+        -0.01888888888888889,
+        0.08333333333333333
+      ],
+      "constrained_loss": 0.03222222222222222,
+      "constrained_loss_ci95": [
+        -0.018888888888888893,
+        0.08333333333333333
+      ],
+      "net_recovery": 0.0,
+      "net_recovery_ci95": [
+        -0.013333333333333332,
+        0.014444444444444446
+      ],
+      "recovery_share": 0.0,
+      "recovery_share_reason": null,
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "required",
+      "decoder": "trigger_strict",
+      "free_loss": 0.03222222222222222,
+      "free_loss_ci95": [
+        -0.01888888888888889,
+        0.08333333333333333
+      ],
+      "constrained_loss": 0.01888888888888889,
+      "constrained_loss_ci95": [
+        -0.024444444444444442,
+        0.06222222222222223
+      ],
+      "net_recovery": 0.013333333333333334,
+      "net_recovery_ci95": [
+        -0.015555555555555555,
+        0.043333333333333335
+      ],
+      "recovery_share": 0.4137931034482759,
+      "recovery_share_reason": null,
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "required",
+      "decoder": "whole_strict",
+      "free_loss": 0.03222222222222222,
+      "free_loss_ci95": [
+        -0.01888888888888889,
+        0.08333333333333333
+      ],
+      "constrained_loss": 0.011111111111111112,
+      "constrained_loss_ci95": [
+        -0.03222222222222223,
+        0.05333333333333333
+      ],
+      "net_recovery": 0.021111111111111112,
+      "net_recovery_ci95": [
+        -0.006666666666666668,
+        0.05222222222222221
+      ],
+      "recovery_share": 0.6551724137931035,
+      "recovery_share_reason": null,
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "all",
+      "decoder": "loose",
+      "free_loss": -0.009,
+      "free_loss_ci95": [
+        -0.038,
+        0.02
+      ],
+      "constrained_loss": -0.007,
+      "constrained_loss_ci95": [
+        -0.035,
+        0.022000000000000002
+      ],
+      "net_recovery": -0.002,
+      "net_recovery_ci95": [
+        -0.01,
+        0.0030000000000000005
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "all",
+      "decoder": "trigger_strict",
+      "free_loss": -0.009,
+      "free_loss_ci95": [
+        -0.038,
+        0.02
+      ],
+      "constrained_loss": 0.022,
+      "constrained_loss_ci95": [
+        -0.015,
+        0.06
+      ],
+      "net_recovery": -0.031,
+      "net_recovery_ci95": [
+        -0.07100000000000001,
+        0.008
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "all",
+      "decoder": "whole_strict",
+      "free_loss": -0.009,
+      "free_loss_ci95": [
+        -0.038,
+        0.02
+      ],
+      "constrained_loss": 0.029,
+      "constrained_loss_ci95": [
+        -0.004999999999999999,
+        0.065
+      ],
+      "net_recovery": -0.038,
+      "net_recovery_ci95": [
+        -0.07899999999999999,
+        0.0019999999999999996
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "required",
+      "decoder": "loose",
+      "free_loss": -0.014444444444444444,
+      "free_loss_ci95": [
+        -0.044444444444444446,
+        0.014444444444444442
+      ],
+      "constrained_loss": -0.013333333333333334,
+      "constrained_loss_ci95": [
+        -0.044444444444444446,
+        0.015555555555555555
+      ],
+      "net_recovery": -0.0011111111111111111,
+      "net_recovery_ci95": [
+        -0.008888888888888889,
+        0.003333333333333334
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "required",
+      "decoder": "trigger_strict",
+      "free_loss": -0.014444444444444444,
+      "free_loss_ci95": [
+        -0.044444444444444446,
+        0.014444444444444442
+      ],
+      "constrained_loss": 0.024444444444444446,
+      "constrained_loss_ci95": [
+        -0.017777777777777778,
+        0.06666666666666667
+      ],
+      "net_recovery": -0.03888888888888889,
+      "net_recovery_ci95": [
+        -0.08333333333333333,
+        0.002222222222222219
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "required",
+      "decoder": "whole_strict",
+      "free_loss": -0.014444444444444444,
+      "free_loss_ci95": [
+        -0.044444444444444446,
+        0.014444444444444442
+      ],
+      "constrained_loss": 0.03222222222222222,
+      "constrained_loss_ci95": [
+        -0.006666666666666665,
+        0.07222222222222222
+      ],
+      "net_recovery": -0.04666666666666667,
+      "net_recovery_ci95": [
+        -0.0911111111111111,
+        -0.003333333333333335
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "all",
+      "decoder": "loose",
+      "free_loss": -0.014,
+      "free_loss_ci95": [
+        -0.03902499999999998,
+        0.01
+      ],
+      "constrained_loss": -0.016,
+      "constrained_loss_ci95": [
+        -0.043,
+        0.009
+      ],
+      "net_recovery": 0.002,
+      "net_recovery_ci95": [
+        -0.005,
+        0.009
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "all",
+      "decoder": "trigger_strict",
+      "free_loss": -0.014,
+      "free_loss_ci95": [
+        -0.03902499999999998,
+        0.01
+      ],
+      "constrained_loss": 0.011,
+      "constrained_loss_ci95": [
+        -0.004,
+        0.028999999999999998
+      ],
+      "net_recovery": -0.025,
+      "net_recovery_ci95": [
+        -0.052000000000000005,
+        2.7755575615628914e-19
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "all",
+      "decoder": "whole_strict",
+      "free_loss": -0.014,
+      "free_loss_ci95": [
+        -0.03902499999999998,
+        0.01
+      ],
+      "constrained_loss": 0.006,
+      "constrained_loss_ci95": [
+        -0.008000000000000002,
+        0.022000000000000002
+      ],
+      "net_recovery": -0.02,
+      "net_recovery_ci95": [
+        -0.046000000000000006,
+        0.005
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "required",
+      "decoder": "loose",
+      "free_loss": -0.02,
+      "free_loss_ci95": [
+        -0.04555555555555555,
+        0.003333333333333334
+      ],
+      "constrained_loss": -0.022222222222222223,
+      "constrained_loss_ci95": [
+        -0.04888888888888889,
+        0.002222222222222222
+      ],
+      "net_recovery": 0.0022222222222222222,
+      "net_recovery_ci95": [
+        -0.003333333333333334,
+        0.009999999999999998
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "required",
+      "decoder": "trigger_strict",
+      "free_loss": -0.02,
+      "free_loss_ci95": [
+        -0.04555555555555555,
+        0.003333333333333334
+      ],
+      "constrained_loss": 0.006666666666666667,
+      "constrained_loss_ci95": [
+        -0.0077777777777777776,
+        0.022222222222222223
+      ],
+      "net_recovery": -0.02666666666666667,
+      "net_recovery_ci95": [
+        -0.05555555555555555,
+        0.0011111111111111122
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "required",
+      "decoder": "whole_strict",
+      "free_loss": -0.02,
+      "free_loss_ci95": [
+        -0.04555555555555555,
+        0.003333333333333334
+      ],
+      "constrained_loss": 0.0011111111111111111,
+      "constrained_loss_ci95": [
+        -0.013333333333333332,
+        0.014444444444444446
+      ],
+      "net_recovery": -0.021111111111111112,
+      "net_recovery_ci95": [
+        -0.05,
+        0.005555555555555557
+      ],
+      "recovery_share": null,
+      "recovery_share_reason": "Nonpositive observed free loss; ratio undefined",
+      "recovery_share_ci95": null,
+      "ratio_denominator_stable": false
+    }
+  ],
+  "paired_decoder_contrasts": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "all",
+      "contrast": "whole_strict minus loose",
+      "incremental_recovery_difference": 0.019,
+      "ci95": [
+        -0.006999999999999999,
+        0.045024999999999656
+      ]
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "all",
+      "contrast": "whole_strict minus trigger_strict",
+      "incremental_recovery_difference": 0.007,
+      "ci95": [
+        -0.001,
+        0.017
+      ]
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "required",
+      "contrast": "whole_strict minus loose",
+      "incremental_recovery_difference": 0.021111111111111112,
+      "ci95": [
+        -0.0077777777777777776,
+        0.05111111111111111
+      ]
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "subset": "required",
+      "contrast": "whole_strict minus trigger_strict",
+      "incremental_recovery_difference": 0.0077777777777777776,
+      "ci95": [
+        -0.001111111111111111,
+        0.018888888888888893
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "all",
+      "contrast": "whole_strict minus loose",
+      "incremental_recovery_difference": -0.036,
+      "ci95": [
+        -0.07699999999999999,
+        0.003999999999999997
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "all",
+      "contrast": "whole_strict minus trigger_strict",
+      "incremental_recovery_difference": -0.007,
+      "ci95": [
+        -0.04499999999999999,
+        0.031
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "required",
+      "contrast": "whole_strict minus loose",
+      "incremental_recovery_difference": -0.04555555555555556,
+      "ci95": [
+        -0.0911111111111111,
+        -0.002222222222222223
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "required",
+      "contrast": "whole_strict minus trigger_strict",
+      "incremental_recovery_difference": -0.0077777777777777776,
+      "ci95": [
+        -0.05111111111111111,
+        0.03444444444444445
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "all",
+      "contrast": "whole_strict minus loose",
+      "incremental_recovery_difference": -0.022,
+      "ci95": [
+        -0.049,
+        0.003999999999999999
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "all",
+      "contrast": "whole_strict minus trigger_strict",
+      "incremental_recovery_difference": 0.005,
+      "ci95": [
+        -2.7755575615628914e-19,
+        0.013999999999999999
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "required",
+      "contrast": "whole_strict minus loose",
+      "incremental_recovery_difference": -0.023333333333333334,
+      "ci95": [
+        -0.05333333333333333,
+        0.0044444444444444444
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "required",
+      "contrast": "whole_strict minus trigger_strict",
+      "incremental_recovery_difference": 0.005555555555555556,
+      "ci95": [
+        -3.2381504884899e-19,
+        0.015555555555555555
+      ]
+    }
+  ],
+  "timing_events": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 101,
+      "batch_wall_seconds": 104.480131859,
+      "attempted_generations": 800,
+      "date": "2026-10-28T05:48:11.975437+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 211,
+      "batch_wall_seconds": 105.350040237,
+      "attempted_generations": 800,
+      "date": "2026-10-28T05:49:57.326258+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 307,
+      "batch_wall_seconds": 105.61096176799998,
+      "attempted_generations": 800,
+      "date": "2026-10-28T05:51:42.937865+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 401,
+      "batch_wall_seconds": 105.70282596800001,
+      "attempted_generations": 800,
+      "date": "2026-10-28T05:53:28.641471+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 503,
+      "batch_wall_seconds": 105.80388118400003,
+      "attempted_generations": 800,
+      "date": "2026-10-28T05:55:14.446036+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 101,
+      "batch_wall_seconds": 99.80504326200003,
+      "attempted_generations": 800,
+      "date": "2026-10-28T05:56:55.742960+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 211,
+      "batch_wall_seconds": 100.80897313699995,
+      "attempted_generations": 800,
+      "date": "2026-10-28T05:58:36.552588+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 307,
+      "batch_wall_seconds": 100.12045882400002,
+      "attempted_generations": 800,
+      "date": "2026-10-28T06:00:16.674739+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 401,
+      "batch_wall_seconds": 99.87079096699995,
+      "attempted_generations": 800,
+      "date": "2026-10-28T06:01:56.546176+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 503,
+      "batch_wall_seconds": 100.28761092100001,
+      "attempted_generations": 800,
+      "date": "2026-10-28T06:03:36.834504+00:00"
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "session_finished",
+      "attempted_generations": 8000,
+      "active_function_seconds": 1038.68807948,
+      "metadata": {
+        "date": "2026-10-28T05:46:18.411258+00:00",
+        "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+        "gpu_type": "A10",
+        "gpu_name": "NVIDIA A10",
+        "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+        "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+        "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+        "protocol_sha256": "e811e99b91029515c1bd83b7633caad0d2e94c1cb96df9af844cab4d78cdd9d0",
+        "batch_id": "full-002-1",
+        "model": "Qwen/Qwen3-0.6B"
+      },
+      "pip_audit": {
+        "dependencies": [
+          {
+            "name": "aiohappyeyeballs",
+            "version": "2.7.1",
+            "vulns": []
+          },
+          {
+            "name": "aiohttp",
+            "version": "3.14.5",
+            "vulns": []
+          },
+          {
+            "name": "aiosignal",
+            "version": "1.4.0",
+            "vulns": []
+          },
+          {
+            "name": "annotated-doc",
+            "version": "0.0.5",
+            "vulns": []
+          },
+          {
+            "name": "anyio",
+            "version": "4.15.1",
+            "vulns": []
+          },
+          {
+            "name": "attrs",
+            "version": "26.1.0",
+            "vulns": []
+          },
+          {
+            "name": "boolean-py",
+            "version": "5.0",
+            "vulns": []
+          },
+          {
+            "name": "cachecontrol",
+            "version": "0.14.4",
+            "vulns": []
+          },
+          {
+            "name": "cbor2",
+            "version": "6.1.5",
+            "vulns": []
+          },
+          {
+            "name": "certifi",
+            "version": "2026.10.23",
+            "vulns": []
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.5.2",
+            "vulns": []
+          },
+          {
+            "name": "click",
+            "version": "8.5.0",
+            "vulns": []
+          },
+          {
+            "name": "cmake",
+            "version": "4.4.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-bindings",
+            "version": "13.4.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-pathfinder",
+            "version": "1.8.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-toolkit",
+            "version": "13.0.3.0",
+            "vulns": []
+          },
+          {
+            "name": "cyclonedx-python-lib",
+            "version": "11.12.0",
+            "vulns": []
+          },
+          {
+            "name": "defusedxml",
+            "version": "0.7.1",
+            "vulns": []
+          },
+          {
+            "name": "filelock",
+            "version": "4.2.4",
+            "vulns": []
+          },
+          {
+            "name": "frozenlist",
+            "version": "1.8.0",
+            "vulns": []
+          },
+          {
+            "name": "fsspec",
+            "version": "2026.9.0",
+            "vulns": []
+          },
+          {
+            "name": "grpclib",
+            "version": "0.4.9",
+            "vulns": []
+          },
+          {
+            "name": "h11",
+            "version": "0.16.0",
+            "vulns": []
+          },
+          {
+            "name": "h2",
+            "version": "4.4.1",
+            "vulns": []
+          },
+          {
+            "name": "hf-xet",
+            "version": "1.7.0",
+            "vulns": []
+          },
+          {
+            "name": "hpack",
+            "version": "4.2.0",
+            "vulns": []
+          },
+          {
+            "name": "httpcore2",
+            "version": "2.16.0",
+            "vulns": []
+          },
+          {
+            "name": "httpx2",
+            "version": "2.16.0",
+            "vulns": []
+          },
+          {
+            "name": "huggingface-hub",
+            "version": "2.3.0",
+            "vulns": []
+          },
+          {
+            "name": "hyperframe",
+            "version": "6.1.0",
+            "vulns": []
+          },
+          {
+            "name": "idna",
+            "version": "3.20",
+            "vulns": []
+          },
+          {
+            "name": "iniconfig",
+            "version": "2.3.1",
+            "vulns": []
+          },
+          {
+            "name": "jinja2",
+            "version": "3.1.6",
+            "vulns": []
+          },
+          {
+            "name": "jsonschema",
+            "version": "4.26.0",
+            "vulns": []
+          },
+          {
+            "name": "jsonschema-specifications",
+            "version": "2025.9.1",
+            "vulns": []
+          },
+          {
+            "name": "license-expression",
+            "version": "30.4.4",
+            "vulns": []
+          },
+          {
+            "name": "markdown-it-py",
+            "version": "4.2.0",
+            "vulns": []
+          },
+          {
+            "name": "markupsafe",
+            "version": "3.0.4",
+            "vulns": []
+          },
+          {
+            "name": "mdurl",
+            "version": "0.1.2",
+            "vulns": []
+          },
+          {
+            "name": "modal",
+            "version": "1.6.2",
+            "vulns": []
+          },
+          {
+            "name": "mpmath",
+            "version": "1.3.0",
+            "vulns": []
+          },
+          {
+            "name": "msgpack",
+            "version": "1.2.4",
+            "vulns": []
+          },
+          {
+            "name": "multidict",
+            "version": "7.2.1",
+            "vulns": []
+          },
+          {
+            "name": "networkx",
+            "version": "3.7",
+            "vulns": []
+          },
+          {
+            "name": "ninja",
+            "version": "1.13.2",
+            "vulns": []
+          },
+          {
+            "name": "numpy",
+            "version": "2.5.4",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cublas",
+            "version": "13.1.1.3",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-cupti",
+            "version": "13.0.85",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-nvrtc",
+            "version": "13.0.88",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-runtime",
+            "version": "13.0.96",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cudnn-cu13",
+            "version": "9.24.0.43",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cufft",
+            "version": "12.0.0.61",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cufile",
+            "version": "1.15.1.6",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-curand",
+            "version": "10.4.0.35",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusolver",
+            "version": "12.0.4.66",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusparse",
+            "version": "12.6.3.3",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusparselt-cu13",
+            "version": "0.8.1",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nccl-cu13",
+            "version": "2.30.7",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvjitlink",
+            "version": "13.4.92",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvshmem-cu13",
+            "version": "3.4.5",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvtx",
+            "version": "13.0.85",
+            "vulns": []
+          },
+          {
+            "name": "packageurl-python",
+            "version": "0.17.6",
+            "vulns": []
+          },
+          {
+            "name": "packaging",
+            "version": "26.3",
+            "vulns": []
+          },
+          {
+            "name": "pip",
+            "version": "26.2.2",
+            "vulns": []
+          },
+          {
+            "name": "pip-api",
+            "version": "0.0.35",
+            "vulns": []
+          },
+          {
+            "name": "pip-audit",
+            "version": "2.10.1",
+            "vulns": []
+          },
+          {
+            "name": "pip-requirements-parser",
+            "version": "32.0.1",
+            "vulns": []
+          },
+          {
+            "name": "platformdirs",
+            "version": "4.13.6",
+            "vulns": []
+          },
+          {
+            "name": "pluggy",
+            "version": "1.7.0",
+            "vulns": []
+          },
+          {
+            "name": "propcache",
+            "version": "0.5.4",
+            "vulns": []
+          },
+          {
+            "name": "protobuf",
+            "version": "6.33.5",
+            "vulns": []
+          },
+          {
+            "name": "py-serializable",
+            "version": "2.1.0",
+            "vulns": []
+          },
+          {
+            "name": "pygments",
+            "version": "2.21.0",
+            "vulns": []
+          },
+          {
+            "name": "pyparsing",
+            "version": "3.3.3",
+            "vulns": []
+          },
+          {
+            "name": "pytest",
+            "version": "9.1.1",
+            "vulns": []
+          },
+          {
+            "name": "pyyaml",
+            "version": "6.0.3",
+            "vulns": []
+          },
+          {
+            "name": "referencing",
+            "version": "0.37.0",
+            "vulns": []
+          },
+          {
+            "name": "regex",
+            "version": "2026.9.29",
+            "vulns": []
+          },
+          {
+            "name": "requests",
+            "version": "2.34.2",
+            "vulns": []
+          },
+          {
+            "name": "rich",
+            "version": "15.0.0",
+            "vulns": []
+          },
+          {
+            "name": "rpds-py",
+            "version": "2026.9.1",
+            "vulns": []
+          },
+          {
+            "name": "safetensors",
+            "version": "0.8.0",
+            "vulns": []
+          },
+          {
+            "name": "sentencepiece",
+            "version": "0.2.1",
+            "vulns": []
+          },
+          {
+            "name": "setuptools",
+            "version": "84.2.1",
+            "vulns": []
+          },
+          {
+            "name": "shellingham",
+            "version": "1.5.4",
+            "vulns": []
+          },
+          {
+            "name": "sortedcontainers",
+            "version": "2.4.0",
+            "vulns": []
+          },
+          {
+            "name": "sympy",
+            "version": "1.14.0",
+            "vulns": []
+          },
+          {
+            "name": "synchronicity",
+            "version": "0.12.7",
+            "vulns": []
+          },
+          {
+            "name": "tokenizers",
+            "version": "0.23.3",
+            "vulns": []
+          },
+          {
+            "name": "toml",
+            "version": "0.10.2",
+            "vulns": []
+          },
+          {
+            "name": "tomli",
+            "version": "2.5.0",
+            "vulns": []
+          },
+          {
+            "name": "tomli-w",
+            "version": "1.2.0",
+            "vulns": []
+          },
+          {
+            "name": "torch",
+            "version": "2.14.1",
+            "vulns": []
+          },
+          {
+            "name": "tqdm",
+            "version": "4.70.1",
+            "vulns": []
+          },
+          {
+            "name": "transformers",
+            "version": "5.21.0",
+            "vulns": []
+          },
+          {
+            "name": "triton",
+            "version": "3.8.0",
+            "vulns": []
+          },
+          {
+            "name": "truststore",
+            "version": "0.10.5",
+            "vulns": []
+          },
+          {
+            "name": "typer",
+            "version": "0.27.3",
+            "vulns": []
+          },
+          {
+            "name": "types-certifi",
+            "version": "2021.10.8.3",
+            "vulns": []
+          },
+          {
+            "name": "types-toml",
+            "version": "0.10.8.20260518",
+            "vulns": []
+          },
+          {
+            "name": "typing-extensions",
+            "version": "4.16.0",
+            "vulns": []
+          },
+          {
+            "name": "urllib3",
+            "version": "2.8.0",
+            "vulns": []
+          },
+          {
+            "name": "watchfiles",
+            "version": "1.3.0",
+            "vulns": []
+          },
+          {
+            "name": "yarl",
+            "version": "1.25.1",
+            "vulns": []
+          }
+        ],
+        "fixes": []
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "kind": "supervisor_finished",
+      "date": "2026-10-28T06:03:41.550864+00:00",
+      "active_function_seconds": 1049.701846734
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 101,
+      "batch_wall_seconds": 117.022281352,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:15:23.313791+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 211,
+      "batch_wall_seconds": 117.732698911,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:17:21.047288+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 307,
+      "batch_wall_seconds": 117.70139446599998,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:19:18.749336+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 401,
+      "batch_wall_seconds": 116.335875848,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:21:15.085912+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 503,
+      "batch_wall_seconds": 118.32593367500004,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:23:13.420218+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 101,
+      "batch_wall_seconds": 95.06438320099994,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:24:50.223302+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 211,
+      "batch_wall_seconds": 96.86915580499999,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:26:27.093167+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 307,
+      "batch_wall_seconds": 95.909409138,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:28:03.003324+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 401,
+      "batch_wall_seconds": 96.899025822,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:29:39.902965+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 503,
+      "batch_wall_seconds": 94.16621427300004,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:31:14.069956+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "session_finished",
+      "attempted_generations": 8000,
+      "active_function_seconds": 1070.9566335279999,
+      "metadata": {
+        "date": "2026-10-28T16:13:23.412654+00:00",
+        "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+        "gpu_type": "A10",
+        "gpu_name": "NVIDIA A10",
+        "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+        "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+        "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+        "protocol_sha256": "75cbdf173a82821d88c7663170e5c3e25c5103cba128e2dd51ed2bb8e6a4f310",
+        "batch_id": "full-002-2-concurrent1",
+        "model": "meta-llama/Llama-3.2-1B-Instruct"
+      },
+      "pip_audit": {
+        "dependencies": [
+          {
+            "name": "aiohappyeyeballs",
+            "version": "2.7.1",
+            "vulns": []
+          },
+          {
+            "name": "aiohttp",
+            "version": "3.14.5",
+            "vulns": []
+          },
+          {
+            "name": "aiosignal",
+            "version": "1.4.0",
+            "vulns": []
+          },
+          {
+            "name": "annotated-doc",
+            "version": "0.0.5",
+            "vulns": []
+          },
+          {
+            "name": "anyio",
+            "version": "4.15.1",
+            "vulns": []
+          },
+          {
+            "name": "attrs",
+            "version": "26.1.0",
+            "vulns": []
+          },
+          {
+            "name": "boolean-py",
+            "version": "5.0",
+            "vulns": []
+          },
+          {
+            "name": "cachecontrol",
+            "version": "0.14.4",
+            "vulns": []
+          },
+          {
+            "name": "cbor2",
+            "version": "6.1.5",
+            "vulns": []
+          },
+          {
+            "name": "certifi",
+            "version": "2026.10.23",
+            "vulns": []
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.5.2",
+            "vulns": []
+          },
+          {
+            "name": "click",
+            "version": "8.5.0",
+            "vulns": []
+          },
+          {
+            "name": "cmake",
+            "version": "4.4.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-bindings",
+            "version": "13.4.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-pathfinder",
+            "version": "1.8.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-toolkit",
+            "version": "13.0.3.0",
+            "vulns": []
+          },
+          {
+            "name": "cyclonedx-python-lib",
+            "version": "11.12.0",
+            "vulns": []
+          },
+          {
+            "name": "defusedxml",
+            "version": "0.7.1",
+            "vulns": []
+          },
+          {
+            "name": "filelock",
+            "version": "4.2.4",
+            "vulns": []
+          },
+          {
+            "name": "frozenlist",
+            "version": "1.8.0",
+            "vulns": []
+          },
+          {
+            "name": "fsspec",
+            "version": "2026.9.0",
+            "vulns": []
+          },
+          {
+            "name": "grpclib",
+            "version": "0.4.9",
+            "vulns": []
+          },
+          {
+            "name": "h11",
+            "version": "0.16.0",
+            "vulns": []
+          },
+          {
+            "name": "h2",
+            "version": "4.4.1",
+            "vulns": []
+          },
+          {
+            "name": "hf-xet",
+            "version": "1.7.0",
+            "vulns": []
+          },
+          {
+            "name": "hpack",
+            "version": "4.2.0",
+            "vulns": []
+          },
+          {
+            "name": "httpcore2",
+            "version": "2.16.0",
+            "vulns": []
+          },
+          {
+            "name": "httpx2",
+            "version": "2.16.0",
+            "vulns": []
+          },
+          {
+            "name": "huggingface-hub",
+            "version": "2.3.0",
+            "vulns": []
+          },
+          {
+            "name": "hyperframe",
+            "version": "6.1.0",
+            "vulns": []
+          },
+          {
+            "name": "idna",
+            "version": "3.20",
+            "vulns": []
+          },
+          {
+            "name": "iniconfig",
+            "version": "2.3.1",
+            "vulns": []
+          },
+          {
+            "name": "jinja2",
+            "version": "3.1.6",
+            "vulns": []
+          },
+          {
+            "name": "jsonschema",
+            "version": "4.26.0",
+            "vulns": []
+          },
+          {
+            "name": "jsonschema-specifications",
+            "version": "2025.9.1",
+            "vulns": []
+          },
+          {
+            "name": "license-expression",
+            "version": "30.4.4",
+            "vulns": []
+          },
+          {
+            "name": "markdown-it-py",
+            "version": "4.2.0",
+            "vulns": []
+          },
+          {
+            "name": "markupsafe",
+            "version": "3.0.4",
+            "vulns": []
+          },
+          {
+            "name": "mdurl",
+            "version": "0.1.2",
+            "vulns": []
+          },
+          {
+            "name": "modal",
+            "version": "1.6.2",
+            "vulns": []
+          },
+          {
+            "name": "mpmath",
+            "version": "1.3.0",
+            "vulns": []
+          },
+          {
+            "name": "msgpack",
+            "version": "1.2.4",
+            "vulns": []
+          },
+          {
+            "name": "multidict",
+            "version": "7.2.1",
+            "vulns": []
+          },
+          {
+            "name": "networkx",
+            "version": "3.7",
+            "vulns": []
+          },
+          {
+            "name": "ninja",
+            "version": "1.13.2",
+            "vulns": []
+          },
+          {
+            "name": "numpy",
+            "version": "2.5.4",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cublas",
+            "version": "13.1.1.3",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-cupti",
+            "version": "13.0.85",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-nvrtc",
+            "version": "13.0.88",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-runtime",
+            "version": "13.0.96",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cudnn-cu13",
+            "version": "9.24.0.43",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cufft",
+            "version": "12.0.0.61",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cufile",
+            "version": "1.15.1.6",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-curand",
+            "version": "10.4.0.35",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusolver",
+            "version": "12.0.4.66",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusparse",
+            "version": "12.6.3.3",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusparselt-cu13",
+            "version": "0.8.1",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nccl-cu13",
+            "version": "2.30.7",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvjitlink",
+            "version": "13.4.92",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvshmem-cu13",
+            "version": "3.4.5",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvtx",
+            "version": "13.0.85",
+            "vulns": []
+          },
+          {
+            "name": "packageurl-python",
+            "version": "0.17.6",
+            "vulns": []
+          },
+          {
+            "name": "packaging",
+            "version": "26.3",
+            "vulns": []
+          },
+          {
+            "name": "pip",
+            "version": "26.2.2",
+            "vulns": []
+          },
+          {
+            "name": "pip-api",
+            "version": "0.0.35",
+            "vulns": []
+          },
+          {
+            "name": "pip-audit",
+            "version": "2.10.1",
+            "vulns": []
+          },
+          {
+            "name": "pip-requirements-parser",
+            "version": "32.0.1",
+            "vulns": []
+          },
+          {
+            "name": "platformdirs",
+            "version": "4.13.6",
+            "vulns": []
+          },
+          {
+            "name": "pluggy",
+            "version": "1.7.0",
+            "vulns": []
+          },
+          {
+            "name": "propcache",
+            "version": "0.5.4",
+            "vulns": []
+          },
+          {
+            "name": "protobuf",
+            "version": "6.33.5",
+            "vulns": []
+          },
+          {
+            "name": "py-serializable",
+            "version": "2.1.0",
+            "vulns": []
+          },
+          {
+            "name": "pygments",
+            "version": "2.21.0",
+            "vulns": []
+          },
+          {
+            "name": "pyparsing",
+            "version": "3.3.3",
+            "vulns": []
+          },
+          {
+            "name": "pytest",
+            "version": "9.1.1",
+            "vulns": []
+          },
+          {
+            "name": "pyyaml",
+            "version": "6.0.3",
+            "vulns": []
+          },
+          {
+            "name": "referencing",
+            "version": "0.37.0",
+            "vulns": []
+          },
+          {
+            "name": "regex",
+            "version": "2026.9.29",
+            "vulns": []
+          },
+          {
+            "name": "requests",
+            "version": "2.34.2",
+            "vulns": []
+          },
+          {
+            "name": "rich",
+            "version": "15.0.0",
+            "vulns": []
+          },
+          {
+            "name": "rpds-py",
+            "version": "2026.9.1",
+            "vulns": []
+          },
+          {
+            "name": "safetensors",
+            "version": "0.8.0",
+            "vulns": []
+          },
+          {
+            "name": "sentencepiece",
+            "version": "0.2.1",
+            "vulns": []
+          },
+          {
+            "name": "setuptools",
+            "version": "84.2.1",
+            "vulns": []
+          },
+          {
+            "name": "shellingham",
+            "version": "1.5.4",
+            "vulns": []
+          },
+          {
+            "name": "sortedcontainers",
+            "version": "2.4.0",
+            "vulns": []
+          },
+          {
+            "name": "sympy",
+            "version": "1.14.0",
+            "vulns": []
+          },
+          {
+            "name": "synchronicity",
+            "version": "0.12.7",
+            "vulns": []
+          },
+          {
+            "name": "tokenizers",
+            "version": "0.23.3",
+            "vulns": []
+          },
+          {
+            "name": "toml",
+            "version": "0.10.2",
+            "vulns": []
+          },
+          {
+            "name": "tomli",
+            "version": "2.5.0",
+            "vulns": []
+          },
+          {
+            "name": "tomli-w",
+            "version": "1.2.0",
+            "vulns": []
+          },
+          {
+            "name": "torch",
+            "version": "2.14.1",
+            "vulns": []
+          },
+          {
+            "name": "tqdm",
+            "version": "4.70.1",
+            "vulns": []
+          },
+          {
+            "name": "transformers",
+            "version": "5.21.0",
+            "vulns": []
+          },
+          {
+            "name": "triton",
+            "version": "3.8.0",
+            "vulns": []
+          },
+          {
+            "name": "truststore",
+            "version": "0.10.5",
+            "vulns": []
+          },
+          {
+            "name": "typer",
+            "version": "0.27.3",
+            "vulns": []
+          },
+          {
+            "name": "types-certifi",
+            "version": "2021.10.8.3",
+            "vulns": []
+          },
+          {
+            "name": "types-toml",
+            "version": "0.10.8.20260518",
+            "vulns": []
+          },
+          {
+            "name": "typing-extensions",
+            "version": "4.16.0",
+            "vulns": []
+          },
+          {
+            "name": "urllib3",
+            "version": "2.8.0",
+            "vulns": []
+          },
+          {
+            "name": "watchfiles",
+            "version": "1.3.0",
+            "vulns": []
+          },
+          {
+            "name": "yarl",
+            "version": "1.25.1",
+            "vulns": []
+          }
+        ],
+        "fixes": []
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "kind": "supervisor_finished",
+      "date": "2026-10-28T16:31:19.575966+00:00",
+      "active_function_seconds": 1079.933416175
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 101,
+      "batch_wall_seconds": 245.010448564,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:44:01.529514+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 211,
+      "batch_wall_seconds": 246.02155647599997,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:48:07.551958+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 307,
+      "batch_wall_seconds": 251.226991097,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:52:18.779640+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 401,
+      "batch_wall_seconds": 247.85411349499998,
+      "attempted_generations": 800,
+      "date": "2026-10-28T16:56:26.634728+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "F16",
+      "seed": 503,
+      "batch_wall_seconds": 247.31424916800006,
+      "attempted_generations": 800,
+      "date": "2026-10-28T17:00:33.949671+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 101,
+      "batch_wall_seconds": 175.0599782710001,
+      "attempted_generations": 800,
+      "date": "2026-10-28T17:03:32.324689+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 211,
+      "batch_wall_seconds": 176.00072066899997,
+      "attempted_generations": 800,
+      "date": "2026-10-28T17:06:28.326084+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 307,
+      "batch_wall_seconds": 174.791357694,
+      "attempted_generations": 800,
+      "date": "2026-10-28T17:09:23.118159+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 401,
+      "batch_wall_seconds": 176.924603402,
+      "attempted_generations": 800,
+      "date": "2026-10-28T17:12:20.043448+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "run_finished",
+      "precision": "Q4_K_M",
+      "seed": 503,
+      "batch_wall_seconds": 177.7176694310001,
+      "attempted_generations": 800,
+      "date": "2026-10-28T17:15:17.761904+00:00"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "session_finished",
+      "attempted_generations": 8000,
+      "active_function_seconds": 2128.78729505,
+      "metadata": {
+        "date": "2026-10-28T16:39:49.267303+00:00",
+        "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+        "gpu_type": "A10",
+        "gpu_name": "NVIDIA A10",
+        "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+        "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+        "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+        "protocol_sha256": "75cbdf173a82821d88c7663170e5c3e25c5103cba128e2dd51ed2bb8e6a4f310",
+        "batch_id": "full-002-3-concurrent1",
+        "model": "meta-llama/Llama-3.2-3B-Instruct"
+      },
+      "pip_audit": {
+        "dependencies": [
+          {
+            "name": "aiohappyeyeballs",
+            "version": "2.7.1",
+            "vulns": []
+          },
+          {
+            "name": "aiohttp",
+            "version": "3.14.5",
+            "vulns": []
+          },
+          {
+            "name": "aiosignal",
+            "version": "1.4.0",
+            "vulns": []
+          },
+          {
+            "name": "annotated-doc",
+            "version": "0.0.5",
+            "vulns": []
+          },
+          {
+            "name": "anyio",
+            "version": "4.15.1",
+            "vulns": []
+          },
+          {
+            "name": "attrs",
+            "version": "26.1.0",
+            "vulns": []
+          },
+          {
+            "name": "boolean-py",
+            "version": "5.0",
+            "vulns": []
+          },
+          {
+            "name": "cachecontrol",
+            "version": "0.14.4",
+            "vulns": []
+          },
+          {
+            "name": "cbor2",
+            "version": "6.1.5",
+            "vulns": []
+          },
+          {
+            "name": "certifi",
+            "version": "2026.10.23",
+            "vulns": []
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.5.2",
+            "vulns": []
+          },
+          {
+            "name": "click",
+            "version": "8.5.0",
+            "vulns": []
+          },
+          {
+            "name": "cmake",
+            "version": "4.4.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-bindings",
+            "version": "13.4.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-pathfinder",
+            "version": "1.8.4",
+            "vulns": []
+          },
+          {
+            "name": "cuda-toolkit",
+            "version": "13.0.3.0",
+            "vulns": []
+          },
+          {
+            "name": "cyclonedx-python-lib",
+            "version": "11.12.0",
+            "vulns": []
+          },
+          {
+            "name": "defusedxml",
+            "version": "0.7.1",
+            "vulns": []
+          },
+          {
+            "name": "filelock",
+            "version": "4.2.4",
+            "vulns": []
+          },
+          {
+            "name": "frozenlist",
+            "version": "1.8.0",
+            "vulns": []
+          },
+          {
+            "name": "fsspec",
+            "version": "2026.9.0",
+            "vulns": []
+          },
+          {
+            "name": "grpclib",
+            "version": "0.4.9",
+            "vulns": []
+          },
+          {
+            "name": "h11",
+            "version": "0.16.0",
+            "vulns": []
+          },
+          {
+            "name": "h2",
+            "version": "4.4.1",
+            "vulns": []
+          },
+          {
+            "name": "hf-xet",
+            "version": "1.7.0",
+            "vulns": []
+          },
+          {
+            "name": "hpack",
+            "version": "4.2.0",
+            "vulns": []
+          },
+          {
+            "name": "httpcore2",
+            "version": "2.16.0",
+            "vulns": []
+          },
+          {
+            "name": "httpx2",
+            "version": "2.16.0",
+            "vulns": []
+          },
+          {
+            "name": "huggingface-hub",
+            "version": "2.3.0",
+            "vulns": []
+          },
+          {
+            "name": "hyperframe",
+            "version": "6.1.0",
+            "vulns": []
+          },
+          {
+            "name": "idna",
+            "version": "3.20",
+            "vulns": []
+          },
+          {
+            "name": "iniconfig",
+            "version": "2.3.1",
+            "vulns": []
+          },
+          {
+            "name": "jinja2",
+            "version": "3.1.6",
+            "vulns": []
+          },
+          {
+            "name": "jsonschema",
+            "version": "4.26.0",
+            "vulns": []
+          },
+          {
+            "name": "jsonschema-specifications",
+            "version": "2025.9.1",
+            "vulns": []
+          },
+          {
+            "name": "license-expression",
+            "version": "30.4.4",
+            "vulns": []
+          },
+          {
+            "name": "markdown-it-py",
+            "version": "4.2.0",
+            "vulns": []
+          },
+          {
+            "name": "markupsafe",
+            "version": "3.0.4",
+            "vulns": []
+          },
+          {
+            "name": "mdurl",
+            "version": "0.1.2",
+            "vulns": []
+          },
+          {
+            "name": "modal",
+            "version": "1.6.2",
+            "vulns": []
+          },
+          {
+            "name": "mpmath",
+            "version": "1.3.0",
+            "vulns": []
+          },
+          {
+            "name": "msgpack",
+            "version": "1.2.4",
+            "vulns": []
+          },
+          {
+            "name": "multidict",
+            "version": "7.2.1",
+            "vulns": []
+          },
+          {
+            "name": "networkx",
+            "version": "3.7",
+            "vulns": []
+          },
+          {
+            "name": "ninja",
+            "version": "1.13.2",
+            "vulns": []
+          },
+          {
+            "name": "numpy",
+            "version": "2.5.4",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cublas",
+            "version": "13.1.1.3",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-cupti",
+            "version": "13.0.85",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-nvrtc",
+            "version": "13.0.88",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cuda-runtime",
+            "version": "13.0.96",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cudnn-cu13",
+            "version": "9.24.0.43",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cufft",
+            "version": "12.0.0.61",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cufile",
+            "version": "1.15.1.6",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-curand",
+            "version": "10.4.0.35",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusolver",
+            "version": "12.0.4.66",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusparse",
+            "version": "12.6.3.3",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-cusparselt-cu13",
+            "version": "0.8.1",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nccl-cu13",
+            "version": "2.30.7",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvjitlink",
+            "version": "13.4.92",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvshmem-cu13",
+            "version": "3.4.5",
+            "vulns": []
+          },
+          {
+            "name": "nvidia-nvtx",
+            "version": "13.0.85",
+            "vulns": []
+          },
+          {
+            "name": "packageurl-python",
+            "version": "0.17.6",
+            "vulns": []
+          },
+          {
+            "name": "packaging",
+            "version": "26.3",
+            "vulns": []
+          },
+          {
+            "name": "pip",
+            "version": "26.2.2",
+            "vulns": []
+          },
+          {
+            "name": "pip-api",
+            "version": "0.0.35",
+            "vulns": []
+          },
+          {
+            "name": "pip-audit",
+            "version": "2.10.1",
+            "vulns": []
+          },
+          {
+            "name": "pip-requirements-parser",
+            "version": "32.0.1",
+            "vulns": []
+          },
+          {
+            "name": "platformdirs",
+            "version": "4.13.6",
+            "vulns": []
+          },
+          {
+            "name": "pluggy",
+            "version": "1.7.0",
+            "vulns": []
+          },
+          {
+            "name": "propcache",
+            "version": "0.5.4",
+            "vulns": []
+          },
+          {
+            "name": "protobuf",
+            "version": "6.33.5",
+            "vulns": []
+          },
+          {
+            "name": "py-serializable",
+            "version": "2.1.0",
+            "vulns": []
+          },
+          {
+            "name": "pygments",
+            "version": "2.21.0",
+            "vulns": []
+          },
+          {
+            "name": "pyparsing",
+            "version": "3.3.3",
+            "vulns": []
+          },
+          {
+            "name": "pytest",
+            "version": "9.1.1",
+            "vulns": []
+          },
+          {
+            "name": "pyyaml",
+            "version": "6.0.3",
+            "vulns": []
+          },
+          {
+            "name": "referencing",
+            "version": "0.37.0",
+            "vulns": []
+          },
+          {
+            "name": "regex",
+            "version": "2026.9.29",
+            "vulns": []
+          },
+          {
+            "name": "requests",
+            "version": "2.34.2",
+            "vulns": []
+          },
+          {
+            "name": "rich",
+            "version": "15.0.0",
+            "vulns": []
+          },
+          {
+            "name": "rpds-py",
+            "version": "2026.9.1",
+            "vulns": []
+          },
+          {
+            "name": "safetensors",
+            "version": "0.8.0",
+            "vulns": []
+          },
+          {
+            "name": "sentencepiece",
+            "version": "0.2.1",
+            "vulns": []
+          },
+          {
+            "name": "setuptools",
+            "version": "84.2.1",
+            "vulns": []
+          },
+          {
+            "name": "shellingham",
+            "version": "1.5.4",
+            "vulns": []
+          },
+          {
+            "name": "sortedcontainers",
+            "version": "2.4.0",
+            "vulns": []
+          },
+          {
+            "name": "sympy",
+            "version": "1.14.0",
+            "vulns": []
+          },
+          {
+            "name": "synchronicity",
+            "version": "0.12.7",
+            "vulns": []
+          },
+          {
+            "name": "tokenizers",
+            "version": "0.23.3",
+            "vulns": []
+          },
+          {
+            "name": "toml",
+            "version": "0.10.2",
+            "vulns": []
+          },
+          {
+            "name": "tomli",
+            "version": "2.5.0",
+            "vulns": []
+          },
+          {
+            "name": "tomli-w",
+            "version": "1.2.0",
+            "vulns": []
+          },
+          {
+            "name": "torch",
+            "version": "2.14.1",
+            "vulns": []
+          },
+          {
+            "name": "tqdm",
+            "version": "4.70.1",
+            "vulns": []
+          },
+          {
+            "name": "transformers",
+            "version": "5.21.0",
+            "vulns": []
+          },
+          {
+            "name": "triton",
+            "version": "3.8.0",
+            "vulns": []
+          },
+          {
+            "name": "truststore",
+            "version": "0.10.5",
+            "vulns": []
+          },
+          {
+            "name": "typer",
+            "version": "0.27.3",
+            "vulns": []
+          },
+          {
+            "name": "types-certifi",
+            "version": "2021.10.8.3",
+            "vulns": []
+          },
+          {
+            "name": "types-toml",
+            "version": "0.10.8.20260518",
+            "vulns": []
+          },
+          {
+            "name": "typing-extensions",
+            "version": "4.16.0",
+            "vulns": []
+          },
+          {
+            "name": "urllib3",
+            "version": "2.8.0",
+            "vulns": []
+          },
+          {
+            "name": "watchfiles",
+            "version": "1.3.0",
+            "vulns": []
+          },
+          {
+            "name": "yarl",
+            "version": "1.25.1",
+            "vulns": []
+          }
+        ],
+        "fixes": []
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "kind": "supervisor_finished",
+      "date": "2026-10-28T17:15:22.322651+00:00",
+      "active_function_seconds": 2137.268174067
+    }
+  ]
+}

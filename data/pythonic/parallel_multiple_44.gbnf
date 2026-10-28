@@ -1,0 +1,28 @@
+root ::= ws "[" ws (call (ws "," ws call)*)? ws "]" ws
+ws ::= [ \t\n\r]*
+string ::= "\"" ([^"\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "\"" | "'" ([^'\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "'"
+number ::= "-"? ("0" | [1-9] [0-9]*) ("." [0-9]+)? ([eE] [+-]? [0-9]+)?
+integer ::= "-"? ("0" | [1-9] [0-9]*)
+boolean ::= "True" | "False"
+null ::= "None"
+value ::= string | number | boolean | null | any-object | any-array
+any-object ::= "{" ws (string ws ":" ws value (ws "," ws string ws ":" ws value)*)? ws "}"
+any-array ::= "[" ws (value (ws "," ws value)*)? ws "]"
+node-2 ::= integer
+node-3 ::= "'small'" | "'medium'" | "'large'"
+node-1-0 ::= "rooms" ws "=" ws node-2 node-1-1 | "meeting_room" ws "=" ws node-3 node-1-2
+node-1-1 ::= ws "," ws "meeting_room" ws "=" ws node-3 node-1-3
+node-1-2 ::= ws "," ws "rooms" ws "=" ws node-2 node-1-3
+node-1-3 ::= ""
+node-5 ::= integer
+node-6 ::= integer
+node-7 ::= boolean
+node-4-0 ::= "bedrooms" ws "=" ws node-5 node-4-1 | "bathrooms" ws "=" ws node-6 node-4-2 | "garden" ws "=" ws node-7 node-4-4
+node-4-1 ::= ws "," ws "bathrooms" ws "=" ws node-6 node-4-3 | ws "," ws "garden" ws "=" ws node-7 node-4-5
+node-4-2 ::= ws "," ws "bedrooms" ws "=" ws node-5 node-4-3 | ws "," ws "garden" ws "=" ws node-7 node-4-6
+node-4-3 ::= "" | ws "," ws "garden" ws "=" ws node-7 node-4-7
+node-4-4 ::= ws "," ws "bedrooms" ws "=" ws node-5 node-4-5 | ws "," ws "bathrooms" ws "=" ws node-6 node-4-6
+node-4-5 ::= ws "," ws "bathrooms" ws "=" ws node-6 node-4-7
+node-4-6 ::= ws "," ws "bedrooms" ws "=" ws node-5 node-4-7
+node-4-7 ::= ""
+call ::= ("office_designer.design" ws "(" ws node-1-0 ws ")") | ("house_designer.design" ws "(" ws node-4-0 ws ")")

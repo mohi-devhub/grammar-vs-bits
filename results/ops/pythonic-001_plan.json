@@ -1,0 +1,28 @@
+{
+  "frozen_at": "2026-10-28T19:37:46.252359+00:00",
+  "observations": 4800,
+  "design": "2 models × 2 precisions × 2 arms × 5 run labels × 120 cases",
+  "additional_cap_usd": 3,
+  "project_cap_usd": 12,
+  "gpu": "A10",
+  "queue_limit_seconds": 1800,
+  "maximum_resource_envelope_per_model_usd": 1.45,
+  "bounded_resource_calculation_per_model_usd": 1.30903,
+  "resource_envelopes_plus_storage_buffer_usd": 3,
+  "meta_format_correction": "Separate sensitivity; never pooled into the original matrix",
+  "models": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+      "slug": "Llama-3.2-1B-Instruct",
+      "family": "llama"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "slug": "Llama-3.2-3B-Instruct",
+      "family": "llama"
+    }
+  ],
+  "interpretation_plan": "Report accuracy and paired precision/decoder interactions on parallel, parallel_multiple and pooled120. Compare joint Pythonic vs original JSON contracts only on the identical60 parallel cases. Retain truncations and errors as failures; do not replace partial failed sessions or select items using scores."
+}

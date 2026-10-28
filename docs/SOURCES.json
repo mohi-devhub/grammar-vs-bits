@@ -1,0 +1,175 @@
+{
+  "checked_at_utc": "2026-10-27T08:57:53.051408+00:00",
+  "scope": "Literature and source-review provenance, not an experimental model/runtime/dependency lock. SHA-256 applies to fetched pinned repository bytes only. Sources were inspected, not executed.",
+  "sources": [
+    {
+      "kind": "repository_file",
+      "repository": "Happynood/quant-toolcall-bench",
+      "revision": "6b6e29e5c83a91a52bdfc68b5f3063de172c0e55",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Happynood/quant-toolcall-bench/6b6e29e5c83a91a52bdfc68b5f3063de172c0e55/README.md",
+      "sha256": "87411a073a1d5c3b69345755aa75578bdbe9e4432c8900fd3a3fd6c50f5db5ec",
+      "bytes": 13510,
+      "fetch_status": "ok"
+    },
+    {
+      "kind": "repository_file",
+      "repository": "Happynood/quant-toolcall-bench",
+      "revision": "6b6e29e5c83a91a52bdfc68b5f3063de172c0e55",
+      "path": "docs/constrained_decoding_findings.md",
+      "url": "https://raw.githubusercontent.com/Happynood/quant-toolcall-bench/6b6e29e5c83a91a52bdfc68b5f3063de172c0e55/docs/constrained_decoding_findings.md",
+      "sha256": "990da962626b4f8190dcbe7d16cd11fa0d4db8a59bc9c3cc95975cbca1524a30",
+      "bytes": 7463,
+      "fetch_status": "ok"
+    },
+    {
+      "kind": "repository_file",
+      "repository": "Happynood/quant-toolcall-bench",
+      "revision": "6b6e29e5c83a91a52bdfc68b5f3063de172c0e55",
+      "path": "src/quantcall/decoding/gbnf.py",
+      "url": "https://raw.githubusercontent.com/Happynood/quant-toolcall-bench/6b6e29e5c83a91a52bdfc68b5f3063de172c0e55/src/quantcall/decoding/gbnf.py",
+      "sha256": "2d71ced8cb6bcf49fe106222ba1b3115c219fbbf6d70dbf4137c729a9c11b880",
+      "bytes": 6764,
+      "fetch_status": "ok"
+    },
+    {
+      "kind": "repository_file",
+      "repository": "Happynood/quant-mcp-bench",
+      "revision": "fc98a47c6a0ef77bb8be3a915016b42d203faf45",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Happynood/quant-mcp-bench/fc98a47c6a0ef77bb8be3a915016b42d203faf45/README.md",
+      "sha256": "5ba5027de1a00e8497b8dcb087f124b812e4fef93efdd1d0407a3931d5d93f6e",
+      "bytes": 7613,
+      "fetch_status": "ok"
+    },
+    {
+      "kind": "repository_file",
+      "repository": "Happynood/quant-mcp-bench",
+      "revision": "fc98a47c6a0ef77bb8be3a915016b42d203faf45",
+      "path": "docs/RUN_REAL.md",
+      "url": "https://raw.githubusercontent.com/Happynood/quant-mcp-bench/fc98a47c6a0ef77bb8be3a915016b42d203faf45/docs/RUN_REAL.md",
+      "sha256": "180949265707708caa9e0062b332b9e6f71c5d00626a1092cb57eb2c5c6f6123",
+      "bytes": 48786,
+      "fetch_status": "ok"
+    },
+    {
+      "kind": "repository_file",
+      "repository": "Code-byte404/toolhound",
+      "revision": "97666be79a2af2afb78b36a168a5f89f84be6d97",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Code-byte404/toolhound/97666be79a2af2afb78b36a168a5f89f84be6d97/README.md",
+      "sha256": "6a3a04a359bacae7099d3516f5d58534468dada650cc5cb879ecdae8ad8ac6ba",
+      "bytes": 21403,
+      "fetch_status": "ok"
+    },
+    {
+      "kind": "paper",
+      "title": "Flat Score, Amplified Failures: How the Error Budget Masks Damage in Quantized LLM Agents",
+      "version": "2607.27275v1",
+      "url": "https://arxiv.org/abs/2607.27275v1",
+      "review_scope": "main text and limitations/reproducibility appendices"
+    },
+    {
+      "kind": "paper",
+      "title": "“Give Me BF16 or Give Me Death”? Accuracy-Performance Trade-Offs in LLM Quantization",
+      "version": "2411.02355v4",
+      "url": "https://arxiv.org/abs/2411.02355v4",
+      "review_scope": "main text and limitations"
+    },
+    {
+      "kind": "paper",
+      "title": "Less is More: Optimizing Function Calling for LLM Execution on Edge Devices",
+      "version": "2411.15399v1",
+      "url": "https://arxiv.org/abs/2411.15399v1",
+      "review_scope": "abstract, methodology, and experimental setup/results, including quantization variants and retrieval-size comparisons"
+    },
+    {
+      "kind": "paper",
+      "title": "Which Decisions Low-Bit Quantization Breaks, and How to Predict Them",
+      "version": "2608.06564v5",
+      "url": "https://arxiv.org/abs/2608.06564v5",
+      "review_scope": "abstract, section 4.3, and appendix A.19"
+    },
+    {
+      "kind": "paper",
+      "title": "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding",
+      "version": "2310.07075v3",
+      "url": "https://arxiv.org/abs/2310.07075v3",
+      "review_scope": "abstract"
+    },
+    {
+      "kind": "paper",
+      "title": "JSONSchemaBench: A Rigorous Benchmark of Structured Outputs for Language Models",
+      "version": "2501.10868v3",
+      "url": "https://arxiv.org/abs/2501.10868v3",
+      "review_scope": "abstract"
+    },
+    {
+      "kind": "paper",
+      "title": "Constrained Decoding Eliminates Structural Failures in Small LLMs but Reveals a Scale-Dependent Semantic Gap",
+      "version": "2609.23742v1",
+      "url": "https://arxiv.org/abs/2609.23742v1",
+      "review_scope": "sections 3–4"
+    },
+    {
+      "kind": "paper",
+      "title": "Constraint Tax in Open-Weight LLMs: An Empirical Study of Tool Calling Suppression Under Structured Output Constraints",
+      "version": "2606.25605v1",
+      "url": "https://arxiv.org/abs/2606.25605v1",
+      "review_scope": "abstract"
+    },
+    {
+      "kind": "paper",
+      "title": "Repair, Not Improvement: Decomposing Constrained Decoding in Tool-Call Abstention",
+      "version": "2608.13959v2",
+      "url": "https://arxiv.org/abs/2608.13959v2",
+      "review_scope": "v2 abstract; v1 main text inspected separately"
+    },
+    {
+      "kind": "paper",
+      "title": "TriAxialKV: Toward Extreme Low-Precision KV-Cache Quantization for Agentic Inference Tasks",
+      "version": "2605.17170v1",
+      "url": "https://arxiv.org/abs/2605.17170v1",
+      "review_scope": "abstract and section 4"
+    },
+    {
+      "kind": "paper",
+      "title": "StructureBench: A Unified Benchmark Suite for Multi-Scenario Structured Generation Tasks with On-Device Models",
+      "url": "https://ijcai.org/proceedings/2026/267",
+      "review_scope": "official proceedings abstract"
+    },
+    {
+      "kind": "paper",
+      "title": "The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models",
+      "url": "https://proceedings.mlr.press/v267/patil25a.html",
+      "review_scope": "official proceedings page and official evaluation blog"
+    },
+    {
+      "kind": "benchmark_documentation",
+      "url": "https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html"
+    },
+    {
+      "kind": "implementation_documentation",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md",
+      "note": "Moving documentation reference only; no experimental runtime commit selected."
+    },
+    {
+      "kind": "model_card",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+      "note": "Official page reviewed; no weights downloaded and authenticated access not tested."
+    },
+    {
+      "kind": "model_card",
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct",
+      "note": "Official page reviewed; no weights downloaded and authenticated access not tested."
+    },
+    {
+      "kind": "model_card",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "url": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct",
+      "note": "Official page reviewed; no weights downloaded and authenticated access not tested."
+    }
+  ]
+}

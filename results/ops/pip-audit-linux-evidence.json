@@ -1,0 +1,8 @@
+{
+  "status": "No known vulnerabilities found",
+  "evidence": "results/ops/setup_logs/pilot-launch-002.log",
+  "audited_image_id": "im-wrkInb6pBhB0p404y1jfTY",
+  "audit_command": "python -m pip_audit --local --format json --output /opt/pip-audit.json",
+  "full_report_location_in_image": "/opt/pip-audit.json",
+  "note": "This file records build-log evidence; it is not the dependency-level audit report itself."
+}

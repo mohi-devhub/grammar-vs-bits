@@ -1,0 +1,19 @@
+{
+  "scope": "Current pilot implementation and runtime inputs; source hashes captured during build, not an upstream release commit",
+  "sha256": {
+    "cloud.py": "553908d1252dae386a6320cbf50851d53934d19295f64714bf55cd9a856fdf02",
+    "qunti/runner.py": "ce4fc4502195967109ca5eebce238f44396d51bf8aac8d724112c8de95237f3e",
+    "qunti/grammar.py": "2512096c0ab59477f38747e94baeaa00daa7aabab0fdb91559a18de6b734c59d",
+    "qunti/scoring.py": "f1b7317cef6a5c516b2eac36a0e284275fc28c7e7510dc7a6d43032a17742a7e",
+    "qunti/diagnostics.py": "1d5f025177a7e524fea8f98f7cf0e7881ae2f6fa2bb2c01a1ef1f07c7e0fa4cb",
+    "scripts/pilot.py": "2614185e9cecf40d67d74362f11ed44f8c1650c10f39e5b715b00f323d44d9b5",
+    "requirements.lock": "6bc9c54a6258813de17d59fc521e95d7ce07c2a00d96ea563effc5ddc86d810e",
+    "requirements-build.lock": "b67de5d9492de723cd7f27f196ae6072be23d5d61037eb443520793c070bbf38",
+    "uv.lock": "14089abb4060d3aec64cebf46bf57fb641717df15fef9a4adee9dc4a9550edbc",
+    "configs/protocol.json": "27dcf95956d306e5bd7fcbc1e5aeaee4be54bff80753a3d4a06c45f7194499cc",
+    "configs/container.json": "5822304efd57a8aa46b5213f06da42d1ce04c2459883ecf9e0cdb635652bc608"
+  },
+  "local_pip_audit": "results/ops/pip-audit-local.json",
+  "local_python": "3.12.12",
+  "modal_bootstrap_python_minor": "3.12"
+}

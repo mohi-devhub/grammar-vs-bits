@@ -1,0 +1,6 @@
+{
+  "app_id": "ap-A7HQVe4jv9ziB3fm9Zurhz",
+  "reason": "Stopped before image build/worker to correct unsupported quantizer --threads flag discovered in pinned source. Correct syntax: input output type nthreads. Retain settling allowance, no inferred zero.",
+  "source_evidence": "vendor/llama.cpp/tools/quantize/quantize.cpp:609",
+  "stopped": true
+}

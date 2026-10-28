@@ -1,0 +1,23 @@
+{
+  "run_id": "pythonic-001",
+  "started_at": "2026-10-28T19:37:46.470916+00:00",
+  "complete": false,
+  "optional_cap_usd": 3,
+  "project_cap_usd": 12,
+  "sessions": [
+    {
+      "batch_id": "pythonic-001-1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "app_id": "ap-7NzFvlnymH2f0t1G8mWAgf",
+      "observations": 0,
+      "complete": false,
+      "reported_cost_usd": 5.4120000000000004e-05,
+      "conservative_cost_usd": 1.45,
+      "source": "results/sensitivity/pythonic-001/pythonic-001-1.jsonl"
+    }
+  ],
+  "project_reported_cost_usd": 2.6110228699999998,
+  "optional_reported_cost_usd": 5.4120000000000004e-05,
+  "finished_at": "2026-10-28T19:45:14.809652+00:00",
+  "stop_reason": "Missing full_cloud module during cloud import; zero generations; own app stopped"
+}

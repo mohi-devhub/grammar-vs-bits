@@ -1,0 +1,8 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "reported_project_cost_usd": 0.3433585599999999,
+  "conservative_project_cost_usd": 0.34335856,
+  "next_model_projection_usd": 0.7659915866948632,
+  "settling_storage_buffer_usd": 0.75,
+  "date": "2026-10-28T05:13:00.525432+00:00"
+}

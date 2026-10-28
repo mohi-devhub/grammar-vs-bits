@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-28T20:35:07.465595+00:00",
+  "tests_passed": 36,
+  "pip_audit": "clean",
+  "lockfile_check": "uv lock --offline --check passed",
+  "paper": {
+    "created_at": "2026-10-28T20:34:17.947114+00:00",
+    "run_id": "full-002",
+    "pages": 6,
+    "pdf_sha256": "3661c7b95939e485f9985e61a55397a8c6a492342309b3152d3fb8748be22530",
+    "toolchain_source": "docs/PAPER_TOOLCHAIN.json",
+    "shell_escape": false,
+    "warnings": [
+      "Package epstopdf Warning: Shell escape feature is not enabled.",
+      "Underfull \\hbox (badness 1009) in paragraph at lines 24--24",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 27--28",
+      "Underfull \\hbox (badness 1117) in paragraph at lines 27--28",
+      "Underfull \\hbox (badness 6316) in paragraph at lines 1--35",
+      "Underfull \\hbox (badness 1024) in paragraph at lines 39--40",
+      "Underfull \\vbox (badness 10000) has occurred while \\output is active []",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\vbox (badness 10000) has occurred while \\output is active []",
+      "Underfull \\vbox (badness 6893) has occurred while \\output is active []",
+      "Underfull \\hbox (badness 1097) in paragraph at lines 3--4",
+      "Underfull \\hbox (badness 5726) in paragraph at lines 5--6",
+      "Underfull \\hbox (badness 1292) in paragraph at lines 5--6",
+      "Underfull \\hbox (badness 4660) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 4--7",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 4--7",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 9--12",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 9--12",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 9--12",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 14--17",
+      "Underfull \\hbox (badness 3158) in paragraph at lines 19--22",
+      "Underfull \\hbox (badness 1184) in paragraph at lines 36--40",
+      "Underfull \\hbox (badness 1810) in paragraph at lines 48--52",
+      "Underfull \\hbox (badness 1184) in paragraph at lines 48--52",
+      "Underfull \\hbox (badness 2277) in paragraph at lines 60--63",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 60--63",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 60--63",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 71--74",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 71--74"
+    ]
+  },
+  "primary_result_hashes_unchanged": true,
+  "primary_result_sha256": {
+    "results/full/full-002/summary.json": "476004e7ef242977ef5a930941cb60008eaa62c6f27bfdf256a082dc520b7107",
+    "results/full/full-002/scored.jsonl": "c2f986b51af7606052bd02a2d5fdb6bc7fffd6e056ea36d5ae2b289085cccdd2",
+    "results/full/full-002-1/events.jsonl": "6b0486896de373b953341dec01a0ea10172b33db9d54ddde349eeeec16cb7cab",
+    "results/full/full-002-2-concurrent1/events.jsonl": "d31c5c033a0be484eeb1c1845f982db3d86c208f49e316ca758cffdbf40b1fa5",
+    "results/full/full-002-3-concurrent1/events.jsonl": "fd37b0c160c9d7475587ead7edb897f4a38a7c7cf125afa5db40efa49bf78d4a"
+  },
+  "independent_primary_numeric_checks": {
+    "raw_observations": 24000,
+    "independently_scored_accuracy_mismatches": 0,
+    "statuses": {
+      "ok": 23860,
+      "token_limit": 139,
+      "grammar_trigger_replay_error": 1
+    },
+    "checks": {
+      "primary_cell_subset_intervals": 144,
+      "sensitivity_cell_subset_intervals": 144,
+      "sensitivity_recovery_intervals": 54,
+      "sensitivity_decoder_contrast_intervals": 36
+    },
+    "table1_cells_match": 24,
+    "table2_estimate_and_CI_triplets_match": 27,
+    "whole_strict_token_limits": [
+      {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "quant": "Q4_K_M",
+        "id": "parallel_70",
+        "seed": 101,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "quant": "Q4_K_M",
+        "id": "parallel_70",
+        "seed": 211,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "quant": "Q4_K_M",
+        "id": "parallel_181",
+        "seed": 401,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "quant": "Q4_K_M",
+        "id": "parallel_70",
+        "seed": 401,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "quant": "F16",
+        "id": "parallel_29",
+        "seed": 101,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "quant": "F16",
+        "id": "parallel_29",
+        "seed": 211,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "quant": "F16",
+        "id": "parallel_29",
+        "seed": 307,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "quant": "F16",
+        "id": "parallel_29",
+        "seed": 401,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "quant": "F16",
+        "id": "parallel_29",
+        "seed": 503,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "quant": "Q4_K_M",
+        "id": "parallel_29",
+        "seed": 401,
+        "schema_valid": true
+      },
+      {
+        "model": "meta-llama/Llama-3.2-3B-Instruct",
+        "quant": "Q4_K_M",
+        "id": "parallel_29",
+        "seed": 503,
+        "schema_valid": true
+      }
+    ],
+    "paper_sha256": "3661c7b95939e485f9985e61a55397a8c6a492342309b3152d3fb8748be22530"
+  },
+  "optional_unique_observations": 4800,
+  "optional_status_counts": {
+    "ok": 4222,
+    "token_limit": 578
+  },
+  "optional_same_weight_artifacts_as_primary": true,
+  "optional_token_limits_at_recorded_cap": true,
+  "all_archived_file_hashes_verified": true,
+  "own_apps_active": 0,
+  "own_containers_active": 0,
+  "shutdown_source": "results/ops/audit-fixes_final_shutdown.json",
+  "reported_costs": {
+    "optional_reported_usd": 0.7346155099999999,
+    "project_reported_usd": 3.3455842600000008,
+    "optional_cap_usd": 3,
+    "project_cap_usd": 12,
+    "settled": false,
+    "includes_failed_attempts": true,
+    "batches": [
+      {
+        "batch_id": "pythonic-001-1",
+        "app_id": "ap-7NzFvlnymH2f0t1G8mWAgf",
+        "reported_usd": 7.732e-05
+      },
+      {
+        "batch_id": "pythonic-002-1",
+        "app_id": "ap-OJSBUvgHYQHf0jcXQmKBzL",
+        "reported_usd": 0.37100732
+      },
+      {
+        "batch_id": "pythonic-002-2",
+        "app_id": "ap-xfZa1fgVlfuq07yVmVtEFn",
+        "reported_usd": 0.26695346
+      },
+      {
+        "batch_id": "pythonic-002-3",
+        "app_id": "ap-XXA33v7wlyYq8mQIz07aFf",
+        "reported_usd": 0.09657741
+      }
+    ]
+  },
+  "source_snapshots": 56,
+  "archive_checksum_source": "dist/release.json after packaging; not embedded to avoid a self-referential checksum"
+}

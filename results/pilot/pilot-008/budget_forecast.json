@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-10-27T17:11:06.222318+00:00",
+  "batch": "pilot-008",
+  "gpu_type": "A10",
+  "billing_capture": "2026-10-27T17:11:06.202272+00:00",
+  "project_cap_usd": 12.0,
+  "reported_project_cost_usd": 0.34335856,
+  "reported_batch_cost_usd": 0.07961645,
+  "reported_batch_cost_per_received_generation_usd": 0.00026538816666666666,
+  "reported_project_cost_amortized_per_received_generation_usd": 0.0011445285333333334,
+  "billing_is_final": false,
+  "storage_completeness_established": false,
+  "retained_reservations_usd": 4.0,
+  "full_run_approved": false,
+  "scenarios": [
+    {
+      "assumed_llama_1b_cost_multiple": 1,
+      "assumed_llama_3b_cost_multiple": 1,
+      "assumed_four_arm_pool_cost_multiplier": 1,
+      "inference_resource_usd": 1.1319831733897265,
+      "unmeasured_preparation_startup_storage_allowance_usd": 1.0,
+      "additional_full_run_planning_usd": 2.1319831733897265,
+      "project_total_at_reported_spend_usd": 2.4753417333897265,
+      "fits_cap_at_reported_spend": true
+    },
+    {
+      "assumed_llama_1b_cost_multiple": 1,
+      "assumed_llama_3b_cost_multiple": 1,
+      "assumed_four_arm_pool_cost_multiplier": 2,
+      "inference_resource_usd": 2.263966346779453,
+      "unmeasured_preparation_startup_storage_allowance_usd": 1.0,
+      "additional_full_run_planning_usd": 3.263966346779453,
+      "project_total_at_reported_spend_usd": 3.607324906779453,
+      "fits_cap_at_reported_spend": true
+    },
+    {
+      "assumed_llama_1b_cost_multiple": 2,
+      "assumed_llama_3b_cost_multiple": 6,
+      "assumed_four_arm_pool_cost_multiplier": 1,
+      "inference_resource_usd": 3.395949520169179,
+      "unmeasured_preparation_startup_storage_allowance_usd": 1.0,
+      "additional_full_run_planning_usd": 4.395949520169179,
+      "project_total_at_reported_spend_usd": 4.739308080169179,
+      "fits_cap_at_reported_spend": true
+    },
+    {
+      "assumed_llama_1b_cost_multiple": 2,
+      "assumed_llama_3b_cost_multiple": 6,
+      "assumed_four_arm_pool_cost_multiplier": 2,
+      "inference_resource_usd": 6.791899040338358,
+      "unmeasured_preparation_startup_storage_allowance_usd": 1.0,
+      "additional_full_run_planning_usd": 7.791899040338358,
+      "project_total_at_reported_spend_usd": 8.135257600338358,
+      "fits_cap_at_reported_spend": true
+    },
+    {
+      "assumed_llama_1b_cost_multiple": 3,
+      "assumed_llama_3b_cost_multiple": 10,
+      "assumed_four_arm_pool_cost_multiplier": 1,
+      "inference_resource_usd": 5.28258814248539,
+      "unmeasured_preparation_startup_storage_allowance_usd": 1.0,
+      "additional_full_run_planning_usd": 6.28258814248539,
+      "project_total_at_reported_spend_usd": 6.62594670248539,
+      "fits_cap_at_reported_spend": true
+    },
+    {
+      "assumed_llama_1b_cost_multiple": 3,
+      "assumed_llama_3b_cost_multiple": 10,
+      "assumed_four_arm_pool_cost_multiplier": 2,
+      "inference_resource_usd": 10.56517628497078,
+      "unmeasured_preparation_startup_storage_allowance_usd": 1.0,
+      "additional_full_run_planning_usd": 11.56517628497078,
+      "project_total_at_reported_spend_usd": 11.90853484497078,
+      "fits_cap_at_reported_spend": true
+    }
+  ],
+  "forecast_scope": "Same allocated GPU type as pilot. Model/arm factors and $1 setup/storage allowance are assumptions, not measured bounds. Prior reported spending may lag.",
+  "complete_run_unit": "One model and operational seed, both precisions and all four arms on 200 frozen items: 1600 attempts, same GPU type",
+  "split_policy": "If confirmed October headroom cannot cover all unchanged cells, allocate complete run units to October and the remainder to November from Nov 1; both require explicit approval."
+}

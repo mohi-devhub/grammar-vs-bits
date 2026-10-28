@@ -1,0 +1,42 @@
+root ::= ws "[" ws (call (ws "," ws call)*)? ws "]" ws
+ws ::= [ \t\n\r]*
+string ::= "\"" ([^"\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "\"" | "'" ([^'\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "'"
+number ::= "-"? ("0" | [1-9] [0-9]*) ("." [0-9]+)? ([eE] [+-]? [0-9]+)?
+integer ::= "-"? ("0" | [1-9] [0-9]*)
+boolean ::= "True" | "False"
+null ::= "None"
+value ::= string | number | boolean | null | any-object | any-array
+any-object ::= "{" ws (string ws ":" ws value (ws "," ws string ws ":" ws value)*)? ws "}"
+any-array ::= "[" ws (value (ws "," ws value)*)? ws "]"
+node-3 ::= integer
+node-2 ::= "[" ws (node-3 (ws "," ws node-3)*)? ws "]"
+node-5 ::= integer
+node-4 ::= "[" ws (node-5 (ws "," ws node-5)*)? ws "]"
+node-6 ::= boolean
+node-1-0 ::= "group1" ws "=" ws node-2 node-1-1 | "group2" ws "=" ws node-4 node-1-2 | "equal_variance" ws "=" ws node-6 node-1-4
+node-1-1 ::= ws "," ws "group2" ws "=" ws node-4 node-1-3 | ws "," ws "equal_variance" ws "=" ws node-6 node-1-5
+node-1-2 ::= ws "," ws "group1" ws "=" ws node-2 node-1-3 | ws "," ws "equal_variance" ws "=" ws node-6 node-1-6
+node-1-3 ::= "" | ws "," ws "equal_variance" ws "=" ws node-6 node-1-7
+node-1-4 ::= ws "," ws "group1" ws "=" ws node-2 node-1-5 | ws "," ws "group2" ws "=" ws node-4 node-1-6
+node-1-5 ::= ws "," ws "group2" ws "=" ws node-4 node-1-7
+node-1-6 ::= ws "," ws "group1" ws "=" ws node-2 node-1-7
+node-1-7 ::= ""
+node-8 ::= string
+node-9 ::= string
+node-11 ::= "'Patio'" | "'Wi-Fi'" | "'Happy Hour'" | "'Wheelchair Accessible'"
+node-10 ::= "[" ws (node-11 (ws "," ws node-11)*)? ws "]"
+node-7-0 ::= "location" ws "=" ws node-8 node-7-1 | "cuisine" ws "=" ws node-9 node-7-2 | "amenities" ws "=" ws node-10 node-7-4
+node-7-1 ::= ws "," ws "cuisine" ws "=" ws node-9 node-7-3 | ws "," ws "amenities" ws "=" ws node-10 node-7-5
+node-7-2 ::= ws "," ws "location" ws "=" ws node-8 node-7-3 | ws "," ws "amenities" ws "=" ws node-10 node-7-6
+node-7-3 ::= "" | ws "," ws "amenities" ws "=" ws node-10 node-7-7
+node-7-4 ::= ws "," ws "location" ws "=" ws node-8 node-7-5 | ws "," ws "cuisine" ws "=" ws node-9 node-7-6
+node-7-5 ::= ws "," ws "cuisine" ws "=" ws node-9 node-7-7
+node-7-6 ::= ws "," ws "location" ws "=" ws node-8 node-7-7
+node-7-7 ::= ""
+node-13 ::= string
+node-14 ::= integer
+node-12-0 ::= "hobby" ws "=" ws node-13 node-12-1 | "trait_count" ws "=" ws node-14 node-12-2
+node-12-1 ::= "" | ws "," ws "trait_count" ws "=" ws node-14 node-12-3
+node-12-2 ::= ws "," ws "hobby" ws "=" ws node-13 node-12-3
+node-12-3 ::= ""
+call ::= ("run_two_sample_ttest" ws "(" ws node-1-0 ws ")") | ("restaurant_search.find_closest" ws "(" ws node-7-0 ws ")") | ("get_personality_traits" ws "(" ws node-12-0 ws ")")

@@ -1,0 +1,2564 @@
+{
+  "created_at": "2026-10-28T17:16:52.549027+00:00",
+  "run_id": "full-002",
+  "exploratory": true,
+  "interpretation": "Paired observable outcomes. Rescue of a format failure is not proof of exclusively syntactic knowledge loss. Schema-valid failures are task failures, not direct evidence of a particular internal mechanism.",
+  "rows": [
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "loose",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 725,
+          "denominator": 1000,
+          "rate": 0.725,
+          "ci95": [
+            0.665,
+            0.785
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "both_wrong": {
+          "attempts": 275,
+          "denominator": 1000,
+          "rate": 0.275,
+          "ci95": [
+            0.215,
+            0.335
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 230,
+          "denominator": 1000,
+          "rate": 0.23,
+          "ci95": [
+            0.175,
+            0.29
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 725,
+          "denominator": 1000,
+          "rate": 0.725,
+          "ci95": [
+            0.665,
+            0.785
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 25,
+          "denominator": 1000,
+          "rate": 0.025,
+          "ci95": [
+            0.005,
+            0.05
+          ]
+        },
+        "both_wrong": {
+          "attempts": 250,
+          "denominator": 1000,
+          "rate": 0.25,
+          "ci95": [
+            0.195,
+            0.31
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 250,
+          "denominator": 1000,
+          "rate": 0.25,
+          "ci95": [
+            0.195,
+            0.31
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 725,
+          "denominator": 1000,
+          "rate": 0.725,
+          "ci95": [
+            0.665,
+            0.785
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 25,
+          "denominator": 1000,
+          "rate": 0.025,
+          "ci95": [
+            0.005,
+            0.05
+          ]
+        },
+        "both_wrong": {
+          "attempts": 250,
+          "denominator": 1000,
+          "rate": 0.25,
+          "ci95": [
+            0.195,
+            0.31
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 250,
+          "denominator": 1000,
+          "rate": 0.25,
+          "ci95": [
+            0.195,
+            0.31
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 680,
+          "denominator": 1000,
+          "rate": 0.68,
+          "ci95": [
+            0.6149999999999999,
+            0.743
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 6,
+          "denominator": 1000,
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.016
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 6,
+          "denominator": 1000,
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.017
+          ]
+        },
+        "both_wrong": {
+          "attempts": 308,
+          "denominator": 1000,
+          "rate": 0.308,
+          "ci95": [
+            0.245,
+            0.373
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 6,
+          "denominator": 1000,
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.017
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 232,
+          "denominator": 1000,
+          "rate": 0.232,
+          "ci95": [
+            0.17597500000000002,
+            0.292
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 680,
+          "denominator": 1000,
+          "rate": 0.68,
+          "ci95": [
+            0.6140000000000001,
+            0.7430000000000001
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 6,
+          "denominator": 1000,
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.014999999999999998
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 43,
+          "denominator": 1000,
+          "rate": 0.043,
+          "ci95": [
+            0.018000000000000002,
+            0.07102499999999964
+          ]
+        },
+        "both_wrong": {
+          "attempts": 271,
+          "denominator": 1000,
+          "rate": 0.271,
+          "ci95": [
+            0.21,
+            0.33399999999999996
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 29,
+          "denominator": 1000,
+          "rate": 0.029,
+          "ci95": [
+            0.009000000000000001,
+            0.054000000000000006
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 4,
+          "denominator": 1000,
+          "rate": 0.004,
+          "ci95": [
+            0.0,
+            0.012000000000000002
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 277,
+          "denominator": 1000,
+          "rate": 0.277,
+          "ci95": [
+            0.216975,
+            0.34
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 684,
+          "denominator": 1000,
+          "rate": 0.684,
+          "ci95": [
+            0.619,
+            0.747
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 2,
+          "denominator": 1000,
+          "rate": 0.002,
+          "ci95": [
+            0.0,
+            0.009
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 46,
+          "denominator": 1000,
+          "rate": 0.046,
+          "ci95": [
+            0.020000000000000004,
+            0.075
+          ]
+        },
+        "both_wrong": {
+          "attempts": 268,
+          "denominator": 1000,
+          "rate": 0.268,
+          "ci95": [
+            0.20800000000000002,
+            0.33
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 30,
+          "denominator": 1000,
+          "rate": 0.03,
+          "ci95": [
+            0.01,
+            0.055
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015000000000000003
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 270,
+          "denominator": 1000,
+          "rate": 0.27,
+          "ci95": [
+            0.209,
+            0.33199999999999996
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "loose",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 120,
+          "denominator": 1000,
+          "rate": 0.12,
+          "ci95": [
+            0.075,
+            0.165
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "both_wrong": {
+          "attempts": 880,
+          "denominator": 1000,
+          "rate": 0.88,
+          "ci95": [
+            0.835,
+            0.925
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 80,
+          "denominator": 1000,
+          "rate": 0.08,
+          "ci95": [
+            0.045,
+            0.12
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 115,
+          "denominator": 1000,
+          "rate": 0.115,
+          "ci95": [
+            0.075,
+            0.16
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 374,
+          "denominator": 1000,
+          "rate": 0.374,
+          "ci95": [
+            0.309,
+            0.44
+          ]
+        },
+        "both_wrong": {
+          "attempts": 506,
+          "denominator": 1000,
+          "rate": 0.506,
+          "ci95": [
+            0.43700000000000006,
+            0.575
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 492,
+          "denominator": 1000,
+          "rate": 0.492,
+          "ci95": [
+            0.42400000000000004,
+            0.561
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 115,
+          "denominator": 1000,
+          "rate": 0.115,
+          "ci95": [
+            0.075,
+            0.16
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 388,
+          "denominator": 1000,
+          "rate": 0.388,
+          "ci95": [
+            0.32099999999999995,
+            0.455
+          ]
+        },
+        "both_wrong": {
+          "attempts": 492,
+          "denominator": 1000,
+          "rate": 0.492,
+          "ci95": [
+            0.424,
+            0.561
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 15,
+          "denominator": 1000,
+          "rate": 0.015,
+          "ci95": [
+            0.0,
+            0.035
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 497,
+          "denominator": 1000,
+          "rate": 0.497,
+          "ci95": [
+            0.429,
+            0.5660000000000001
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 126,
+          "denominator": 1000,
+          "rate": 0.126,
+          "ci95": [
+            0.081,
+            0.175
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 3,
+          "denominator": 1000,
+          "rate": 0.003,
+          "ci95": [
+            0.0,
+            0.012
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 1,
+          "denominator": 1000,
+          "rate": 0.001,
+          "ci95": [
+            0.0,
+            0.006
+          ]
+        },
+        "both_wrong": {
+          "attempts": 870,
+          "denominator": 1000,
+          "rate": 0.87,
+          "ci95": [
+            0.8219999999999998,
+            0.915
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 59,
+          "denominator": 1000,
+          "rate": 0.059,
+          "ci95": [
+            0.029000000000000005,
+            0.09300000000000001
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 128,
+          "denominator": 1000,
+          "rate": 0.128,
+          "ci95": [
+            0.08399999999999999,
+            0.175
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 1,
+          "denominator": 1000,
+          "rate": 0.001,
+          "ci95": [
+            0.0,
+            0.006
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 339,
+          "denominator": 1000,
+          "rate": 0.339,
+          "ci95": [
+            0.275,
+            0.4039999999999999
+          ]
+        },
+        "both_wrong": {
+          "attempts": 532,
+          "denominator": 1000,
+          "rate": 0.532,
+          "ci95": [
+            0.46299999999999997,
+            0.6010249999999997
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 29,
+          "denominator": 1000,
+          "rate": 0.029,
+          "ci95": [
+            0.01,
+            0.055
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 1,
+          "denominator": 1000,
+          "rate": 0.001,
+          "ci95": [
+            0.0,
+            0.006
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 518,
+          "denominator": 1000,
+          "rate": 0.518,
+          "ci95": [
+            0.44900000000000007,
+            0.588
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 123,
+          "denominator": 1000,
+          "rate": 0.123,
+          "ci95": [
+            0.08,
+            0.17
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 6,
+          "denominator": 1000,
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.017
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 351,
+          "denominator": 1000,
+          "rate": 0.351,
+          "ci95": [
+            0.28600000000000003,
+            0.41699999999999987
+          ]
+        },
+        "both_wrong": {
+          "attempts": 520,
+          "denominator": 1000,
+          "rate": 0.52,
+          "ci95": [
+            0.452,
+            0.59
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 33,
+          "denominator": 1000,
+          "rate": 0.033,
+          "ci95": [
+            0.011000000000000001,
+            0.059000000000000004
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 526,
+          "denominator": 1000,
+          "rate": 0.526,
+          "ci95": [
+            0.458,
+            0.5950249999999998
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "loose",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 255,
+          "denominator": 1000,
+          "rate": 0.255,
+          "ci95": [
+            0.195,
+            0.32
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "both_wrong": {
+          "attempts": 745,
+          "denominator": 1000,
+          "rate": 0.745,
+          "ci95": [
+            0.68,
+            0.805
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 50,
+          "denominator": 1000,
+          "rate": 0.05,
+          "ci95": [
+            0.02,
+            0.08
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 250,
+          "denominator": 1000,
+          "rate": 0.25,
+          "ci95": [
+            0.19,
+            0.31
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 305,
+          "denominator": 1000,
+          "rate": 0.305,
+          "ci95": [
+            0.24,
+            0.37
+          ]
+        },
+        "both_wrong": {
+          "attempts": 440,
+          "denominator": 1000,
+          "rate": 0.44,
+          "ci95": [
+            0.37,
+            0.51
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 445,
+          "denominator": 1000,
+          "rate": 0.445,
+          "ci95": [
+            0.375,
+            0.515
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 250,
+          "denominator": 1000,
+          "rate": 0.25,
+          "ci95": [
+            0.19,
+            0.31
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 5,
+          "denominator": 1000,
+          "rate": 0.005,
+          "ci95": [
+            0.0,
+            0.015
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 305,
+          "denominator": 1000,
+          "rate": 0.305,
+          "ci95": [
+            0.24,
+            0.37
+          ]
+        },
+        "both_wrong": {
+          "attempts": 440,
+          "denominator": 1000,
+          "rate": 0.44,
+          "ci95": [
+            0.37,
+            0.51
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 445,
+          "denominator": 1000,
+          "rate": 0.445,
+          "ci95": [
+            0.375,
+            0.515
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 267,
+          "denominator": 1000,
+          "rate": 0.267,
+          "ci95": [
+            0.20697500000000002,
+            0.32900000000000007
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 2,
+          "denominator": 1000,
+          "rate": 0.002,
+          "ci95": [
+            0.0,
+            0.008
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 4,
+          "denominator": 1000,
+          "rate": 0.004,
+          "ci95": [
+            0.0,
+            0.011
+          ]
+        },
+        "both_wrong": {
+          "attempts": 727,
+          "denominator": 1000,
+          "rate": 0.727,
+          "ci95": [
+            0.665,
+            0.7879999999999999
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 61,
+          "denominator": 1000,
+          "rate": 0.061,
+          "ci95": [
+            0.03,
+            0.096
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 263,
+          "denominator": 1000,
+          "rate": 0.263,
+          "ci95": [
+            0.20299999999999996,
+            0.324
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 6,
+          "denominator": 1000,
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.019
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 281,
+          "denominator": 1000,
+          "rate": 0.281,
+          "ci95": [
+            0.22,
+            0.34299999999999997
+          ]
+        },
+        "both_wrong": {
+          "attempts": 450,
+          "denominator": 1000,
+          "rate": 0.45,
+          "ci95": [
+            0.38199999999999995,
+            0.518
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 456,
+          "denominator": 1000,
+          "rate": 0.456,
+          "ci95": [
+            0.38800000000000007,
+            0.524
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "metrics": {
+        "both_correct": {
+          "attempts": 263,
+          "denominator": 1000,
+          "rate": 0.263,
+          "ci95": [
+            0.20299999999999996,
+            0.324
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 6,
+          "denominator": 1000,
+          "rate": 0.006,
+          "ci95": [
+            0.0,
+            0.019
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 286,
+          "denominator": 1000,
+          "rate": 0.286,
+          "ci95": [
+            0.22399999999999998,
+            0.348
+          ]
+        },
+        "both_wrong": {
+          "attempts": 445,
+          "denominator": 1000,
+          "rate": 0.445,
+          "ci95": [
+            0.37699999999999995,
+            0.514
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 1000,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 451,
+          "denominator": 1000,
+          "rate": 0.451,
+          "ci95": [
+            0.383975,
+            0.52
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "loose",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 665,
+          "denominator": 900,
+          "rate": 0.7388888888888889,
+          "ci95": [
+            0.6722222222222223,
+            0.8
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "both_wrong": {
+          "attempts": 235,
+          "denominator": 900,
+          "rate": 0.2611111111111111,
+          "ci95": [
+            0.2,
+            0.3277777777777778
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 195,
+          "denominator": 900,
+          "rate": 0.21666666666666667,
+          "ci95": [
+            0.16111111111111112,
+            0.2777777777777778
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 665,
+          "denominator": 900,
+          "rate": 0.7388888888888889,
+          "ci95": [
+            0.6722222222222223,
+            0.8
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 25,
+          "denominator": 900,
+          "rate": 0.027777777777777776,
+          "ci95": [
+            0.005555555555555556,
+            0.05555555555555555
+          ]
+        },
+        "both_wrong": {
+          "attempts": 210,
+          "denominator": 900,
+          "rate": 0.23333333333333334,
+          "ci95": [
+            0.17222222222222222,
+            0.3
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 5,
+          "denominator": 900,
+          "rate": 0.005555555555555556,
+          "ci95": [
+            0.0,
+            0.016666666666666666
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 210,
+          "denominator": 900,
+          "rate": 0.23333333333333334,
+          "ci95": [
+            0.17222222222222222,
+            0.3
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 665,
+          "denominator": 900,
+          "rate": 0.7388888888888889,
+          "ci95": [
+            0.6722222222222223,
+            0.8
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 25,
+          "denominator": 900,
+          "rate": 0.027777777777777776,
+          "ci95": [
+            0.005555555555555556,
+            0.05555555555555555
+          ]
+        },
+        "both_wrong": {
+          "attempts": 210,
+          "denominator": 900,
+          "rate": 0.23333333333333334,
+          "ci95": [
+            0.17222222222222222,
+            0.3
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 5,
+          "denominator": 900,
+          "rate": 0.005555555555555556,
+          "ci95": [
+            0.0,
+            0.016666666666666666
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 210,
+          "denominator": 900,
+          "rate": 0.23333333333333334,
+          "ci95": [
+            0.17222222222222222,
+            0.3
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 630,
+          "denominator": 900,
+          "rate": 0.7,
+          "ci95": [
+            0.6333333333333333,
+            0.7644444444444444
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 6,
+          "denominator": 900,
+          "rate": 0.006666666666666667,
+          "ci95": [
+            0.0,
+            0.017777777777777778
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 6,
+          "denominator": 900,
+          "rate": 0.006666666666666667,
+          "ci95": [
+            0.0,
+            0.018888888888888893
+          ]
+        },
+        "both_wrong": {
+          "attempts": 258,
+          "denominator": 900,
+          "rate": 0.2866666666666667,
+          "ci95": [
+            0.2222222222222222,
+            0.35444444444444445
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 6,
+          "denominator": 900,
+          "rate": 0.006666666666666667,
+          "ci95": [
+            0.0,
+            0.018888888888888893
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 186,
+          "denominator": 900,
+          "rate": 0.20666666666666667,
+          "ci95": [
+            0.1511111111111111,
+            0.2666666666666666
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 630,
+          "denominator": 900,
+          "rate": 0.7,
+          "ci95": [
+            0.6322222222222222,
+            0.7644444444444444
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 6,
+          "denominator": 900,
+          "rate": 0.006666666666666667,
+          "ci95": [
+            0.0,
+            0.016666666666666663
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 43,
+          "denominator": 900,
+          "rate": 0.04777777777777778,
+          "ci95": [
+            0.01888888888888889,
+            0.0811111111111111
+          ]
+        },
+        "both_wrong": {
+          "attempts": 221,
+          "denominator": 900,
+          "rate": 0.24555555555555555,
+          "ci95": [
+            0.18333333333333332,
+            0.3111111111111111
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 29,
+          "denominator": 900,
+          "rate": 0.03222222222222222,
+          "ci95": [
+            0.01,
+            0.06111111111111111
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 4,
+          "denominator": 900,
+          "rate": 0.0044444444444444444,
+          "ci95": [
+            0.0,
+            0.013333333333333336
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 227,
+          "denominator": 900,
+          "rate": 0.25222222222222224,
+          "ci95": [
+            0.19222222222222218,
+            0.3166666666666667
+          ]
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 634,
+          "denominator": 900,
+          "rate": 0.7044444444444444,
+          "ci95": [
+            0.6377777777777777,
+            0.768888888888889
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 2,
+          "denominator": 900,
+          "rate": 0.0022222222222222222,
+          "ci95": [
+            0.0,
+            0.009999999999999998
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 46,
+          "denominator": 900,
+          "rate": 0.051111111111111114,
+          "ci95": [
+            0.022222222222222223,
+            0.08444444444444445
+          ]
+        },
+        "both_wrong": {
+          "attempts": 218,
+          "denominator": 900,
+          "rate": 0.24222222222222223,
+          "ci95": [
+            0.1822222222222222,
+            0.30666666666666664
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 30,
+          "denominator": 900,
+          "rate": 0.03333333333333333,
+          "ci95": [
+            0.011111111111111112,
+            0.06111111111111111
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 5,
+          "denominator": 900,
+          "rate": 0.005555555555555556,
+          "ci95": [
+            0.0,
+            0.016666666666666666
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 220,
+          "denominator": 900,
+          "rate": 0.24444444444444444,
+          "ci95": [
+            0.18444444444444447,
+            0.3088888888888889
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "loose",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 115,
+          "denominator": 900,
+          "rate": 0.12777777777777777,
+          "ci95": [
+            0.07777777777777778,
+            0.17777777777777778
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "both_wrong": {
+          "attempts": 785,
+          "denominator": 900,
+          "rate": 0.8722222222222222,
+          "ci95": [
+            0.8222222222222222,
+            0.9222222222222223
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 50,
+          "denominator": 900,
+          "rate": 0.05555555555555555,
+          "ci95": [
+            0.022222222222222223,
+            0.08888888888888889
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 115,
+          "denominator": 900,
+          "rate": 0.12777777777777777,
+          "ci95": [
+            0.07777777777777778,
+            0.17777777777777778
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 374,
+          "denominator": 900,
+          "rate": 0.41555555555555557,
+          "ci95": [
+            0.34444444444444444,
+            0.4888888888888889
+          ]
+        },
+        "both_wrong": {
+          "attempts": 411,
+          "denominator": 900,
+          "rate": 0.45666666666666667,
+          "ci95": [
+            0.38333333333333336,
+            0.5288888888888889
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 5,
+          "denominator": 900,
+          "rate": 0.005555555555555556,
+          "ci95": [
+            0.0,
+            0.016666666666666666
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 392,
+          "denominator": 900,
+          "rate": 0.43555555555555553,
+          "ci95": [
+            0.3644444444444444,
+            0.5077777777777778
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 115,
+          "denominator": 900,
+          "rate": 0.12777777777777777,
+          "ci95": [
+            0.07777777777777778,
+            0.17777777777777778
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 388,
+          "denominator": 900,
+          "rate": 0.4311111111111111,
+          "ci95": [
+            0.3577777777777778,
+            0.5055555555555555
+          ]
+        },
+        "both_wrong": {
+          "attempts": 397,
+          "denominator": 900,
+          "rate": 0.4411111111111111,
+          "ci95": [
+            0.36888888888888893,
+            0.5133333333333334
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 15,
+          "denominator": 900,
+          "rate": 0.016666666666666666,
+          "ci95": [
+            0.0,
+            0.03888888888888889
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 397,
+          "denominator": 900,
+          "rate": 0.4411111111111111,
+          "ci95": [
+            0.36888888888888893,
+            0.5133333333333334
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 126,
+          "denominator": 900,
+          "rate": 0.14,
+          "ci95": [
+            0.09,
+            0.19111111111111115
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 2,
+          "denominator": 900,
+          "rate": 0.0022222222222222222,
+          "ci95": [
+            0.0,
+            0.009999999999999998
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 1,
+          "denominator": 900,
+          "rate": 0.0011111111111111111,
+          "ci95": [
+            0.0,
+            0.006666666666666668
+          ]
+        },
+        "both_wrong": {
+          "attempts": 771,
+          "denominator": 900,
+          "rate": 0.8566666666666667,
+          "ci95": [
+            0.8055555555555556,
+            0.9055555555555556
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 44,
+          "denominator": 900,
+          "rate": 0.04888888888888889,
+          "ci95": [
+            0.021111111111111112,
+            0.0811111111111111
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 128,
+          "denominator": 900,
+          "rate": 0.14222222222222222,
+          "ci95": [
+            0.09333333333333334,
+            0.19444444444444445
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 339,
+          "denominator": 900,
+          "rate": 0.37666666666666665,
+          "ci95": [
+            0.3066666666666667,
+            0.4478055555555552
+          ]
+        },
+        "both_wrong": {
+          "attempts": 433,
+          "denominator": 900,
+          "rate": 0.4811111111111111,
+          "ci95": [
+            0.41,
+            0.5544444444444443
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 29,
+          "denominator": 900,
+          "rate": 0.03222222222222222,
+          "ci95": [
+            0.011111111111111112,
+            0.06111111111111111
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 1,
+          "denominator": 900,
+          "rate": 0.0011111111111111111,
+          "ci95": [
+            0.0,
+            0.006666666666666666
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 418,
+          "denominator": 900,
+          "rate": 0.46444444444444444,
+          "ci95": [
+            0.39222222222222225,
+            0.5377777777777778
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 123,
+          "denominator": 900,
+          "rate": 0.13666666666666666,
+          "ci95": [
+            0.08888888888888889,
+            0.18888888888888888
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 5,
+          "denominator": 900,
+          "rate": 0.005555555555555556,
+          "ci95": [
+            0.0,
+            0.016666666666666666
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 351,
+          "denominator": 900,
+          "rate": 0.39,
+          "ci95": [
+            0.32,
+            0.46333333333333326
+          ]
+        },
+        "both_wrong": {
+          "attempts": 421,
+          "denominator": 900,
+          "rate": 0.4677777777777778,
+          "ci95": [
+            0.39555555555555566,
+            0.5399999999999999
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 33,
+          "denominator": 900,
+          "rate": 0.03666666666666667,
+          "ci95": [
+            0.012222222222222223,
+            0.06555555555555556
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 426,
+          "denominator": 900,
+          "rate": 0.47333333333333333,
+          "ci95": [
+            0.4011111111111112,
+            0.5466666666666665
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "loose",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 245,
+          "denominator": 900,
+          "rate": 0.2722222222222222,
+          "ci95": [
+            0.20555555555555555,
+            0.3388888888888889
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "both_wrong": {
+          "attempts": 655,
+          "denominator": 900,
+          "rate": 0.7277777777777777,
+          "ci95": [
+            0.6611111111111111,
+            0.7944444444444444
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 15,
+          "denominator": 900,
+          "rate": 0.016666666666666666,
+          "ci95": [
+            0.0,
+            0.03888888888888889
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "trigger_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 245,
+          "denominator": 900,
+          "rate": 0.2722222222222222,
+          "ci95": [
+            0.20555555555555555,
+            0.3388888888888889
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 305,
+          "denominator": 900,
+          "rate": 0.3388888888888889,
+          "ci95": [
+            0.2722222222222222,
+            0.4111111111111111
+          ]
+        },
+        "both_wrong": {
+          "attempts": 350,
+          "denominator": 900,
+          "rate": 0.3888888888888889,
+          "ci95": [
+            0.31666666666666665,
+            0.46111111111111114
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 350,
+          "denominator": 900,
+          "rate": 0.3888888888888889,
+          "ci95": [
+            0.31666666666666665,
+            0.46111111111111114
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 245,
+          "denominator": 900,
+          "rate": 0.2722222222222222,
+          "ci95": [
+            0.20555555555555555,
+            0.3388888888888889
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 305,
+          "denominator": 900,
+          "rate": 0.3388888888888889,
+          "ci95": [
+            0.2722222222222222,
+            0.4111111111111111
+          ]
+        },
+        "both_wrong": {
+          "attempts": 350,
+          "denominator": 900,
+          "rate": 0.3888888888888889,
+          "ci95": [
+            0.31666666666666665,
+            0.46111111111111114
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 350,
+          "denominator": 900,
+          "rate": 0.3888888888888889,
+          "ci95": [
+            0.31666666666666665,
+            0.46111111111111114
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "loose",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 262,
+          "denominator": 900,
+          "rate": 0.2911111111111111,
+          "ci95": [
+            0.22666666666666666,
+            0.3566666666666667
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 1,
+          "denominator": 900,
+          "rate": 0.0011111111111111111,
+          "ci95": [
+            0.0,
+            0.006666666666666666
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 3,
+          "denominator": 900,
+          "rate": 0.0033333333333333335,
+          "ci95": [
+            0.0,
+            0.01
+          ]
+        },
+        "both_wrong": {
+          "attempts": 634,
+          "denominator": 900,
+          "rate": 0.7044444444444444,
+          "ci95": [
+            0.6377777777777778,
+            0.77
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 16,
+          "denominator": 900,
+          "rate": 0.017777777777777778,
+          "ci95": [
+            0.0,
+            0.03888888888888889
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "trigger_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 263,
+          "denominator": 900,
+          "rate": 0.2922222222222222,
+          "ci95": [
+            0.22777777777777777,
+            0.3577777777777778
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 281,
+          "denominator": 900,
+          "rate": 0.31222222222222223,
+          "ci95": [
+            0.2466666666666667,
+            0.3811388888888884
+          ]
+        },
+        "both_wrong": {
+          "attempts": 356,
+          "denominator": 900,
+          "rate": 0.39555555555555555,
+          "ci95": [
+            0.32775,
+            0.4666666666666667
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 356,
+          "denominator": 900,
+          "rate": 0.39555555555555555,
+          "ci95": [
+            0.32775,
+            0.4666666666666667
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "required",
+      "metrics": {
+        "both_correct": {
+          "attempts": 263,
+          "denominator": 900,
+          "rate": 0.2922222222222222,
+          "ci95": [
+            0.22777777777777777,
+            0.3577777777777778
+          ]
+        },
+        "free_only_correct": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "decoder_only_correct": {
+          "attempts": 286,
+          "denominator": 900,
+          "rate": 0.31777777777777777,
+          "ci95": [
+            0.25222222222222224,
+            0.3888888888888888
+          ]
+        },
+        "both_wrong": {
+          "attempts": 351,
+          "denominator": 900,
+          "rate": 0.39,
+          "ci95": [
+            0.32111111111111107,
+            0.46111111111111114
+          ]
+        },
+        "rescued_free_format_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "rescued_free_schema_valid_failure": {
+          "attempts": 0,
+          "denominator": 900,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "remaining_decoder_schema_valid_failure": {
+          "attempts": 351,
+          "denominator": 900,
+          "rate": 0.39,
+          "ci95": [
+            0.32111111111111107,
+            0.46111111111111114
+          ]
+        }
+      }
+    }
+  ]
+}

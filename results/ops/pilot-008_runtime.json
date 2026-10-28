@@ -1,0 +1,25 @@
+{
+  "runtime_image_id": "im-bn1uCAy12LO075Ds0NhzwA",
+  "cuda_rebuild_layer": "im-8Upuvfm7qk2u8Ua4sVSgDA",
+  "parent_audited_image_id": "im-9fka2nV2OfiyVZP8chYC1i",
+  "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+  "native_cuda_architecture": 86,
+  "actual_hardware": {
+    "date": "2026-10-27T17:06:06.828863+00:00",
+    "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+    "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+    "gpu_name": "NVIDIA A10",
+    "gpu_type": "A10",
+    "requested_gpu_fallbacks": [
+      "L4",
+      "A10"
+    ],
+    "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+    "container_started_monotonic": 0.892931106,
+    "protocol_sha256": "9dbaa75473307c170cd63f2b4daef4d8226a146bcbe22ea863ddea0418c482db"
+  },
+  "worker_source_manifest": "results/ops/pilot-008_worker_source.json",
+  "cloud_source_sha256": "49b735ce02adb253fe73a6c7fe996750d1682f6bdb726316e9b9af34ca1a3f83",
+  "linux_audit": "results/ops/pip-audit-linux-pilot-008.json"
+}

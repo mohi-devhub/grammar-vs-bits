@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-27T13:26:36.015467+00:00",
+  "frozen_items": 200,
+  "pilot_items": 50,
+  "offline_grammar_membership_cases": 6194,
+  "offline_failures": 0,
+  "scorer_integration_tests": 5,
+  "local_pip_audit": "clean",
+  "selected_anchor_access": "both Instruct configs and weight HEADs now 200",
+  "full_run_authorized": false
+}

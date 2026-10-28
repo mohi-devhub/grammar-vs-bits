@@ -1,0 +1,8 @@
+{
+  "app_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+  "stage": "source snapshot copy after audited image build",
+  "reason": "Modal rejected scoring.py modified during build; audited runtime layers cached; no CPU preparation or GPU generation started. Reservation retained.",
+  "audited_runtime_image": "im-wrkInb6pBhB0p404y1jfTY",
+  "audit_log": "No known vulnerabilities found",
+  "shutdown_evidence": "results/ops/pilot-002_shutdown.json"
+}

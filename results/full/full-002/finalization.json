@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-28T19:10:16.249007+00:00",
+  "stage": "analysis_manuscript_archive_and_shutdown_review_complete",
+  "complete": true,
+  "registered_collection_complete": true,
+  "paper_pages": 6,
+  "verification": "results/full/full-002/verification.json",
+  "local_release_manifest": "dist/release.json",
+  "publicly_published": false,
+  "follow_up_direction_2_evaluated": false,
+  "post_hoc_failure_sensitivity_complete": true
+}

@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-28T20:33:17.205006+00:00",
+  "complete": true,
+  "volume": "qunti-check-artifacts",
+  "inventory": [
+    {
+      "remote_path": "full/pythonic-002-1/shutdown_reason.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-1/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "28815ed91ee779f5ba9459012408deac4d277c67f65c691e769654904bfcb944"
+    },
+    {
+      "remote_path": "full/pythonic-002-1/shutdown_history.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-1/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "28815ed91ee779f5ba9459012408deac4d277c67f65c691e769654904bfcb944"
+    },
+    {
+      "remote_path": "full/pythonic-002-1/progress.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-1/progress.json",
+      "bytes": 108,
+      "sha256": "8eeaef4f5a290d6a5379efdfb80a5aa3f70b6e145fb6774a07fc9fc098f3b552"
+    },
+    {
+      "remote_path": "full/pythonic-002-1/events.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-1/events.jsonl",
+      "bytes": 22454490,
+      "sha256": "debbf520d7e983edf69bb8aefad7727394fe83faa557db81b0f23c36d43a4ab4"
+    },
+    {
+      "remote_path": "full/pythonic-002-1/raw.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-1/raw.jsonl",
+      "bytes": 22385990,
+      "sha256": "542a42659d8bbc9abaec376dbd285a3d22871db928ffe84f6949b5818643a53e"
+    },
+    {
+      "remote_path": "full/pythonic-002-1/Q4_K_M-server.log",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-1/Q4_K_M-server.log",
+      "bytes": 1157756,
+      "sha256": "0564797dc6b616666c58bc3142ff64690fd58a0a51ff2bcb32004cac5a3a8447"
+    },
+    {
+      "remote_path": "full/pythonic-002-1/F16-server.log",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-1/F16-server.log",
+      "bytes": 1175398,
+      "sha256": "28b028448d061be0b78060022ed662f43e80b1fd8c1c1b9c4c277f301c08272e"
+    },
+    {
+      "remote_path": "full/pythonic-002-2/shutdown_reason.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-2/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "b85127e5296877ab4db336e0c6e4d2d9d1eb4d569c7c1e03e511bff77b214ecf"
+    },
+    {
+      "remote_path": "full/pythonic-002-2/shutdown_history.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-2/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "b85127e5296877ab4db336e0c6e4d2d9d1eb4d569c7c1e03e511bff77b214ecf"
+    },
+    {
+      "remote_path": "full/pythonic-002-2/events.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-2/events.jsonl",
+      "bytes": 11801293,
+      "sha256": "3b2617cdbde2eb6e477ff43e517872c5cdf96372261482a751ed8de34e13a097"
+    },
+    {
+      "remote_path": "full/pythonic-002-2/Q4_K_M-server.log",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-2/Q4_K_M-server.log",
+      "bytes": 390466,
+      "sha256": "77b2a882b2bc768cf7debe60178d7f1a2161c976c4f31ccdd00d88a894ffbc62"
+    },
+    {
+      "remote_path": "full/pythonic-002-2/raw.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-2/raw.jsonl",
+      "bytes": 11760102,
+      "sha256": "0170431fe1aa91fb67daedb10afec6e1ed4e14645462a80e85f30424bd9f6ac9"
+    },
+    {
+      "remote_path": "full/pythonic-002-2/progress.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-2/progress.json",
+      "bytes": 108,
+      "sha256": "685dc0a447fd46373a6137ed6951b40840d9cfc3a1cc0297e173872fb1cb0860"
+    },
+    {
+      "remote_path": "full/pythonic-002-2/F16-server.log",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-2/F16-server.log",
+      "bytes": 1146763,
+      "sha256": "2b8f209a46da1d13785f0c85bcb5b847394fc73f18a90536fd2f8837ae8104dd"
+    },
+    {
+      "remote_path": "full/pythonic-002-3/shutdown_reason.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-3/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "d848bd11332febc0e2931e420913a9951e19c9322a4fc7cdef65874196fb4c2a"
+    },
+    {
+      "remote_path": "full/pythonic-002-3/shutdown_history.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-3/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "d848bd11332febc0e2931e420913a9951e19c9322a4fc7cdef65874196fb4c2a"
+    },
+    {
+      "remote_path": "full/pythonic-002-3/events.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-3/events.jsonl",
+      "bytes": 5859233,
+      "sha256": "c47faedb2139cd32328e207efa6d6aefa2ff119b1630d259419fe3022bbb77ee"
+    },
+    {
+      "remote_path": "full/pythonic-002-3/raw.jsonl",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-3/raw.jsonl",
+      "bytes": 5744331,
+      "sha256": "37ace27061ce19efdeea3b2fb632e5307ddfc11295987d0fa1b12960e4d55729"
+    },
+    {
+      "remote_path": "full/pythonic-002-3/Q4_K_M-server.log",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-3/Q4_K_M-server.log",
+      "bytes": 751322,
+      "sha256": "f0a5be1ade0c7bfe11b5beb141ca4fe6a7dc6e6119435ba33dd44a68fd48b5fe"
+    },
+    {
+      "remote_path": "full/pythonic-002-3/progress.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/full/pythonic-002-3/progress.json",
+      "bytes": 107,
+      "sha256": "980140be8ca476f990b10e26f45eebbb640747e6839fcbfa57c29c9886d13b95"
+    },
+    {
+      "remote_path": "models/Llama-3.2-1B-Instruct/manifest.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/models/Llama-3.2-1B-Instruct/manifest.json",
+      "bytes": 2046,
+      "sha256": "d0743b4e2ca374d7eedaa90b496252a508a914acc8bdb5f5cffca304d9cd00f7"
+    },
+    {
+      "remote_path": "models/Llama-3.2-3B-Instruct/manifest.json",
+      "local_path": "results/sensitivity/pythonic-002/cloud_archive/models/Llama-3.2-3B-Instruct/manifest.json",
+      "bytes": 2376,
+      "sha256": "d42e043fe7ef906237aa744b8afb75d8bb979059257e76975d3249b8eb8071ac"
+    }
+  ],
+  "deletion_performed": false
+}

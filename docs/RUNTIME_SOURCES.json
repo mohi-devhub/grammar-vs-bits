@@ -1,0 +1,16 @@
+[
+  {
+    "name": "llama.cpp",
+    "repository": "ggml-org/llama.cpp",
+    "commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+    "archive_sha256": "4f041cba396f3151e0dbd3a6d009e7868dc4a3c5999bfdb735509fafc7899902",
+    "archive_bytes": 38617505
+  },
+  {
+    "name": "gorilla",
+    "repository": "gorilla-llm/gorilla",
+    "commit": "916260dfc116bf06793a1af79b4ec8195b0453b6",
+    "archive_sha256": "bd32c82a8ab3a2343c291433d1249dbf46ed8f2a12134a7953fadfe6b17d9fd9",
+    "archive_bytes": 44540692
+  }
+]

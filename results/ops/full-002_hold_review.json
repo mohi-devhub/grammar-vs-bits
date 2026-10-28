@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-28T09:21:11.896591+00:00",
+  "reported_project_cost_usd": 0.98038471,
+  "reviews": [
+    {
+      "batch": "pilot-001",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": null
+    },
+    {
+      "batch": "pilot-002",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 0.08615032
+    },
+    {
+      "batch": "pilot-003",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 1.1520000000000002e-05
+    },
+    {
+      "batch": "pilot-004",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 0.0024035999999999997
+    },
+    {
+      "batch": "pilot-005",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 2.938e-05
+    },
+    {
+      "batch": "pilot-006",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 0.021384649999999998
+    },
+    {
+      "batch": "pilot-007",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.35376264,
+      "reported_cost_usd": 0.15376264
+    },
+    {
+      "batch": "pilot-008",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 0.07961645
+    }
+  ],
+  "total_pilot_hold_usd": 2.45376264,
+  "basis": "All historical pilot apps stopped, retained runtime/shutdown evidence and fresh attributed billing. Preserve at least $0.30 per pilot and at least reported app cost plus $0.20. Holds are estimates, not actual charges; absent rows are not assigned zero actual cost."
+}

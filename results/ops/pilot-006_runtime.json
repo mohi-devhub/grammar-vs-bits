@@ -1,0 +1,13 @@
+{
+  "batch": "pilot-006",
+  "runtime_image_id": "im-9fka2nV2OfiyVZP8chYC1i",
+  "cpu_quantizer_build_layer": "im-uqkorPU6HAK7Hmov83e29G",
+  "audited_dependency_parent": "im-wrkInb6pBhB0p404y1jfTY",
+  "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+  "source": "Image build success lines in .cache/pilot-launch-006.log; exact recipe in cloud.py and frozen source manifest",
+  "bootstrap_python_minor": "3.12",
+  "actual_python": "Recorded by preparation manifest and GPU session metadata",
+  "actual_cpu_preparation_python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+  "cloud_source_sha256": "aa600ee15ed4931b6112d218ba2fcc2f9d69dfb6d54e9a93f2eaf8c4b6ad7009",
+  "cloud_source_snapshot": "results/ops/pilot-006_cloud.py"
+}

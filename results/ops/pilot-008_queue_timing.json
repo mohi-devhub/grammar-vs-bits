@@ -1,0 +1,21 @@
+{
+  "submitted_at": "2026-10-27T17:05:48.517992+00:00",
+  "first_gpu_event_received_at": "2026-10-27T17:06:06.976108+00:00",
+  "client_wait_to_first_gpu_event_seconds": 18.45817008299491,
+  "scope": "Includes queue, container startup and RPC; not a measure of billed occupancy",
+  "hardware": {
+    "date": "2026-10-27T17:06:06.828863+00:00",
+    "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+    "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+    "gpu_name": "NVIDIA A10",
+    "gpu_type": "A10",
+    "requested_gpu_fallbacks": [
+      "L4",
+      "A10"
+    ],
+    "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+    "container_started_monotonic": 0.892931106,
+    "protocol_sha256": "9dbaa75473307c170cd63f2b4daef4d8226a146bcbe22ea863ddea0418c482db"
+  }
+}

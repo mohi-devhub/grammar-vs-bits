@@ -1,0 +1,32 @@
+{
+  "description": "qunti-check-pilot",
+  "app_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+  "lifecycle": {
+    "state": "ephemeral",
+    "created_at": "2026-10-27 19:18:18+05:30",
+    "created_by": "achumohith14",
+    "deployed_at": null,
+    "deployed_by": null,
+    "version": null,
+    "stopped_at": null,
+    "stopped_by": null
+  },
+  "functions": {
+    "prepare_qwen": {
+      "id": "fu-1vfNAGxB35YqunS1IjMhie",
+      "summary": {}
+    },
+    "run_pilot": {
+      "id": "fu-QMx4FKe1FGcZ6LIg2UWYvK",
+      "summary": {
+        "gpu_config": [
+          {
+            "count": 1,
+            "gpu_type": "L4"
+          }
+        ]
+      }
+    }
+  },
+  "servers": {}
+}

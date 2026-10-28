@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28T20:25:26.013146+00:00",
+  "reason": "Platform internal failure/preemption; complete only cells without a durable prediction",
+  "retained_observations": 1610,
+  "missing_observations": 790,
+  "closed_app_bounds": [
+    {
+      "app_id": "ap-7NzFvlnymH2f0t1G8mWAgf",
+      "closed_app_seconds": 103.0,
+      "conservative_usd": 0.12302835416666666,
+      "reported_usd": 7.732e-05
+    },
+    {
+      "app_id": "ap-OJSBUvgHYQHf0jcXQmKBzL",
+      "closed_app_seconds": 1133.0,
+      "conservative_usd": 0.5707993958333334,
+      "reported_usd": 0.37100732
+    },
+    {
+      "app_id": "ap-xfZa1fgVlfuq07yVmVtEFn",
+      "closed_app_seconds": 984.0,
+      "conservative_usd": 0.5060247499999999,
+      "reported_usd": 0.26695346
+    }
+  ],
+  "prior_optional_bound_usd": 1.1998525,
+  "new_resource_envelope_usd": 1.35,
+  "additional_bound_with_storage_buffer_usd": 2.6498525,
+  "project_reported_usd": 3.249006850000001,
+  "gpu": "A10"
+}

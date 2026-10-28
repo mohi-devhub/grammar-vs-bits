@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-28T20:34:17.252056+00:00",
+  "run_id": "full-002",
+  "sources": [
+    "results/full/full-002/summary.json",
+    "results/full/full-002/costs.json",
+    "results/full/full-002/failure_sensitivity.json",
+    "results/sensitivity/pythonic-002/summary.json"
+  ],
+  "source_sha256": {
+    "results/full/full-002/summary.json": "476004e7ef242977ef5a930941cb60008eaa62c6f27bfdf256a082dc520b7107",
+    "results/full/full-002/costs.json": "95bdc20c78b4b9816d474de466954dcef12ca81328a2e5b2a8cf60f6ddb0839b",
+    "results/full/full-002/failure_sensitivity.json": "213dcc6e632564c9594adb2e1f450b8b7e9a768a85bb23b109720b14f7edc23a",
+    "results/sensitivity/pythonic-002/summary.json": "fbe5ea0245c5ace1a8b1e667c3992e86fee0414a860fd95303bba5de2f0d722d"
+  },
+  "generator": "scripts/build_paper_data.py"
+}

@@ -1,0 +1,139 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 1069.98it/s]
+✓ Initialized. View run at 
+https://modal.com/apps/achumohith14/main/ap-27090tv4stgi7opQZHMtyj
+✓ Created objects.
+├── ✓ Uploaded /Users/mohith/Research/qunti-check/cloud.py
+├── ✓ Uploaded /Users/mohith/Research/qunti-check/vendor/llama.cpp
+├── ✓ Uploaded 
+│   /Users/mohith/Research/qunti-check/.cache/pilot-snapshots/pilot-004/qunti
+├── ✓ Created Function prepare_qwen.
+└── ✓ Created Function run_pilot.
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.8.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+
+[1AFetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+[1AFetching 9 files:  11%|█         | 1/9 [00:00<00:00,  9.29it/s]
+[1AFetching 9 files:  33%|███▎      | 3/9 [00:00<00:00, 13.34it/s]
+[1AFetching 9 files:  56%|█████▌    | 5/9 [00:00<00:00, 15.95it/s]
+[1AFetching 9 files:  78%|███████▊  | 7/9 [00:00<00:00, 11.04it/s]
+[1AFetching 9 files: 100%|██████████| 9/9 [00:07<00:00,  1.43s/it]Fetching 9 files: 100%|██████████| 9/9 [00:07<00:00,  1.14it/s]
+INFO:hf-to-gguf:Loading model: hf
+INFO:hf-to-gguf:Model architecture: Qwen3ForCausalLM
+INFO:hf-to-gguf:gguf: indexing model part 'model.safetensors'
+INFO:gguf.gguf_writer:gguf: This GGUF file is for Little Endian only
+INFO:hf-to-gguf:Exporting model...
+INFO:hf-to-gguf:output.weight,             torch.bfloat16 --> F16, shape = {1024, 151936}
+INFO:hf-to-gguf:token_embd.weight,         torch.bfloat16 --> F16, shape = {1024, 151936}
+INFO:hf-to-gguf:blk.0.attn_norm.weight,    torch.bfloat16 --> F32, shape = {1024}
+INFO:hf-to-gguf:blk.0.ffn_down.weight,     torch.bfloat16 --> F16, shape = {3072, 1024}
+INFO:hf-to-gguf:blk.0.ffn_gate.weight,     torch.bfloat16 --> F16, shape = {1024, 3072}
+INFO:hf-to-gguf:blk.0.ffn_up.weight,       torch.bfloat16 --> F16, shape = {1024, 3072}
+INFO:hf-to-gguf:blk.0.ffn_norm.weight,     torch.bfloat16 --> F32, shape = {1024}
+INFO:hf-to-gguf:blk.0.attn_k_norm.weight,  torch.bfloat16 --> F32, shape = {128}
+INFO:hf-to-gguf:blk.0.attn_k.weight,       torch.bfloat16 --> F16, shape = {1024, 1024}
+INFO:hf-to-gguf:blk.0.attn_output.weight,  torch.bfloat16 --> F16, shape = {2048, 1024}
+INFO:hf-to-gguf:blk.0.attn_q_norm.weight,  torch.bfloat16 --> F32, shape = {128}
+INFO:hf-to-gguf:blk.0.attn_q.weight,       torch.bfloat16 --> F16, shape = {1024, 2048}
+INFO:hf-to-gguf:blk.0.attn_v.weight,       torch.bfloat16 --> F16, shape = {1024, 1024}
+INFO:hf-to-gguf:blk.1.attn_norm.weight,    torch.bfloat16 --> F32, shape = {1024}
+INFO:hf-to-gguf:blk.1.ffn_down.weight,     torch.bfloat16 --> F16, shape = {3072, 1024}
+INFO:hf-to-gguf:blk.1.ffn_gate.weight,     torch.bfloat16 --> F16, shape = {1024, 3072}
+INFO:hf-to-gguf:blk.1.ffn_up.weight,       torch.bfloat16 --> F16, shape = {1024, 3072}
+INFO:hf-to-gguf:blk.1.ffn_norm.weight,     torch.bfloat16 --> F32, shape = {1024}
+INFO:hf-to-gguf:blk.1.attn_k_norm.weight,  torch.bfloat16 --> F32, shape = {128}
+INFO:hf-to-gguf:blk.1.attn_k.weight,       torch.bfloat16 --> F16, shape = {1024, 1024}
+INFO:hf-to-gguf:blk.1.attn_output.weight,  torch.bfloat16 --> F16, shape = {2048, 1024}
+INFO:hf-to-gguf:blk.1.attn_q_norm.weight,  torch.bfloat16 --> F32, shape = {128}
+INFO:hf-to-gguf:blk.1.attn_q_norm.weight,  torch.bfloat16 --> F32, shape = {128}
+Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<get_app_logs_loop() done, defined at /Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/pty.py:91> exception=OSError(28, 'No space left on device')>
+Traceback (most recent call last):
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/pty.py", line 223, in get_app_logs_loop
+    app_done = await _get_logs()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/pty.py", line 213, in _get_logs
+    await _put_log(log_batch, log)
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/pty.py", line 160, in _put_log
+    await output_mgr.put_streaming_log(log, prefix=log_prefix)
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/rich.py", line 656, in put_streaming_log
+    self._get_line_buffer(log.file_descriptor, "streaming", callback).write(log, prefix=prefix)
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/rich.py", line 146, in write
+    self._callback(completed_lines)
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/rich.py", line 643, in _console_print_log
+    self._console.out(data, style=color.name, end="")
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/rich/console.py", line 1640, in out
+    self.print(
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/rich/console.py", line 1704, in print
+    with self:
+         ^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/rich/console.py", line 864, in __exit__
+    self._exit_buffer()
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/rich/console.py", line 820, in _exit_buffer
+    self._check_buffer()
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/rich/console.py", line 2055, in _check_buffer
+    self._write_buffer()
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/rich/console.py", line 2129, in _write_buffer
+    self.file.flush()
+OSError: [Errno 28] No space left on device
+Traceback (most recent call last):
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 113, in main
+    metadata = prepare_qwen.remote()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_object.py", line 49, in wrapped
+    return await method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_functions.py", line 2081, in remote
+    return await self._call_function(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_functions.py", line 2018, in _call_function
+    return await invocation.run_function()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_functions.py", line 517, in run_function
+    return await _process_result(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_utils/function_utils.py", line 572, in _process_result
+    raise exc_with_hints(exc)
+  File "<ta-01M5YSJ941XR7HJWJ10VAJBZPR>:/root/cloud.py", line 56, in prepare_qwen
+    subprocess.run(command, check=True, timeout=600)
+  ^^^^^^^^^^^^^^^^^
+  File "<ta-01M5YSJ941XR7HJWJ10VAJBZPR>:/usr/local/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+^^^^^^^^^^^^^^^
+subprocess.CalledProcessError: Command '['/opt/llama-build/bin/llama-quantize', '--threads', '2', '/artifacts/models/Qwen3-0.6B/F16.gguf', '/artifacts/models/Qwen3-0.6B/Q8_0.gguf', 'Q8_0']' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 140, in <module>
+    main()
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 132, in main
+    write_json(ROOT / ("results/ops/" + args.batch_id + "_client_timing.json"), {"date": now(), "client_session_seconds": time.monotonic() - started,
+  File "/Users/mohith/Research/qunti-check/qunti/common.py", line 25, in write_json
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n")
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/Users/mohith/Research/qunti-check/results/ops/pilot-004_client_timing.json'

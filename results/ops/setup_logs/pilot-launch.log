@@ -1,0 +1,29 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 1107.85it/s]
+✓ Initialized. View run at 
+https://modal.com/apps/achumohith14/main/ap-u3gGINaddVnGYKkFbkRlW7
+Stopping app - uncaught exception raised locally: InvalidError("Unsupported standalone python version: '3.12.12', supported values are ['3.10', '3.11', '3.12', '3.13', '3.14', '3.14t', '3.15', '3.15t']").
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 124, in <module>
+    main()
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 94, in main
+    with app.run():
+         ^^^^^^^^^
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/app.py", line 494, in run
+    async with _run_app(
+               ^^^^^^^^^
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/runner.py", line 455, in _run_app
+    await _create_all_objects(running_app, local_app_state, load_context)
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/runner.py", line 203, in _create_all_objects
+    await asyncio.gather(*[tc.create_task(_load(tag, obj)) for tag, obj in indexed_objects.items()])
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/runner.py", line 194, in _load
+    await resolver.load(obj, load_context, existing_object_id=existing_object_id)
+modal.exception.InvalidError: Unsupported standalone python version: '3.12.12', supported values are ['3.10', '3.11', '3.12', '3.13', '3.14', '3.14t', '3.15', '3.15t']

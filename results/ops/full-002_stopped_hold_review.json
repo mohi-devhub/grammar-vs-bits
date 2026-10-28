@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-28T14:04:06.235848+00:00",
+  "reported_project_cost_usd": 1.3903028499999999,
+  "review": [
+    {
+      "batch": "full-001-1",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.35594981000000003,
+      "reported_cost_usd": 0.15594981
+    },
+    {
+      "batch": "full-002-2",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": null
+    },
+    {
+      "batch": "full-002-2-retry1",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 0.01642418
+    },
+    {
+      "batch": "full-002-2-retry2",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.3,
+      "reported_cost_usd": 0.06963552
+    },
+    {
+      "batch": "full-002-2-native1",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.44810816,
+      "reported_cost_usd": 0.24810816
+    },
+    {
+      "batch": "full-002-2-spawn1",
+      "old_hold_usd": 0.5,
+      "new_hold_usd": 0.36151431,
+      "reported_cost_usd": 0.16151431
+    }
+  ],
+  "basis": "Stopped attempts with retained logs, current attributed metering and at least $0.30 settling hold or reported cost plus $0.20. Absent metering remains unknown, not zero."
+}

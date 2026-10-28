@@ -1,0 +1,44 @@
+{
+  "run_id": "pythonic-002",
+  "started_at": "2026-10-28T19:45:14.965142+00:00",
+  "complete": true,
+  "optional_cap_usd": 3,
+  "project_cap_usd": 12,
+  "sessions": [
+    {
+      "batch_id": "pythonic-002-1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "app_id": "ap-OJSBUvgHYQHf0jcXQmKBzL",
+      "observations": 2400,
+      "complete": true,
+      "reported_cost_usd": 0.36872687,
+      "conservative_cost_usd": 1.35,
+      "source": "results/sensitivity/pythonic-002/pythonic-002-1.jsonl"
+    },
+    {
+      "batch_id": "pythonic-002-2",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "app_id": "ap-xfZa1fgVlfuq07yVmVtEFn",
+      "observations": 2400,
+      "complete": true,
+      "reported_cost_usd": 0.24146041000000001,
+      "conservative_cost_usd": 1.35,
+      "source": "results/sensitivity/pythonic-002/pythonic-002-2.jsonl",
+      "initial_attempt_observations": 1610,
+      "continuation_sources": [
+        "results/sensitivity/pythonic-002/pythonic-002-3.jsonl"
+      ],
+      "continuation_app_ids": [
+        "ap-XXA33v7wlyYq8mQIz07aFf"
+      ],
+      "collection_sessions": 2,
+      "platform_interruption_retained": true,
+      "reported_cost_scope": "Original interrupted app snapshot only; continuation app costs appear separately in summary.json."
+    }
+  ],
+  "project_reported_cost_usd": 3.223513800000001,
+  "optional_reported_cost_usd": 0.61246773,
+  "finished_at": "2026-10-28T20:31:38.924230+00:00",
+  "continuation_note": "Llama-3B platform interruption retained. Only cells without durable outputs continued on another A10; no saved failed response was retried.",
+  "cost_snapshot_scope": "Cost fields in this controller state are the original interrupted-attempt snapshot, before the missing-cell continuation. summary.json has the later aggregate metering for all apps, including failed startup and continuation."
+}

@@ -1,0 +1,25 @@
+root ::= ws "[" ws (call (ws "," ws call)*)? ws "]" ws
+ws ::= [ \t\n\r]*
+string ::= "\"" ([^"\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "\"" | "'" ([^'\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "'"
+number ::= "-"? ("0" | [1-9] [0-9]*) ("." [0-9]+)? ([eE] [+-]? [0-9]+)?
+integer ::= "-"? ("0" | [1-9] [0-9]*)
+boolean ::= "True" | "False"
+null ::= "None"
+value ::= string | number | boolean | null | any-object | any-array
+any-object ::= "{" ws (string ws ":" ws value (ws "," ws string ws ":" ws value)*)? ws "}"
+any-array ::= "[" ws (value (ws "," ws value)*)? ws "]"
+node-2 ::= string
+node-1-0 ::= "discovery" ws "=" ws node-2 node-1-1
+node-1-1 ::= ""
+node-4 ::= string
+node-5 ::= integer
+node-6 ::= boolean
+node-3-0 ::= "location" ws "=" ws node-4 node-3-1 | "years" ws "=" ws node-5 node-3-2 | "include_human_impact" ws "=" ws node-6 node-3-4
+node-3-1 ::= ws "," ws "years" ws "=" ws node-5 node-3-3 | ws "," ws "include_human_impact" ws "=" ws node-6 node-3-5
+node-3-2 ::= ws "," ws "location" ws "=" ws node-4 node-3-3 | ws "," ws "include_human_impact" ws "=" ws node-6 node-3-6
+node-3-3 ::= "" | ws "," ws "include_human_impact" ws "=" ws node-6 node-3-7
+node-3-4 ::= ws "," ws "location" ws "=" ws node-4 node-3-5 | ws "," ws "years" ws "=" ws node-5 node-3-6
+node-3-5 ::= ws "," ws "years" ws "=" ws node-5 node-3-7
+node-3-6 ::= ws "," ws "location" ws "=" ws node-4 node-3-7
+node-3-7 ::= ""
+call ::= ("get_scientist_for_discovery" ws "(" ws node-1-0 ws ")") | ("forest_growth_forecast" ws "(" ws node-3-0 ws ")")

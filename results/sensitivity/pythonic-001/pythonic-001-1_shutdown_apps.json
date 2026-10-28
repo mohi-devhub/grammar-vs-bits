@@ -1,0 +1,26 @@
+[
+  {
+    "app_id": "ap-C4FfuuJt0ioG1hkR9KcCAm",
+    "description": "evalnoise-l4-followup",
+    "state": "ephemeral (detached)",
+    "tasks": "2",
+    "created_at": "2026-10-29 00:42:47+05:30",
+    "stopped_at": null
+  },
+  {
+    "app_id": "ap-7NzFvlnymH2f0t1G8mWAgf",
+    "description": "qunti-check-pythonic",
+    "state": "stopped",
+    "tasks": "0",
+    "created_at": "2026-10-29 01:12:48+05:30",
+    "stopped_at": "2026-10-29 01:14:31+05:30"
+  },
+  {
+    "app_id": "ap-EAQ6rjdrbFLjsUHZG1kU2d",
+    "description": "evalnoise-study-remaining",
+    "state": "stopped",
+    "tasks": "0",
+    "created_at": "2026-10-28 18:52:44+05:30",
+    "stopped_at": "2026-10-28 23:16:59+05:30"
+  }
+]

@@ -1,0 +1,36 @@
+root ::= ws "[" ws (call (ws "," ws call)*)? ws "]" ws
+ws ::= [ \t\n\r]*
+string ::= "\"" ([^"\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "\"" | "'" ([^'\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "'"
+number ::= "-"? ("0" | [1-9] [0-9]*) ("." [0-9]+)? ([eE] [+-]? [0-9]+)?
+integer ::= "-"? ("0" | [1-9] [0-9]*)
+boolean ::= "True" | "False"
+null ::= "None"
+value ::= string | number | boolean | null | any-object | any-array
+any-object ::= "{" ws (string ws ":" ws value (ws "," ws string ws ":" ws value)*)? ws "}"
+any-array ::= "[" ws (value (ws "," ws value)*)? ws "]"
+node-2 ::= string
+node-1-0 ::= "input_string" ws "=" ws node-2 node-1-1
+node-1-1 ::= ""
+node-4 ::= integer
+node-5 ::= integer
+node-6 ::= integer
+node-3-0 ::= "r" ws "=" ws node-4 node-3-1 | "g" ws "=" ws node-5 node-3-2 | "b" ws "=" ws node-6 node-3-4
+node-3-1 ::= ws "," ws "g" ws "=" ws node-5 node-3-3 | ws "," ws "b" ws "=" ws node-6 node-3-5
+node-3-2 ::= ws "," ws "r" ws "=" ws node-4 node-3-3 | ws "," ws "b" ws "=" ws node-6 node-3-6
+node-3-3 ::= ws "," ws "b" ws "=" ws node-6 node-3-7
+node-3-4 ::= ws "," ws "r" ws "=" ws node-4 node-3-5 | ws "," ws "g" ws "=" ws node-5 node-3-6
+node-3-5 ::= ws "," ws "g" ws "=" ws node-5 node-3-7
+node-3-6 ::= ws "," ws "r" ws "=" ws node-4 node-3-7
+node-3-7 ::= ""
+node-8 ::= integer
+node-9 ::= integer
+node-10 ::= integer
+node-7-0 ::= "a" ws "=" ws node-8 node-7-1 | "b" ws "=" ws node-9 node-7-2 | "c" ws "=" ws node-10 node-7-4
+node-7-1 ::= ws "," ws "b" ws "=" ws node-9 node-7-3 | ws "," ws "c" ws "=" ws node-10 node-7-5
+node-7-2 ::= ws "," ws "a" ws "=" ws node-8 node-7-3 | ws "," ws "c" ws "=" ws node-10 node-7-6
+node-7-3 ::= ws "," ws "c" ws "=" ws node-10 node-7-7
+node-7-4 ::= ws "," ws "a" ws "=" ws node-8 node-7-5 | ws "," ws "b" ws "=" ws node-9 node-7-6
+node-7-5 ::= ws "," ws "b" ws "=" ws node-9 node-7-7
+node-7-6 ::= ws "," ws "a" ws "=" ws node-8 node-7-7
+node-7-7 ::= ""
+call ::= ("perform.string_reverse" ws "(" ws node-1-0 ws ")") | ("convert.rgb_to_hex" ws "(" ws node-3-0 ws ")") | ("solve.quadratic_equation" ws "(" ws node-7-0 ws ")")

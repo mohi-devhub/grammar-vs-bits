@@ -1,0 +1,24 @@
+{
+  "observed_gpu_types": [
+    "A10"
+  ],
+  "observed_gpu_names": [
+    "NVIDIA A10"
+  ],
+  "generations": 300,
+  "cache_n_min": 0,
+  "cache_n_max": 0,
+  "precision_ftypes": {
+    "F16": "F16",
+    "Q8_0": "Q8_0",
+    "Q4_K_M": "Q4_K - Medium"
+  },
+  "model_paths": {
+    "F16": "/artifacts/models/Qwen3-0.6B/F16.gguf",
+    "Q8_0": "/artifacts/models/Qwen3-0.6B/Q8_0.gguf",
+    "Q4_K_M": "/artifacts/models/Qwen3-0.6B/Q4_K_M.gguf"
+  },
+  "gpu_offload_request": 99,
+  "backend_utilization_independently_sampled": false,
+  "server_build_info": "b0-unknown (archive build; commit established by verified source archive and explicit metadata)"
+}

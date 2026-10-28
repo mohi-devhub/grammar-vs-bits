@@ -1,0 +1,10 @@
+{
+  "scope": "Local offline membership validator build environment; not the cloud GPU runtime",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.12.12 (main, Oct 28 2025, 11:52:25) [Clang 20.1.4 ]",
+  "tools": {
+    "cmake": "cmake version 4.4.4",
+    "ninja": "1.13.0.git.kitware.jobserver-pipe-1",
+    "clang++": "Apple clang version 21.0.0 (clang-2100.1.1.101)"
+  }
+}

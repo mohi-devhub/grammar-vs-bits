@@ -1,0 +1,7 @@
+{
+  "app_id": "ap-27090tv4stgi7opQZHMtyj",
+  "failure": "F16 conversion succeeded; CUDA-linked quantizer exit 127 in CPU container. Local disk exhaustion also interrupted log/final-evidence writes; explicit stop confirmed no active tasks.",
+  "raw_log": ".cache/pilot-launch-004.log",
+  "local_cache_cleanup": "Only this repo offline .o files and venv __pycache__ removed",
+  "quantizer_diagnosis": "Exit 127 observed; CUDA runtime linkage suspected, not established from lost stderr. Use independently built CPU-only static utility from same commit."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "model": "Qwen3-0.6B",
+    "differences": [
+      0
+    ],
+    "prompts": 200,
+    "bos": null
+  },
+  {
+    "model": "Llama-3.2-1B-Instruct",
+    "differences": [
+      1
+    ],
+    "prompts": 200,
+    "bos": 128000
+  },
+  {
+    "model": "Llama-3.2-3B-Instruct",
+    "differences": [
+      1
+    ],
+    "prompts": 200,
+    "bos": 128000
+  }
+]

@@ -1,0 +1,20 @@
+root ::= ws "[" ws (call (ws "," ws call)*)? ws "]" ws
+ws ::= [ \t\n\r]*
+string ::= "\"" ([^"\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "\"" | "'" ([^'\\\x00-\x1F] | "\\" (["'\\abfnrtv] | "u" [0-9a-fA-F]{4} | "x" [0-9a-fA-F]{2}))* "'"
+number ::= "-"? ("0" | [1-9] [0-9]*) ("." [0-9]+)? ([eE] [+-]? [0-9]+)?
+integer ::= "-"? ("0" | [1-9] [0-9]*)
+boolean ::= "True" | "False"
+null ::= "None"
+value ::= string | number | boolean | null | any-object | any-array
+any-object ::= "{" ws (string ws ":" ws value (ws "," ws string ws ":" ws value)*)? ws "}"
+any-array ::= "[" ws (value (ws "," ws value)*)? ws "]"
+node-2 ::= string
+node-1-0 ::= "company_name" ws "=" ws node-2 node-1-1
+node-1-1 ::= ""
+node-4 ::= string
+node-5 ::= integer
+node-3-0 ::= "company_name" ws "=" ws node-4 node-3-1 | "lawsuit_id" ws "=" ws node-5 node-3-2
+node-3-1 ::= "" | ws "," ws "lawsuit_id" ws "=" ws node-5 node-3-3
+node-3-2 ::= ws "," ws "company_name" ws "=" ws node-4 node-3-3
+node-3-3 ::= ""
+call ::= ("lawsuit.fetch_details" ws "(" ws node-1-0 ws ")") | ("lawsuit.judge" ws "(" ws node-3-0 ws ")")

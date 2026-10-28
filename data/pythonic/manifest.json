@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-10-28T19:35:54.492025+00:00",
+  "items": 120,
+  "categories": {
+    "parallel": 60,
+    "parallel_multiple": 60
+  },
+  "selection_seed": 20261027,
+  "selection": "Original 60 parallel cases plus sorted parallel_multiple pool sampled with Random(\"20261027:parallel_multiple\"); no outcome filtering.",
+  "frozen_sha256": "8fa19fc02e3eed0b41c111dbcea7db3c1a70c92b7e47cc8decca5e73bc01d83d",
+  "new_upstream_sha256": "8863ea8433239f55c5f016154cf0830853c89f693c6ea270396a2fa121960579",
+  "models": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+      "slug": "Llama-3.2-1B-Instruct",
+      "family": "llama"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "slug": "Llama-3.2-3B-Instruct",
+      "family": "llama"
+    }
+  ],
+  "source": "https://github.com/meta-llama/llama-models/blob/0e0b8c519242d5833d8c11bffc1232b77ad7f301/models/llama3_2/text_prompt_format.md",
+  "prompt_scope": "Documented Pythonic call-list form; paraphrased instructions and study convention [] for abstention. tools= omitted to avoid single-object JSON injection. Joint prompt/parser/grammar sensitivity, not a parser-only intervention.",
+  "baseline_comparison": "Only the original 60 parallel items have a matched primary JSON baseline; parallel_multiple is a separate endpoint."
+}

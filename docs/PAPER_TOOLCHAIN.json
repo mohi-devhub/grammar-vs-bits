@@ -1,0 +1,11 @@
+{
+  "name": "TinyTeX-1",
+  "tag": "v2026.10",
+  "official_repository": "rstudio/tinytex-releases",
+  "asset": "TinyTeX-1-darwin-v2026.10.tar.xz",
+  "sha256": "e40c294efae81026d8cc8d12c09d2dd456d268efe7fe092410478bc1973fd40f",
+  "official_digest": "sha256:e40c294efae81026d8cc8d12c09d2dd456d268efe7fe092410478bc1973fd40f",
+  "url": "https://github.com/rstudio/tinytex-releases/releases/download/v2026.10/TinyTeX-1-darwin-v2026.10.tar.xz",
+  "local_only": true,
+  "network_package_installation": false
+}

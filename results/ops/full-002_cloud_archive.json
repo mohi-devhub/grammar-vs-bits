@@ -1,0 +1,408 @@
+{
+  "date": "2026-10-28T17:19:03.069962+00:00",
+  "volume": "qunti-check-artifacts",
+  "files": 66,
+  "bytes_to_archive": 613211157,
+  "excluded_reproducible_model_cache_bytes": 14572987953,
+  "deletion_performed": false,
+  "completed_at": "2026-10-28T17:23:04.542009+00:00",
+  "complete": true,
+  "inventory": [
+    {
+      "remote_path": "full/full-002-3-concurrent1/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "0bf66343bc0ac3d4beeff29e5fe035b112e9fd498d4a3055322660922919dbb7"
+    },
+    {
+      "remote_path": "full/full-002-3-concurrent1/shutdown_history.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "0bf66343bc0ac3d4beeff29e5fe035b112e9fd498d4a3055322660922919dbb7"
+    },
+    {
+      "remote_path": "full/full-002-3-concurrent1/progress.json",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/progress.json",
+      "bytes": 177,
+      "sha256": "d00c4c5b8e4619c14453ed46c35204dd39b479bf8553c5194e232fb39ef951d7"
+    },
+    {
+      "remote_path": "full/full-002-3-concurrent1/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/events.jsonl",
+      "bytes": 67382053,
+      "sha256": "fd37b0c160c9d7475587ead7edb897f4a38a7c7cf125afa5db40efa49bf78d4a"
+    },
+    {
+      "remote_path": "full/full-002-3-concurrent1/raw.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/raw.jsonl",
+      "bytes": 67308084,
+      "sha256": "681e3a9ac86194323a96d7f5074c16bfff325174c5037a01a6bf5c8f25e84a86"
+    },
+    {
+      "remote_path": "full/full-002-3-concurrent1/Q4_K_M-server.log",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/Q4_K_M-server.log",
+      "bytes": 3874573,
+      "sha256": "f16c4c8e64d8a393c5f38a95bfaac2676f056ef0b27c9e8df9432ec6e4870d7d"
+    },
+    {
+      "remote_path": "full/full-002-3-concurrent1/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/F16-server.log",
+      "bytes": 3893647,
+      "sha256": "88caa3f6a0d2ced3a5d9767167cafd510834c5c15ce0ebd789faf8542ea42b8b"
+    },
+    {
+      "remote_path": "full/full-002-3-concurrent1/model_artifacts.json",
+      "local_path": "results/cloud_archive/full/full-002-3-concurrent1/model_artifacts.json",
+      "bytes": 2277,
+      "sha256": "2c14d642f431171de73d74ce447e89254d3a191ce3643dd132f4975ef879f569"
+    },
+    {
+      "remote_path": "models/Llama-3.2-3B-Instruct/manifest.json",
+      "local_path": "results/cloud_archive/models/Llama-3.2-3B-Instruct/manifest.json",
+      "bytes": 2381,
+      "sha256": "392f054ecce07edbb8437ef6ff6debb625c805abb606b6ce38b44fe30a2c144b"
+    },
+    {
+      "remote_path": "full/Llama-3.2-3B-Instruct-pip-audit.json",
+      "local_path": "results/cloud_archive/full/Llama-3.2-3B-Instruct-pip-audit.json",
+      "bytes": 6068,
+      "sha256": "dcd914ea7731cd84833d85ed51fb5b5936ba36020147dbd6aa3e49927b138cb8"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "b93d2480b3b9883247f1fc2c8a605ecb10e81396fda6b8c2bedb1061d890939e"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/shutdown_history.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "b93d2480b3b9883247f1fc2c8a605ecb10e81396fda6b8c2bedb1061d890939e"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/progress.json",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/progress.json",
+      "bytes": 177,
+      "sha256": "822bbbf8ccf919cbcb22de8f7a5e284a0604a398e5dd89318980c27d25b03ecb"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/events.jsonl",
+      "bytes": 68382627,
+      "sha256": "d31c5c033a0be484eeb1c1845f982db3d86c208f49e316ca758cffdbf40b1fa5"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/raw.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/raw.jsonl",
+      "bytes": 68308948,
+      "sha256": "0b9cd630cb040efa623745faea56f457500cbc6ea458793212c9072119217bad"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/Q4_K_M-server.log",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/Q4_K_M-server.log",
+      "bytes": 3816966,
+      "sha256": "9ac0f1b82e01e7374b27600d1671e9602f4567ce99fd1b9bd4d1b58b802e23ff"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/F16-server.log",
+      "bytes": 3814262,
+      "sha256": "ac635f13b7ddab8fcb72ce20186981b924b4d7f1c737aca5d55762a714613947"
+    },
+    {
+      "remote_path": "full/full-002-2-concurrent1/model_artifacts.json",
+      "local_path": "results/cloud_archive/full/full-002-2-concurrent1/model_artifacts.json",
+      "bytes": 1989,
+      "sha256": "2ced57c51199447c8eb532c534a2dd3dcf901c8b57bf1696f380795b49d051ae"
+    },
+    {
+      "remote_path": "full/Llama-3.2-1B-Instruct-pip-audit.json",
+      "local_path": "results/cloud_archive/full/Llama-3.2-1B-Instruct-pip-audit.json",
+      "bytes": 6068,
+      "sha256": "dcd914ea7731cd84833d85ed51fb5b5936ba36020147dbd6aa3e49927b138cb8"
+    },
+    {
+      "remote_path": "full/full-002-2-spawn1/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-002-2-spawn1/F16-server.log",
+      "bytes": 2719029,
+      "sha256": "f806d05e337e8d43fe25ac7fa84187ec85ddefef05bfb903a6a5477eaf9fa94e"
+    },
+    {
+      "remote_path": "full/full-002-2-spawn1/raw.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-spawn1/raw.jsonl",
+      "bytes": 24123412,
+      "sha256": "0216c86fc2a91867c9e7aa84a5e698dedc3053f30c1ca38dc95757c8444bdb79"
+    },
+    {
+      "remote_path": "full/full-002-2-spawn1/progress.json",
+      "local_path": "results/cloud_archive/full/full-002-2-spawn1/progress.json",
+      "bytes": 163,
+      "sha256": "d6d10092b67b5869a8b0a20780bf5ac1e6c43eb0d3e70f71e35d81d24e3be1f4"
+    },
+    {
+      "remote_path": "full/full-002-2-spawn1/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-spawn1/events.jsonl",
+      "bytes": 23783141,
+      "sha256": "ab3ada04ef9af3dad20f2443fb964a0ca12c39f6430e066381865b31daff9927"
+    },
+    {
+      "remote_path": "full/full-002-2-spawn1/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-002-2-spawn1/shutdown_reason.json",
+      "bytes": 140,
+      "sha256": "6acee936401c27aa2a22417b656b41011f458b2c27250ccfc9583a0c1d118904"
+    },
+    {
+      "remote_path": "full/full-002-2-spawn1/shutdown_history.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-spawn1/shutdown_history.jsonl",
+      "bytes": 140,
+      "sha256": "6acee936401c27aa2a22417b656b41011f458b2c27250ccfc9583a0c1d118904"
+    },
+    {
+      "remote_path": "full/full-002-2-spawn1/model_artifacts.json",
+      "local_path": "results/cloud_archive/full/full-002-2-spawn1/model_artifacts.json",
+      "bytes": 1972,
+      "sha256": "7714c38b1c04f27dfa3259b82b63f7e38b09807ef4ec544d557da6198b805adc"
+    },
+    {
+      "remote_path": "ops/detach-probe-001.json",
+      "local_path": "results/cloud_archive/ops/detach-probe-001.json",
+      "bytes": 216,
+      "sha256": "da4bafffd3ce507480f7c582d6c615a2e769c383022a00459c964e5d2da17828"
+    },
+    {
+      "remote_path": "full/full-002-2-native1/Q4_K_M-server.log",
+      "local_path": "results/cloud_archive/full/full-002-2-native1/Q4_K_M-server.log",
+      "bytes": 447591,
+      "sha256": "75d29cfbbd5ed8d5c76897d1e1f09372c588108dbbda087a5eca3273bdbb6c73"
+    },
+    {
+      "remote_path": "full/full-002-2-native1/raw.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-native1/raw.jsonl",
+      "bytes": 37972165,
+      "sha256": "45b9aed6f21a989ac8e14477cf28c74e94cc7e23022852578d232f32db0e6689"
+    },
+    {
+      "remote_path": "full/full-002-2-native1/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-002-2-native1/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "16aa775d4a2247e0fba9dfa46ece9d1e48e93f33f1d0da1d03646475ad57b114"
+    },
+    {
+      "remote_path": "full/full-002-2-native1/shutdown_history.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-native1/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "16aa775d4a2247e0fba9dfa46ece9d1e48e93f33f1d0da1d03646475ad57b114"
+    },
+    {
+      "remote_path": "full/full-002-2-native1/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-native1/events.jsonl",
+      "bytes": 36919787,
+      "sha256": "a1af6d8b1bb1c4a5f5bfc595b62d66dac25b160e5bc3978c645a87550a325410"
+    },
+    {
+      "remote_path": "full/full-002-2-native1/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-002-2-native1/F16-server.log",
+      "bytes": 3814618,
+      "sha256": "1c703facf2d536392532567209ced7227a2af7006346136375d9596d33259f89"
+    },
+    {
+      "remote_path": "full/full-002-2-native1/model_artifacts.json",
+      "local_path": "results/cloud_archive/full/full-002-2-native1/model_artifacts.json",
+      "bytes": 1980,
+      "sha256": "1eb96e24143aabcc63e6d07aa9b24482309adae7b471d43603319eaa8bd17fd6"
+    },
+    {
+      "remote_path": "full/full-002-2-retry2/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-002-2-retry2/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "2d4be09e30f9326c4ad04f1a9ac9e5512308711de91a5c4371075c0d7a468238"
+    },
+    {
+      "remote_path": "full/full-002-2-retry2/shutdown_history.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-retry2/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "2d4be09e30f9326c4ad04f1a9ac9e5512308711de91a5c4371075c0d7a468238"
+    },
+    {
+      "remote_path": "full/full-002-2-retry2/raw.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-retry2/raw.jsonl",
+      "bytes": 6610777,
+      "sha256": "12bd33c0781a29643587e0698b24ec9fe77c4feae09d071bb9c1c64dc183f19c"
+    },
+    {
+      "remote_path": "full/full-002-2-retry2/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-002-2-retry2/F16-server.log",
+      "bytes": 1122474,
+      "sha256": "f3acdf845a391c0a1a3c35427b52068a652c7880bf85197f0901c661830ffec4"
+    },
+    {
+      "remote_path": "full/full-002-2-retry2/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-retry2/events.jsonl",
+      "bytes": 6647553,
+      "sha256": "d3cffed20aa59ba863d2707a5eacf5a4fb1ffe8d47b08548ffe82e614ab8f474"
+    },
+    {
+      "remote_path": "full/full-002-2-retry2/model_artifacts.json",
+      "local_path": "results/cloud_archive/full/full-002-2-retry2/model_artifacts.json",
+      "bytes": 1979,
+      "sha256": "f6d003c367a0b3245665d740dc373f5ac078ac2a1f602938c69ba53632288e09"
+    },
+    {
+      "remote_path": "full/full-002-2-retry1/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-002-2-retry1/F16-server.log",
+      "bytes": 403,
+      "sha256": "f9dee9096808fd9b81f831af855ebc9b797520bd2552a5ee1a070cb87411dfa9"
+    },
+    {
+      "remote_path": "full/full-002-2-retry1/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-retry1/events.jsonl",
+      "bytes": 2945,
+      "sha256": "80d490ae88126a8380328d4b1d72aacf0a3975f33f5d731198da677c4622cc7b"
+    },
+    {
+      "remote_path": "full/full-002-2-retry1/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-002-2-retry1/shutdown_reason.json",
+      "bytes": 140,
+      "sha256": "1c6c2b2afe5955b55a8a6f73aac206cd6ce9d191305090b278c9df5f97b43c65"
+    },
+    {
+      "remote_path": "full/full-002-2-retry1/shutdown_history.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-2-retry1/shutdown_history.jsonl",
+      "bytes": 140,
+      "sha256": "1c6c2b2afe5955b55a8a6f73aac206cd6ce9d191305090b278c9df5f97b43c65"
+    },
+    {
+      "remote_path": "full/full-002-2-retry1/model_artifacts.json",
+      "local_path": "results/cloud_archive/full/full-002-2-retry1/model_artifacts.json",
+      "bytes": 1950,
+      "sha256": "fe974a8738e82f920a621a2f36363c0c9c4fa8e4420bfe787af54baa749b387b"
+    },
+    {
+      "remote_path": "models/Llama-3.2-1B-Instruct/manifest.json",
+      "local_path": "results/cloud_archive/models/Llama-3.2-1B-Instruct/manifest.json",
+      "bytes": 2047,
+      "sha256": "8257f9b42bc17ae2a153d89c995622118221a74c86acaf26774c0f222b4896c2"
+    },
+    {
+      "remote_path": "full/full-002-1/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-002-1/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "a72e71b7d940af3cf6b2977d1d1898c9113524d1225bd66cc78b090183a0e236"
+    },
+    {
+      "remote_path": "full/full-002-1/shutdown_history.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-1/shutdown_history.jsonl",
+      "bytes": 154,
+      "sha256": "a72e71b7d940af3cf6b2977d1d1898c9113524d1225bd66cc78b090183a0e236"
+    },
+    {
+      "remote_path": "full/full-002-1/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-1/events.jsonl",
+      "bytes": 60858646,
+      "sha256": "6b0486896de373b953341dec01a0ea10172b33db9d54ddde349eeeec16cb7cab"
+    },
+    {
+      "remote_path": "full/full-002-1/raw.jsonl",
+      "local_path": "results/cloud_archive/full/full-002-1/raw.jsonl",
+      "bytes": 60789052,
+      "sha256": "7d995f962853e7b1aba03d11dde67fa5a4465e70c424f86f162f38f57f044061"
+    },
+    {
+      "remote_path": "full/full-002-1/Q4_K_M-server.log",
+      "local_path": "results/cloud_archive/full/full-002-1/Q4_K_M-server.log",
+      "bytes": 3829850,
+      "sha256": "028055b0bda8c9f4d3b050ab376155f83003a532e60fa1c47f26cf06387fd781"
+    },
+    {
+      "remote_path": "full/full-002-1/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-002-1/F16-server.log",
+      "bytes": 3836682,
+      "sha256": "449aec363b143cbc3ddfded9fc0a1e85271a720e9ed081ba8b4605f0db97bc6b"
+    },
+    {
+      "remote_path": "full/Qwen3-0.6B-pip-audit.json",
+      "local_path": "results/cloud_archive/full/Qwen3-0.6B-pip-audit.json",
+      "bytes": 6068,
+      "sha256": "dcd914ea7731cd84833d85ed51fb5b5936ba36020147dbd6aa3e49927b138cb8"
+    },
+    {
+      "remote_path": "full/full-001-1/F16-server.log",
+      "local_path": "results/cloud_archive/full/full-001-1/F16-server.log",
+      "bytes": 2927433,
+      "sha256": "6c416e1cc0291695b766c8df55073aaa26012f75ba54aa98bf8bc83a4e0dd0c1"
+    },
+    {
+      "remote_path": "full/full-001-1/raw.jsonl",
+      "local_path": "results/cloud_archive/full/full-001-1/raw.jsonl",
+      "bytes": 23196974,
+      "sha256": "0960491437d8c192e77faaa6ef76bbfb8141d52fe4ec86b29028ee8fa179c830"
+    },
+    {
+      "remote_path": "full/full-001-1/shutdown_reason.json",
+      "local_path": "results/cloud_archive/full/full-001-1/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "d645f6255b5bcf2300c8d19523c2dfeb4e8e253ec0ab91fd2b685f92b98f9182"
+    },
+    {
+      "remote_path": "full/full-001-1/events.jsonl",
+      "local_path": "results/cloud_archive/full/full-001-1/events.jsonl",
+      "bytes": 22304450,
+      "sha256": "b0eec9e55bba853ddae2aa5ba3cb0bbdfd2f0bd4a952c19fcf1435fdd93625ec"
+    },
+    {
+      "remote_path": "pilot/pilot-008/shutdown_reason.json",
+      "local_path": "results/cloud_archive/pilot/pilot-008/shutdown_reason.json",
+      "bytes": 154,
+      "sha256": "2fe86d66b5a541c1a374a0e1bbfa6bb8ca268948022d5cd27ef4932d106e3503"
+    },
+    {
+      "remote_path": "pilot/pilot-008/events.jsonl",
+      "local_path": "results/cloud_archive/pilot/pilot-008/events.jsonl",
+      "bytes": 2145223,
+      "sha256": "5530d31f1beef3aa99bbdd2c879dcf84fb9cb303ec1f47fcb4d70c96c20bf669"
+    },
+    {
+      "remote_path": "pilot/Q4_K_M.jsonl",
+      "local_path": "results/cloud_archive/pilot/Q4_K_M.jsonl",
+      "bytes": 684367,
+      "sha256": "4ffe04af7a3ae9c28c5b7f45906d37d2dc7d78092d1f7c2d39d3dbbb80ed1d1e"
+    },
+    {
+      "remote_path": "pilot/Q4_K_M-server.log",
+      "local_path": "results/cloud_archive/pilot/Q4_K_M-server.log",
+      "bytes": 95620,
+      "sha256": "883deefd1dfcb335a5e02a4e8b601a2faa2c704c2071c7c9048838b8a5c43e8a"
+    },
+    {
+      "remote_path": "pilot/Q8_0.jsonl",
+      "local_path": "results/cloud_archive/pilot/Q8_0.jsonl",
+      "bytes": 683236,
+      "sha256": "4e7f7f6ef7a193d0fa7cee195b05a2db03ea5ca8e6a78ea32272e4c2ea48643c"
+    },
+    {
+      "remote_path": "pilot/Q8_0-server.log",
+      "local_path": "results/cloud_archive/pilot/Q8_0-server.log",
+      "bytes": 95646,
+      "sha256": "7f028712f5b144b7bbb814a5034162bdf8dff0631ebe09e8494006bc2bb92f9b"
+    },
+    {
+      "remote_path": "pilot/F16.jsonl",
+      "local_path": "results/cloud_archive/pilot/F16.jsonl",
+      "bytes": 683242,
+      "sha256": "e8510c874732ec5211b394677b150ef77a1b6d76c195cc396d93117ad03d49a2"
+    },
+    {
+      "remote_path": "pilot/F16-server.log",
+      "local_path": "results/cloud_archive/pilot/F16-server.log",
+      "bytes": 95672,
+      "sha256": "8a7124853b7b33a44d11e9499abe4b1387e1fd94c2211aca2d5dcba3ab12d9bc"
+    },
+    {
+      "remote_path": "models/Qwen3-0.6B/manifest.json",
+      "local_path": "results/cloud_archive/models/Qwen3-0.6B/manifest.json",
+      "bytes": 2089,
+      "sha256": "e0b8d62a4935c045027ba1c9ea2b9def95ebd242af99fee695cbf4e7b57773ae"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "created_at": "2026-10-27T17:07:30.134432+00:00",
+  "batch": "pilot-008",
+  "attempted_generations": 300,
+  "gpu_type": "A10",
+  "gpu_metadata": {
+    "date": "2026-10-27T17:06:06.828863+00:00",
+    "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+    "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+    "gpu_name": "NVIDIA A10",
+    "gpu_type": "A10",
+    "requested_gpu_fallbacks": [
+      "L4",
+      "A10"
+    ],
+    "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+    "container_started_monotonic": 0.892931106,
+    "protocol_sha256": "9dbaa75473307c170cd63f2b4daef4d8226a146bcbe22ea863ddea0418c482db"
+  },
+  "planned_generations": 300,
+  "complete": true,
+  "coverage_matches_frozen_pilot": true,
+  "responses_received": 300,
+  "finished_responses": 300,
+  "status_counts": {
+    "ok": 300
+  },
+  "cells": [
+    {
+      "quant": "F16",
+      "condition": "free",
+      "attempts": 50,
+      "correct": 33,
+      "format_failures": 0,
+      "status_counts": {
+        "ok": 50
+      },
+      "mean_request_seconds": 0.52425953076
+    },
+    {
+      "quant": "F16",
+      "condition": "whole_strict",
+      "attempts": 50,
+      "correct": 35,
+      "format_failures": 0,
+      "status_counts": {
+        "ok": 50
+      },
+      "mean_request_seconds": 0.53853661552
+    },
+    {
+      "quant": "Q4_K_M",
+      "condition": "free",
+      "attempts": 50,
+      "correct": 34,
+      "format_failures": 2,
+      "status_counts": {
+        "ok": 50
+      },
+      "mean_request_seconds": 0.46155684434000066
+    },
+    {
+      "quant": "Q4_K_M",
+      "condition": "whole_strict",
+      "attempts": 50,
+      "correct": 36,
+      "format_failures": 0,
+      "status_counts": {
+        "ok": 50
+      },
+      "mean_request_seconds": 0.5069086324399998
+    },
+    {
+      "quant": "Q8_0",
+      "condition": "free",
+      "attempts": 50,
+      "correct": 33,
+      "format_failures": 0,
+      "status_counts": {
+        "ok": 50
+      },
+      "mean_request_seconds": 0.4648938413799998
+    },
+    {
+      "quant": "Q8_0",
+      "condition": "whole_strict",
+      "attempts": 50,
+      "correct": 35,
+      "format_failures": 0,
+      "status_counts": {
+        "ok": 50
+      },
+      "mean_request_seconds": 0.4918188121199998
+    }
+  ],
+  "measured_inference_batch_wall_seconds": 37.814642545,
+  "measured_gpu_function_seconds": 44.850404881,
+  "measured_supervisor_body_seconds": 48.839653642,
+  "measured_cpu_preparation_function_seconds": 0.0,
+  "resource_rate_gpu_container_usd_hour": 1.3226,
+  "resource_rate_cpu_container_usd_hour": 0.2226,
+  "cost_scope": "Timing-based resource estimates exclude platform startup, image builds, idle, post-timer cleanup/volume commits and storage; tagged metering is separate.",
+  "timer_definitions": {
+    "cpu_preparation": "Function entry through manifest construction, before source-weight cleanup and volume commit",
+    "gpu_worker": "Worker-body entry through completed precisions and server shutdown, before final volume commit"
+  },
+  "timed_inference_resource_cost_usd": 0.013892679508338054,
+  "timed_preparation_and_gpu_resource_cost_usd": 0.01647754041544739,
+  "timed_inference_usd_per_attempt": 4.630893169446018e-05,
+  "timed_preparation_and_gpu_usd_per_attempt": 5.492513471815797e-05,
+  "timed_preparation_and_gpu_usd_per_unique_item": 0.00032955080830894784,
+  "supervisor_cpu_resource_ceiling_estimate_usd": 0.00026895725929240277,
+  "gpu_prep_supervisor_body_resource_estimate_usd": 0.016746497674739794,
+  "gpu_prep_supervisor_body_usd_per_generation": 5.582165891579932e-05,
+  "timed_inference_usd_per_generation": 4.630893169446018e-05,
+  "timed_preparation_and_gpu_usd_per_generation": 5.492513471815797e-05,
+  "calibration_usable": true,
+  "projection": {
+    "qwen_main_8000_calls_seconds_at_observed_two_arm_throughput": 1027.05262972,
+    "hardware_assumption": "Same GPU type as this pilot; no cross-GPU speed equivalence assumed",
+    "qwen_main_8000_calls_resource_usd_at_observed_throughput": 0.37732772446324214,
+    "unmeasured": [
+      "Llama model throughput",
+      "loose and trigger-strict generation lengths",
+      "five-run scheduling variation",
+      "additional image/preparation/startup/storage costs"
+    ],
+    "not_a_full_run_authorization": true,
+    "preliminary_not_a_guaranteed_cost_bound": true,
+    "pilot_all_requests_returned_responses": true,
+    "whole_study_scenarios": [
+      {
+        "assumed_llama_cost_multiple_of_qwen_per_model": 1,
+        "assumed_loose_trigger_pool_multiplier": 1,
+        "inference_resource_usd": 1.1319831733897265
+      },
+      {
+        "assumed_llama_cost_multiple_of_qwen_per_model": 1,
+        "assumed_loose_trigger_pool_multiplier": 2,
+        "inference_resource_usd": 2.263966346779453
+      },
+      {
+        "assumed_llama_cost_multiple_of_qwen_per_model": 3,
+        "assumed_loose_trigger_pool_multiplier": 1,
+        "inference_resource_usd": 2.6412940712426956
+      },
+      {
+        "assumed_llama_cost_multiple_of_qwen_per_model": 3,
+        "assumed_loose_trigger_pool_multiplier": 2,
+        "inference_resource_usd": 5.282588142485391
+      },
+      {
+        "assumed_llama_cost_multiple_of_qwen_per_model": 5,
+        "assumed_loose_trigger_pool_multiplier": 1,
+        "inference_resource_usd": 4.150604969095664
+      },
+      {
+        "assumed_llama_cost_multiple_of_qwen_per_model": 5,
+        "assumed_loose_trigger_pool_multiplier": 2,
+        "inference_resource_usd": 8.301209938191327
+      }
+    ]
+  }
+}

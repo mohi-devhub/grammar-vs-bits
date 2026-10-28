@@ -1,0 +1,14 @@
+{
+  "run_id": "full-001",
+  "started_at": "2026-10-28T05:02:59.243975+00:00",
+  "historical_reported_cost_usd": 0.34335856,
+  "model_sessions": [],
+  "cap_usd": 12,
+  "gpu": "A10",
+  "initial_forecast_source": "results/pilot/pilot-008/budget_forecast.json",
+  "complete": false,
+  "stop_reason": "Interrupted Qwen model and transient billing-query failure; no next model launched",
+  "primary_analysis": false,
+  "restarted_as": "full-002",
+  "aborted_attempts": 2936
+}

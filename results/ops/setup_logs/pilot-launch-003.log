@@ -1,0 +1,48 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 1001.35it/s]
+✓ Initialized. View run at 
+https://modal.com/apps/achumohith14/main/ap-HFprm1QnjNLtmwqNColgEk
+Building image im-d49h5hRtT6ArXh5aE69KZP
+
+=> Step 0: FROM base
+
+=> Step 1: COPY . /
+Saving image...
+Image saved, took 1.26s
+
+Built image im-d49h5hRtT6ArXh5aE69KZP in 3.36s
+
+
+Stopping app - uncaught exception raised locally: InvalidError('Function disk request out of bounds: 40960 MiB. Must be between 524288 and 3145728 MiB.').
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 140, in <module>
+    main()
+  File "/Users/mohith/Research/qunti-check/scripts/pilot.py", line 109, in main
+    with app.run():
+         ^^^^^^^^^
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/app.py", line 494, in run
+    async with _run_app(
+               ^^^^^^^^^
+  File "/Users/mohith/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/runner.py", line 455, in _run_app
+    await _create_all_objects(running_app, local_app_state, load_context)
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/runner.py", line 203, in _create_all_objects
+    await asyncio.gather(*[tc.create_task(_load(tag, obj)) for tag, obj in indexed_objects.items()])
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/runner.py", line 194, in _load
+    await resolver.load(obj, load_context, existing_object_id=existing_object_id)
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_functions.py", line 981, in _load
+    with FunctionCreationStatus("Server" if is_server else "Function", tag) as function_creation_status:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_output/status.py", line 50, in __exit__
+    raise exc_val
+  File "/Users/mohith/Research/qunti-check/.venv/lib/python3.12/site-packages/modal/_functions.py", line 1192, in _load
+    response: api_pb2.FunctionCreateResponse = await load_context.client._stub.FunctionCreate(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+modal.exception.InvalidError: Function disk request out of bounds: 40960 MiB. Must be between 524288 and 3145728 MiB.

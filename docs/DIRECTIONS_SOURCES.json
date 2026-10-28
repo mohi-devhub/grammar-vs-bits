@@ -1,0 +1,119 @@
+{
+  "checked_at_utc": "2026-10-27T09:21:19.006940+00:00",
+  "scope": "Supplement to SOURCES.json for DIRECTIONS.md. Source bytes inspected as text; no third-party code executed. Cached source files are ignored. Hashes record retrieved evidence, not experimental dependencies.",
+  "sources": [
+    {
+      "key": "constraint-tax",
+      "url": "https://arxiv.org/html/2606.25605v1",
+      "sha256": "c86b909eb6ff9d28f25ecebc48c207bf09b682d07d3dee67acc54caaf23cea78",
+      "bytes": 422839,
+      "lines": 1389,
+      "cache_path": ".cache/directions/constraint-tax.html"
+    },
+    {
+      "key": "repair",
+      "url": "https://arxiv.org/html/2608.13959v2",
+      "sha256": "8cf058945361f0040bbda30a553e4a97182a22082e64223e2e4cc71adfe9e866",
+      "bytes": 354464,
+      "lines": 2447,
+      "cache_path": ".cache/directions/repair.html"
+    },
+    {
+      "key": "wu",
+      "url": "https://arxiv.org/html/2608.06564v5",
+      "sha256": "c7e1258d362ea8a5ed0ea237f97a63a1530292346f06c9510172d6715cf6a043",
+      "bytes": 488375,
+      "lines": 1805,
+      "cache_path": ".cache/directions/wu.html"
+    },
+    {
+      "key": "chavan",
+      "url": "https://arxiv.org/html/2609.23742v1",
+      "sha256": "75bf99485b1ede874c0a1b35638cb42093b218359df7cae8ee3005200be1fb7b",
+      "bytes": 94953,
+      "lines": 402,
+      "cache_path": ".cache/directions/chavan.html"
+    },
+    {
+      "key": "triaxial",
+      "url": "https://arxiv.org/html/2605.17170v1",
+      "sha256": "4592a5bcf94c3177b82cfffc563cd0466af19b8383db3a4580e6e309be39f2a3",
+      "bytes": 211024,
+      "lines": 950,
+      "cache_path": ".cache/directions/triaxial.html"
+    },
+    {
+      "key": "less-more",
+      "url": "https://arxiv.org/html/2411.15399v1",
+      "sha256": "97a64bc8e43934483552d837ce3d4097128d69a8f43bdf72a8c4896419b66db3",
+      "bytes": 126218,
+      "lines": 285,
+      "cache_path": ".cache/directions/less-more.html"
+    },
+    {
+      "key": "structurebench",
+      "url": "https://ijcai.org/proceedings/2026/267",
+      "sha256": "b161909c5e8c1e77a64f56fa0e1776d6f4c48b729d7e768b75ac4b1b572fa99b",
+      "bytes": 99930,
+      "lines": 310,
+      "cache_path": ".cache/directions/structurebench.html"
+    },
+    {
+      "key": "structurebench-appendix",
+      "url": "https://raw.githubusercontent.com/Str-Ben/StructureBench/db4a8eca2f629ea0b8809930085ccae2bef91010/appendix.md",
+      "sha256": "996698d1473bdca2a9429b8ffc77fd67c4d2112db9085d9bcc5edeaaf7f7003b",
+      "bytes": 10652,
+      "cache_path": ".cache/directions/structurebench-appendix.md"
+    },
+    {
+      "key": "chavan-readme",
+      "url": "https://raw.githubusercontent.com/CruiseDevice/small-llm-structured-benchmark/b09c74476d40e2628bf4777a2e04258d8c3949a3/README.md",
+      "sha256": "392d0e89876ea1e48272650d5faa584450cceaf2dc6285f7b04291c2131d5a96",
+      "bytes": 4793,
+      "cache_path": ".cache/directions/chavan-readme.md"
+    },
+    {
+      "key": "pricing",
+      "url": "https://modal.com/pricing",
+      "sha256": "9f93efd8bc9f80e9515393695620ce7c81cdffe755c945c49a0ebaa5a425865c",
+      "bytes": 323762,
+      "cache_path": ".cache/directions/pricing.html"
+    },
+    {
+      "key": "toolhound-backend",
+      "url": "https://raw.githubusercontent.com/Code-byte404/toolhound/97666be79a2af2afb78b36a168a5f89f84be6d97/src/toolprobe/backend.py",
+      "sha256": "b1a2553c1b064c3c0d8bf4f1523590f0e01917da267acb4308d708f9f5a2e94d",
+      "bytes": 8365,
+      "cache_path": ".cache/directions/toolhound-backend.md"
+    },
+    {
+      "key": "structurebench-pdf",
+      "url": "https://ijcai.org/proceedings/2026/0267.pdf",
+      "sha256": "ad3d6e87d302e7bf2b6d989e21a123f586090cc25828515f38abf558950b6e72",
+      "bytes": 1389630,
+      "cache_path": ".cache/directions/structurebench.pdf"
+    }
+  ],
+  "additional_primary_pages": [
+    {
+      "title": "Self-Refine",
+      "url": "https://arxiv.org/abs/2303.17651v2",
+      "review_scope": "abstract"
+    },
+    {
+      "title": "FrugalGPT",
+      "url": "https://arxiv.org/abs/2305.05176",
+      "review_scope": "abstract"
+    },
+    {
+      "title": "Constrained Decoding Can Reverse Which Inputs Look Uncertain",
+      "url": "https://aclanthology.org/2026.uncertainlp-main.26/",
+      "review_scope": "abstract"
+    },
+    {
+      "title": "Xyntetik quantization-fidelity evidence",
+      "url": "https://xyntetik.com/evidence/",
+      "review_scope": "vendor evidence summary; raw experiments not reproduced"
+    }
+  ]
+}

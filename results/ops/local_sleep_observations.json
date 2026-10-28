@@ -1,0 +1,17 @@
+{
+  "source_command": "pmset -g log; filtered Sleep/Wake records",
+  "observations": [
+    {
+      "local_time": "2026-10-28 12:04:37 +0530",
+      "event": "Entering Sleep state",
+      "reason": "Maintenance Sleep",
+      "reported_duration_seconds": 969
+    },
+    {
+      "local_time": "2026-10-28 12:21:08 +0530",
+      "event": "Wake from Deep Idle",
+      "reason": "lid / HID Activity"
+    }
+  ],
+  "interpretation": "Laptop sleep was observed during the failed local launch. This is operational evidence, not a model result."
+}

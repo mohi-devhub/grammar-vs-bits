@@ -1,0 +1,292 @@
+{
+  "captured_at": "2026-10-28T18:57:35.984445+00:00",
+  "run_id": "full-002",
+  "billing_snapshot": "results/ops/full-002_final_billing.json",
+  "scope": "Gross project-tagged/resource-named metering reported to date; includes setup and aborted attempts. Storage completeness is not established. This is not a settled invoice.",
+  "reported_project_cost_usd": 2.61096875,
+  "design_complete": true,
+  "reported_registered_session_cost_usd": 1.61568254,
+  "registered_session_observations": 24000,
+  "reported_registered_session_cost_per_observation_usd": 6.732010583333333e-05,
+  "reported_project_cost_amortized_per_registered_observation_usd": 0.00010879036458333334,
+  "cap_usd": 12,
+  "reported_headroom_usd": 9.38903125,
+  "pilot_forecast_total_range_usd": [
+    4.739308080169179,
+    8.135257600338358
+  ],
+  "forecast_source": "results/pilot/pilot-008/budget_forecast.json",
+  "models": [
+    {
+      "batch_id": "full-002-1",
+      "model": "Qwen/Qwen3-0.6B",
+      "attempted": 8000,
+      "complete": true,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.39501664,
+      "timed_body_resource_cost_usd": 0.38869970465466747,
+      "conservative_model_cost_usd": 0.5386997046546674,
+      "reported_project_cost_usd": 0.8943250099999999,
+      "app_id": "ap-7X1euBa0ElmGX1NIkoGPoc",
+      "transport_recovered": true,
+      "reported_model_cost_per_attempt_usd": 4.937708e-05,
+      "pre_model_projection_usd": 0.7659915866948632
+    },
+    {
+      "batch_id": "full-002-2-concurrent1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 8000,
+      "complete": true,
+      "exit_code": 0,
+      "reported_model_cost_usd": 0.40674246,
+      "timed_body_resource_cost_usd": 0.3998832377008961,
+      "conservative_model_cost_usd": 0.5498832377008961,
+      "reported_project_cost_usd": 1.7970453100000001,
+      "app_id": "ap-oKt92Thp21lavCSbyI7pXF",
+      "reported_model_cost_per_attempt_usd": 5.08428075e-05,
+      "pre_model_projection_usd": 1.3328517781623084
+    },
+    {
+      "batch_id": "full-002-3-concurrent1",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "attempted": 8000,
+      "complete": true,
+      "exit_code": 0,
+      "reported_model_cost_usd": 0.81392344,
+      "timed_body_resource_cost_usd": 0.8091437240930517,
+      "conservative_model_cost_usd": 0.9591437240930517,
+      "reported_project_cost_usd": 2.59902955,
+      "app_id": "ap-x1Xcbr6399vyHnDHstkqbh",
+      "reported_model_cost_per_attempt_usd": 0.00010174043,
+      "pre_model_projection_usd": 3.5985553344869254
+    }
+  ],
+  "all_project_batches": [
+    {
+      "batch_id": "pilot-001",
+      "app_id": "ap-u3gGINaddVnGYKkFbkRlW7",
+      "status": "setup_rejected_before_worker",
+      "projection_usd": null,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": null
+    },
+    {
+      "batch_id": "pilot-002",
+      "app_id": "ap-bNcw3wmsk7GYTmCLRasPWz",
+      "status": "source_snapshot_rejected_before_worker",
+      "projection_usd": null,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 0.08615032
+    },
+    {
+      "batch_id": "pilot-003",
+      "app_id": "ap-HFprm1QnjNLtmwqNColgEk",
+      "status": "function_definition_rejected_before_worker",
+      "projection_usd": null,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 1.1520000000000002e-05
+    },
+    {
+      "batch_id": "pilot-004",
+      "app_id": "ap-27090tv4stgi7opQZHMtyj",
+      "status": "cpu_preparation_failed_before_generation",
+      "projection_usd": null,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 0.0024035999999999997
+    },
+    {
+      "batch_id": "pilot-005",
+      "app_id": "ap-A7HQVe4jv9ziB3fm9Zurhz",
+      "status": "cancelled_during_initialization",
+      "projection_usd": null,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 2.938e-05
+    },
+    {
+      "batch_id": "pilot-006",
+      "app_id": "ap-ocZ1Sy6vehm1GZsEfJhhmj",
+      "status": "cpu_prepared_gpu_queue_stopped_without_generation",
+      "projection_usd": null,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 0.021384649999999998
+    },
+    {
+      "batch_id": "pilot-007",
+      "app_id": "ap-Kvar7vq97OXLDbBeZJV7eb",
+      "status": "external_app_shutdown_during_image_build",
+      "projection_usd": null,
+      "retained_hold_usd": 0.35376264,
+      "reported_to_date_usd": 0.15376264
+    },
+    {
+      "batch_id": "pilot-008",
+      "app_id": "ap-1x7xObz1nAtzXk0LOzhvyl",
+      "status": "completed_300_generations_single_A10",
+      "projection_usd": null,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 0.07961645
+    },
+    {
+      "batch_id": "full-001-1",
+      "app_id": "ap-lXLYPpHWy4ZPpnVPRcGyAE",
+      "status": "interrupted_model_restarted_whole",
+      "projection_usd": 0.7659915866948632,
+      "retained_hold_usd": 0.35594981000000003,
+      "reported_to_date_usd": 0.15594981
+    },
+    {
+      "batch_id": "full-002-1",
+      "app_id": "ap-7X1euBa0ElmGX1NIkoGPoc",
+      "status": "complete_cloud_checkpoint_recovered",
+      "projection_usd": 0.7659915866948632,
+      "retained_hold_usd": 0.6386997046546674,
+      "reported_to_date_usd": 0.39501664
+    },
+    {
+      "batch_id": "full-002-2",
+      "app_id": "ap-bafp1vpfvkwF6UL7Mdt5Ro",
+      "status": "setup_connection_failure_stopped",
+      "projection_usd": 1.3328517781623084,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": null
+    },
+    {
+      "batch_id": "full-002-2-retry1",
+      "app_id": "ap-L6khhPsDAxPMeDgvLm10xA",
+      "status": "interlock_abort_zero_generations",
+      "projection_usd": 1.3328517781623084,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 0.01642418
+    },
+    {
+      "batch_id": "full-002-2-retry2",
+      "app_id": "ap-plBb2Td7LwJGen0LVUs3ge",
+      "status": "aborted_duplicate_bos_before_scoring",
+      "projection_usd": 1.3328517781623084,
+      "retained_hold_usd": 0.3,
+      "reported_to_date_usd": 0.06963552
+    },
+    {
+      "batch_id": "full-002-2-native1",
+      "app_id": "ap-WoXXKyta5599G2bi5kCmbs",
+      "status": "aborted_client_generator_cancellation",
+      "projection_usd": 1.3328517781623084,
+      "retained_hold_usd": 0.44810816,
+      "reported_to_date_usd": 0.24810815999999997
+    },
+    {
+      "batch_id": "detach-probe-001",
+      "app_id": "ap-7cpAxiquPQ44nopPXgY9QX",
+      "status": "completed_after_launcher_exit",
+      "projection_usd": null,
+      "retained_hold_usd": 0.05,
+      "reported_to_date_usd": 0.00029567
+    },
+    {
+      "batch_id": "full-002-2-spawn1",
+      "app_id": "ap-c4Al6QGX7zeyolAD0aQ5ak",
+      "status": "interlock_abort_partial_collection",
+      "projection_usd": 1.3328517781623084,
+      "retained_hold_usd": 0.36151431,
+      "reported_to_date_usd": 0.16151431
+    },
+    {
+      "batch_id": "full-002-2-concurrent1",
+      "app_id": "ap-oKt92Thp21lavCSbyI7pXF",
+      "status": "complete",
+      "projection_usd": 1.3328517781623084,
+      "retained_hold_usd": 0.6498832377008961,
+      "reported_to_date_usd": 0.40674246
+    },
+    {
+      "batch_id": "full-002-3-concurrent1",
+      "app_id": "ap-x1Xcbr6399vyHnDHstkqbh",
+      "status": "complete",
+      "projection_usd": 3.5985553344869254,
+      "retained_hold_usd": 1.0591437240930517,
+      "reported_to_date_usd": 0.81392344
+    }
+  ],
+  "failed_model_attempts": [
+    {
+      "batch_id": "full-002-2",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 0,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": null,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 0.8943250099999999,
+      "app_id": "ap-bafp1vpfvkwF6UL7Mdt5Ro",
+      "failure_phase": "control-plane connection before preparation; zero GPU generations",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-retry1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 0,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.01642418,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 0.90288349,
+      "app_id": "ap-L6khhPsDAxPMeDgvLm10xA",
+      "failure_phase": "evalnoise started during CPU preparation; stopped before benchmark generations",
+      "original_controller_attempt_count": 0,
+      "raw_source": "results/full/full-002-2-retry1/cloud_events_download_0.jsonl",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-retry2",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 800,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.06963552,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 0.9741725099999999,
+      "app_id": "ap-plBb2Td7LwJGen0LVUs3ge",
+      "failure_phase": "duplicate native Llama BOS identified before task scoring; known lazy replay errors retained separately",
+      "original_controller_attempt_count": 800,
+      "raw_source": "results/full/full-002-2-retry2/cloud_events_download_0.jsonl",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-native1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 4339,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.24810815999999997,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 1.22849287,
+      "app_id": "ap-WoXXKyta5599G2bi5kCmbs",
+      "failure_phase": "generator cancellation; precise stopping actor/cause unconfirmed; durable partial checkpoint retained",
+      "original_controller_attempt_count": 3592,
+      "raw_source": "results/full/full-002-2-native1/cloud_events_download_0.jsonl",
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    },
+    {
+      "batch_id": "full-002-2-spawn1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "attempted": 2811,
+      "complete": false,
+      "exit_code": 1,
+      "reported_model_cost_usd": 0.16151431,
+      "timed_body_resource_cost_usd": null,
+      "conservative_model_cost_usd": 0.5,
+      "reported_project_cost_usd": 1.3821235100000004,
+      "app_id": "ap-c4Al6QGX7zeyolAD0aQ5ak",
+      "failure_phase": "evalnoise launched a new app; our cloud interlock stopped only our app",
+      "raw_source": "results/full/full-002-2-spawn1/cloud_events_download_0.jsonl",
+      "original_controller_attempt_count": 2811,
+      "observation_count_scope": "Durably recorded outputs/errors; unreturned in-flight work may be unobserved. This is not a reconstructed count of all physical GPU calls."
+    }
+  ],
+  "metering_is_final": false,
+  "missing_rows_are_not_zero_cost": true
+}

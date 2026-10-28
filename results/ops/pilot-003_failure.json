@@ -1,0 +1,7 @@
+{
+  "app_id": "ap-HFprm1QnjNLtmwqNColgEk",
+  "reason": "Explicit 40-GiB ephemeral disk request rejected: platform minimum is 512 GiB. Removed custom request to use platform default. No preparation or generation started; reservation retained.",
+  "runtime_image": "im-d49h5hRtT6ArXh5aE69KZP",
+  "shutdown_evidence": "results/ops/pilot-003_shutdown.json",
+  "official_resource_documentation": "https://modal.com/docs/guide/resources"
+}

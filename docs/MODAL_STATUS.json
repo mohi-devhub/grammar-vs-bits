@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-27T09:22:56.525634+00:00",
+  "scope": "All environments visible in the currently configured Modal workspace/profile; not other accounts/profiles.",
+  "command": "modal app list --env <environment> --json --limit 0",
+  "environments": [
+    {
+      "environment": "main",
+      "returned_app_count": 0,
+      "empty_app_list": true
+    }
+  ],
+  "project_apps_launched": 0,
+  "all_app_lists_empty": true
+}

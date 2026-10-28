@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-28T20:04:36.431841+00:00",
+  "project_reported_usd": 2.97977294,
+  "optional_prior_usd": 1.4500000000000002,
+  "projection_usd": 0.6883540640000001,
+  "resource_envelope_usd": 1.35,
+  "resource_ceiling_calculation_usd": 1.3090300000000001,
+  "gpu": "A10",
+  "queue_wait_seconds": 1800
+}

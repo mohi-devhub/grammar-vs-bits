@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-28T14:14:32.322564+00:00",
+  "audit": [
+    {
+      "batch": "full-002-2",
+      "checkpoints": [],
+      "largest_valid_checkpoint": null
+    },
+    {
+      "batch": "full-002-2-retry1",
+      "checkpoints": [
+        {
+          "file": "results/full/full-002-2-retry1/cloud_events_download_0.jsonl",
+          "unique_generations": 0,
+          "status_counts": {},
+          "parse_problem": null
+        },
+        {
+          "file": "results/full/full-002-2-retry1/events.jsonl",
+          "unique_generations": 0,
+          "status_counts": {},
+          "parse_problem": null
+        }
+      ],
+      "largest_valid_checkpoint": {
+        "file": "results/full/full-002-2-retry1/cloud_events_download_0.jsonl",
+        "unique_generations": 0,
+        "status_counts": {},
+        "parse_problem": null
+      }
+    },
+    {
+      "batch": "full-002-2-retry2",
+      "checkpoints": [
+        {
+          "file": "results/full/full-002-2-retry2/cloud_events_download_0.jsonl",
+          "unique_generations": 800,
+          "status_counts": {
+            "ok": 792,
+            "token_limit": 6,
+            "request_error": 2
+          },
+          "parse_problem": null
+        },
+        {
+          "file": "results/full/full-002-2-retry2/events.jsonl",
+          "unique_generations": 800,
+          "status_counts": {
+            "ok": 792,
+            "token_limit": 6,
+            "request_error": 2
+          },
+          "parse_problem": null
+        }
+      ],
+      "largest_valid_checkpoint": {
+        "file": "results/full/full-002-2-retry2/cloud_events_download_0.jsonl",
+        "unique_generations": 800,
+        "status_counts": {
+          "ok": 792,
+          "token_limit": 6,
+          "request_error": 2
+        },
+        "parse_problem": null
+      }
+    },
+    {
+      "batch": "full-002-2-native1",
+      "checkpoints": [
+        {
+          "file": "results/full/full-002-2-native1/cloud_events_download_0.jsonl",
+          "unique_generations": 4339,
+          "status_counts": {
+            "ok": 4308,
+            "token_limit": 31
+          },
+          "parse_problem": null
+        },
+        {
+          "file": "results/full/full-002-2-native1/events.jsonl",
+          "unique_generations": 3592,
+          "status_counts": {
+            "ok": 3571,
+            "token_limit": 21
+          },
+          "parse_problem": null
+        }
+      ],
+      "largest_valid_checkpoint": {
+        "file": "results/full/full-002-2-native1/cloud_events_download_0.jsonl",
+        "unique_generations": 4339,
+        "status_counts": {
+          "ok": 4308,
+          "token_limit": 31
+        },
+        "parse_problem": null
+      }
+    },
+    {
+      "batch": "full-002-2-spawn1",
+      "checkpoints": [
+        {
+          "file": "results/full/full-002-2-spawn1/cloud_events_download_0.jsonl",
+          "unique_generations": 2811,
+          "status_counts": {
+            "ok": 2796,
+            "token_limit": 15
+          },
+          "parse_problem": null
+        },
+        {
+          "file": "results/full/full-002-2-spawn1/cloud_partial_events.jsonl",
+          "unique_generations": 2811,
+          "status_counts": {
+            "ok": 2796,
+            "token_limit": 15
+          },
+          "parse_problem": null
+        },
+        {
+          "file": "results/full/full-002-2-spawn1/events.jsonl",
+          "unique_generations": 0,
+          "status_counts": {},
+          "parse_problem": null
+        }
+      ],
+      "largest_valid_checkpoint": {
+        "file": "results/full/full-002-2-spawn1/cloud_events_download_0.jsonl",
+        "unique_generations": 2811,
+        "status_counts": {
+          "ok": 2796,
+          "token_limit": 15
+        },
+        "parse_problem": null
+      }
+    }
+  ],
+  "policy": "Counts only; no task accuracy was inspected to retain or exclude a whole interrupted model. Checkpoint copies are not pooled as extra observations."
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "pythonic-002",
+  "started_at": "2026-10-28T19:45:14.965142+00:00",
+  "complete": false,
+  "optional_cap_usd": 3,
+  "project_cap_usd": 12,
+  "sessions": [
+    {
+      "batch_id": "pythonic-002-1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "app_id": "ap-OJSBUvgHYQHf0jcXQmKBzL",
+      "observations": 2400,
+      "complete": true,
+      "reported_cost_usd": 0.36872687,
+      "conservative_cost_usd": 1.35,
+      "source": "results/sensitivity/pythonic-002/pythonic-002-1.jsonl"
+    },
+    {
+      "batch_id": "pythonic-002-2",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "app_id": "ap-xfZa1fgVlfuq07yVmVtEFn",
+      "observations": 1610,
+      "complete": false,
+      "reported_cost_usd": 0.24146041000000001,
+      "conservative_cost_usd": 1.35,
+      "source": "results/sensitivity/pythonic-002/pythonic-002-2.jsonl"
+    }
+  ],
+  "project_reported_cost_usd": 3.223513800000001,
+  "optional_reported_cost_usd": 0.61246773
+}

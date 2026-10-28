@@ -1,0 +1,713 @@
+{
+  "created_at": "2026-10-28T20:33:55.070917+00:00",
+  "run_id": "pythonic-002",
+  "complete": true,
+  "separate_from_primary": true,
+  "observations": 4800,
+  "items": 120,
+  "models": [
+    "meta-llama/Llama-3.2-1B-Instruct",
+    "meta-llama/Llama-3.2-3B-Instruct"
+  ],
+  "interruption_counts": {
+    "preserved": 1610,
+    "continued": 790
+  },
+  "status_counts": {
+    "ok": 4222,
+    "token_limit": 578
+  },
+  "scores": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.08333333333333333,
+      "ci95": [
+        0.041666666666666664,
+        0.13333333333333333
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.555,
+      "ci95": [
+        0.4666666666666667,
+        0.6416666666666667
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.045,
+      "ci95": [
+        0.013333333333333334,
+        0.08499999999999999
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.5283333333333333,
+      "ci95": [
+        0.44166666666666665,
+        0.6166666666666667
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.16666666666666666,
+      "ci95": [
+        0.08333333333333333,
+        0.26666666666666666
+      ],
+      "primary_json_accuracy": 0.0
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.6833333333333333,
+      "ci95": [
+        0.5666666666666667,
+        0.8
+      ],
+      "primary_json_accuracy": 0.016666666666666666
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.09,
+      "ci95": [
+        0.029916666666666737,
+        0.16666666666666666
+      ],
+      "primary_json_accuracy": 0.0
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.6233333333333333,
+      "ci95": [
+        0.5,
+        0.7433333333333333
+      ],
+      "primary_json_accuracy": 0.01
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.4266666666666667,
+      "ci95": [
+        0.3,
+        0.55
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.43333333333333335,
+      "ci95": [
+        0.3,
+        0.55
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.008333333333333333,
+      "ci95": [
+        0.0,
+        0.025
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.8583333333333333,
+      "ci95": [
+        0.7916666666666666,
+        0.9166666666666666
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.008333333333333333,
+      "ci95": [
+        0.0,
+        0.025
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "all",
+      "items": 120,
+      "observations": 600,
+      "accuracy": 0.8466666666666667,
+      "ci95": [
+        0.7799999999999999,
+        0.9066666666666666
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "primary_json_accuracy": 0.0
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.9166666666666666,
+      "ci95": [
+        0.85,
+        0.9833333333333333
+      ],
+      "primary_json_accuracy": 0.0
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "primary_json_accuracy": 0.0
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.8833333333333333,
+      "ci95": [
+        0.7999999999999999,
+        0.9566666666666667
+      ],
+      "primary_json_accuracy": 0.0
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.016666666666666666,
+      "ci95": [
+        0.0,
+        0.05
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.8,
+      "ci95": [
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.016666666666666666,
+      "ci95": [
+        0.0,
+        0.05
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "parallel_multiple",
+      "items": 60,
+      "observations": 300,
+      "accuracy": 0.81,
+      "ci95": [
+        0.7066666666666668,
+        0.9
+      ]
+    }
+  ],
+  "recovery_effects": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "all",
+      "net_recovery": 0.011666666666666667,
+      "ci95": [
+        -0.05666666666666667,
+        0.08
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "parallel",
+      "net_recovery": 0.016666666666666666,
+      "ci95": [
+        -0.10333333333333333,
+        0.13666666666666666
+      ],
+      "json_net_recovery": -0.006666666666666667,
+      "protocol_recovery_difference": 0.023333333333333334,
+      "protocol_recovery_difference_ci95": [
+        -0.10000000000000002,
+        0.15
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "subset": "parallel_multiple",
+      "net_recovery": 0.006666666666666667,
+      "ci95": [
+        -0.060000000000000005,
+        0.07333333333333333
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "all",
+      "net_recovery": -0.011666666666666667,
+      "ci95": [
+        -0.05,
+        0.026666666666666665
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "parallel",
+      "net_recovery": -0.03333333333333333,
+      "ci95": [
+        -0.08666666666666667,
+        0.006666666666666667
+      ],
+      "json_net_recovery": 0.0,
+      "protocol_recovery_difference": -0.03333333333333333,
+      "protocol_recovery_difference_ci95": [
+        -0.08666666666666667,
+        0.006666666666666667
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "subset": "parallel_multiple",
+      "net_recovery": 0.01,
+      "ci95": [
+        -0.04666666666666667,
+        0.06666666666666667
+      ]
+    }
+  ],
+  "protocol_contrasts": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.16666666666666666,
+      "ci95": [
+        0.08333333333333333,
+        0.26666666666666666
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.6666666666666666,
+      "ci95": [
+        0.5333333333333333,
+        0.7833333333333333
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.09,
+      "ci95": [
+        0.029916666666666737,
+        0.16666666666666666
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.6133333333333333,
+      "ci95": [
+        0.4866666666666667,
+        0.7333333333333333
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.9166666666666666,
+      "ci95": [
+        0.85,
+        0.9833333333333333
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "subset": "parallel",
+      "gain_pythonic_minus_json": 0.8833333333333333,
+      "ci95": [
+        0.7999999999999999,
+        0.9566666666666667
+      ]
+    }
+  ],
+  "status_breakdown": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 454,
+        "token_limit": 146
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 535,
+        "token_limit": 65
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 316,
+        "token_limit": 284
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 536,
+        "token_limit": 64
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 595,
+        "token_limit": 5
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 595,
+        "token_limit": 5
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 596,
+        "token_limit": 4
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 595,
+        "token_limit": 5
+      }
+    }
+  ],
+  "platform_interruption": "Llama-3B platform interruption retained. Only cells without durable outputs continued on another A10; no saved failed response was retried.",
+  "failures_count_as_incorrect": true,
+  "provenance_checks": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "same_weight_artifacts_as_primary": true,
+      "artifacts": {
+        "F16": {
+          "sha256": "af683d8a5a0882bc9bf998bb91939b0592dce4658c1169aee1f934e164be358f",
+          "bytes": 2479595488
+        },
+        "Q4_K_M": {
+          "sha256": "af287afd7986361211ca5107be4da75be185bb322735de8aa0945c0f2ac4a5a2",
+          "bytes": 807694304
+        }
+      },
+      "source": "results/sensitivity/pythonic-002/pythonic-002-1.jsonl",
+      "source_sha256": "debbf520d7e983edf69bb8aefad7727394fe83faa557db81b0f23c36d43a4ab4",
+      "runtime": {
+        "date": "2026-10-28T19:47:49.848824+00:00",
+        "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+        "gpu_type": "A10",
+        "gpu_name": "NVIDIA A10",
+        "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+        "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+        "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+        "protocol_sha256": "7f0c38b3c37ea887ebc6a7dcaaff26e3aa5410dd729c415e3ecf7b99d9e58b41",
+        "batch_id": "pythonic-002-1",
+        "model": "meta-llama/Llama-3.2-1B-Instruct"
+      },
+      "resume_provenance": null
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "same_weight_artifacts_as_primary": true,
+      "artifacts": {
+        "F16": {
+          "sha256": "f998b36e7ce04f5b708323f5e2af7c0b11b9435b2ec7a0e680afe6c2871a6b9c",
+          "bytes": 6433687968
+        },
+        "Q4_K_M": {
+          "sha256": "1144464c3e433dea52eb6e67d92aa4dcd6c454be2311d6f5d9e80a6fd28de5df",
+          "bytes": 2019377568
+        }
+      },
+      "source": "results/sensitivity/pythonic-002/pythonic-002-2.jsonl",
+      "source_sha256": "3b2617cdbde2eb6e477ff43e517872c5cdf96372261482a751ed8de34e13a097",
+      "runtime": {
+        "date": "2026-10-28T20:09:00.944845+00:00",
+        "gpu": "NVIDIA A10G, 610.57.04, 23028 MiB",
+        "gpu_type": "A10",
+        "gpu_name": "NVIDIA A10G",
+        "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+        "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+        "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+        "protocol_sha256": "7f0c38b3c37ea887ebc6a7dcaaff26e3aa5410dd729c415e3ecf7b99d9e58b41",
+        "batch_id": "pythonic-002-2",
+        "model": "meta-llama/Llama-3.2-3B-Instruct"
+      },
+      "resume_provenance": null
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "same_weight_artifacts_as_primary": true,
+      "artifacts": {
+        "F16": {
+          "sha256": "f998b36e7ce04f5b708323f5e2af7c0b11b9435b2ec7a0e680afe6c2871a6b9c",
+          "bytes": 6433687968
+        },
+        "Q4_K_M": {
+          "sha256": "1144464c3e433dea52eb6e67d92aa4dcd6c454be2311d6f5d9e80a6fd28de5df",
+          "bytes": 2019377568
+        }
+      },
+      "source": "results/sensitivity/pythonic-002/pythonic-002-3.jsonl",
+      "source_sha256": "c47faedb2139cd32328e207efa6d6aefa2ff119b1630d259419fe3022bbb77ee",
+      "runtime": {
+        "date": "2026-10-28T20:27:11.384178+00:00",
+        "gpu": "NVIDIA A10, 610.57.04, 23028 MiB",
+        "gpu_type": "A10",
+        "gpu_name": "NVIDIA A10",
+        "python": "3.12.1 (main, Jan  8 2024, 04:46:10) [Clang 17.0.6 ]",
+        "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+        "llama_cpp_commit": "8542e94350f0ade01644db6f1d1520da3814dafd",
+        "protocol_sha256": "7f0c38b3c37ea887ebc6a7dcaaff26e3aa5410dd729c415e3ecf7b99d9e58b41",
+        "batch_id": "pythonic-002-3",
+        "model": "meta-llama/Llama-3.2-3B-Instruct"
+      },
+      "resume_provenance": {
+        "source": "results/sensitivity/pythonic-002/pythonic-002-2.jsonl",
+        "sha256": "3b2617cdbde2eb6e477ff43e517872c5cdf96372261482a751ed8de34e13a097",
+        "preserved_observations": 1610
+      }
+    }
+  ],
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261028,
+    "unit": "Crossed original items and operational run labels; paired shared draws; pointwise unadjusted intervals"
+  },
+  "interpretation": "Joint prompt/parser/grammar contract sensitivity. Primary comparisons are limited to the identical 60 parallel items. No pooling into the primary 200; no causal attribution to syntax alone.",
+  "costs": {
+    "optional_reported_usd": 0.7346155099999999,
+    "project_reported_usd": 3.3455842600000008,
+    "optional_cap_usd": 3,
+    "project_cap_usd": 12,
+    "settled": false,
+    "includes_failed_attempts": true,
+    "batches": [
+      {
+        "batch_id": "pythonic-001-1",
+        "app_id": "ap-7NzFvlnymH2f0t1G8mWAgf",
+        "reported_usd": 7.732e-05
+      },
+      {
+        "batch_id": "pythonic-002-1",
+        "app_id": "ap-OJSBUvgHYQHf0jcXQmKBzL",
+        "reported_usd": 0.37100732
+      },
+      {
+        "batch_id": "pythonic-002-2",
+        "app_id": "ap-xfZa1fgVlfuq07yVmVtEFn",
+        "reported_usd": 0.26695346
+      },
+      {
+        "batch_id": "pythonic-002-3",
+        "app_id": "ap-XXA33v7wlyYq8mQIz07aFf",
+        "reported_usd": 0.09657741
+      }
+    ]
+  }
+}

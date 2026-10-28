@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-27T14:09:05.746845+00:00",
+  "batch": "pilot-006",
+  "attempted_generations": 0,
+  "planned_generations": 300,
+  "complete": false,
+  "responses_received": 0,
+  "finished_responses": 0,
+  "status_counts": {},
+  "cells": [],
+  "measured_inference_batch_wall_seconds": 0.0,
+  "measured_gpu_function_seconds": null,
+  "measured_cpu_preparation_function_seconds": 59.692075304999996,
+  "resource_rate_gpu_container_usd_hour": 1.0226,
+  "resource_rate_cpu_container_usd_hour": 0.2226,
+  "cost_scope": "Timing-based resource estimates exclude platform startup, image builds, idle, post-timer cleanup/volume commits and storage; tagged metering is separate.",
+  "timer_definitions": {
+    "cpu_preparation": "Function entry through manifest construction, before source-weight cleanup and volume commit",
+    "gpu_worker": "Worker-body entry through completed precisions and server shutdown, before final volume commit"
+  }
+}

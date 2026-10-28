@@ -1,0 +1,11 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Conceptual replication targets. Agreement concerns mechanisms under changed conditions, not prior numerical scores. Empirical directional support requires a paired interval excluding zero; otherwise that contrast remains inconclusive.}\label{tab:replication}
+\begin{tabular}{p{.13\textwidth}p{.40\textwidth}p{.39\textwidth}}
+\toprule
+Prior work & What changes here & What would count as confirmation \\\midrule
+QuantCall~\cite{quantcall} & Shared BFCL subset, prompt/compiler, paired operational schedules; add strict enforcement. & A permissive escape gives little benefit while stricter enforcement changes validity or task accuracy. A null strict effect remains a valid outcome. \\
+QuantMCP~\cite{quantmcp} & Replace live MCP execution with single-turn BFCL AST scoring; preserve abstention and log completion failures. & An escape can preserve malformed output; strict generation can still fail to terminate or answer correctly. No claim to reproduce MCP task-success rates. \\
+Toolhound~\cite{toolhound} & Replace MLX/custom tasks with llama.cpp/BFCL and add matched F16 controls. & Constraints improve call structure more consistently than task correctness. The added precision interaction need not match a q4-only gain. \\\bottomrule
+\end{tabular}
+\end{table*}

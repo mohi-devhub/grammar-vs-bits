@@ -1,0 +1,47 @@
+{
+  "captured_at": "2026-10-28T19:10:16.247708+00:00",
+  "complete_registered_matrix": true,
+  "integrity_source": "results/full/full-002/integrity.json",
+  "pytest": {
+    "passed": 27,
+    "command": ".venv/bin/python -m pytest -q"
+  },
+  "pip_audit": {
+    "source": "results/ops/pip-audit-final.json",
+    "known_vulnerabilities": 0
+  },
+  "paper": {
+    "pages": 6,
+    "pdf_sha256": "ebdc97a2459d6ee0fcbba5c5622e76c80cb90d65bd992edfac7786bef48b241b",
+    "review": "Updated limitations rendered and inspected; six-page PDF has readable tables/figures, resolved references and no overfull boxes."
+  },
+  "cloud_archive": {
+    "source": "results/ops/full-002_cloud_archive.json",
+    "files": 66,
+    "bytes": 613211157,
+    "complete": true
+  },
+  "shutdown_source": "results/ops/full-002_final_shutdown.json",
+  "model_cache_cleanup_source": "results/ops/full-002_model_cache_cleanup.json",
+  "billing_source": "results/full/full-002/costs.json",
+  "shutdown": {
+    "captured_at": "2026-10-28T18:57:36.704812+00:00",
+    "own_active_apps": 0,
+    "own_active_containers": 0,
+    "all_listed_apps_stopped": true,
+    "all_listed_containers_stopped": true
+  },
+  "operational_failure_sensitivity": {
+    "source": "results/full/full-002/failure_sensitivity.json",
+    "offline_only": true,
+    "primary_raw_scored_and_summary_hashes_unchanged": true,
+    "methods": [
+      "cell_completed",
+      "matched_panel",
+      "complete_item"
+    ],
+    "recovery_effects_checked": 54,
+    "decoder_contrasts_checked": 36,
+    "interval_interpretation_changes": 0
+  }
+}
