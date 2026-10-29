@@ -118,3 +118,7 @@ The separately approved Pythonic sensitivity uses 60 original parallel cases plu
 The raw outputs are also distributed in the repository release archive. Published releases and checksums are listed at https://github.com/mohi-devhub/grammar-vs-bits/releases. Historical audit findings and their resolution are in AUDIT.md and docs/AUDIT_RESOLUTION.md. The [editing audit](AUDIT-edits.md) and its [v0.1.2 resolution](docs/AUDIT_EDITS_RESOLUTION.md) document the final wording fixes.
 
 The additional Pythonic format sensitivity is complete and reported separately in [its report](results/sensitivity/pythonic-002/REPORT.md). It does not replace the primary matrix.
+
+## Manuscript and arXiv source
+
+Release v0.1.3 adds keywords and places every figure and table before References. Scientific numbers, claims and figure contents are unchanged from v0.1.2. Rebuild with `.venv/bin/python -m scripts.compile_paper --run-id full-002` (up to seven pages). Prepare the comment-stripped, self-contained submission ZIP with `.venv/bin/python -m scripts.package_arxiv --ref v0.1.3`. The ZIP is `arxiv/grammar-vs-bits-arxiv.zip`; `arxiv/VALIDATION.json` records its clean-folder pdflatex-only build and page-by-page comparison against the release PDF. Standard TeX packages, including TikZ and placeins, are required; the pinned local toolchain installs them from the sources in `docs/PAPER_TOOLCHAIN.json`.

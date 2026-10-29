@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-29T15:08:52.673414+00:00",
+  "version": "0.1.3",
+  "base_release": "v0.1.2",
+  "scope": "Float placement and keywords only; no numbers or claims changed.",
+  "pdf_pages": 7,
+  "pdf_sha256": "6dad2d75d7f14d72f97cfe247a7eddfe9387ee0469d506a7805e9fa3d4793b13",
+  "float_pages": [
+    {
+      "float": "Table 1",
+      "page": 2
+    },
+    {
+      "float": "Figure 1",
+      "page": 2
+    },
+    {
+      "float": "Table 2",
+      "page": 4
+    },
+    {
+      "float": "Figure 2",
+      "page": 4
+    },
+    {
+      "float": "Figure 3",
+      "page": 5
+    },
+    {
+      "float": "Table 3",
+      "page": 5
+    }
+  ],
+  "references_begin_on_page": 6,
+  "every_float_on_an_earlier_page_than_references": true,
+  "keywords_exact_and_immediately_after_abstract": true,
+  "main_tex_prose_and_float_contents_preserved": true,
+  "protected_files_unchanged": 1887,
+  "protected_manifest_sha256": "63006f765a6f43f6d5b35c88a07e92cf0cdb2f5a93261fd6b2bc1876a3fc295b",
+  "locked_dependencies_changed": false,
+  "pip_audit_dependencies": 87,
+  "pip_audit_vulnerabilities": 0,
+  "pip_audit_skipped_dependencies": 0,
+  "existing_tests_passed": 36,
+  "executed_sources_verified": 56,
+  "new_cloud_compute": false
+}

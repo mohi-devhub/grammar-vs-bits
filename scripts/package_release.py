@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 import tarfile
 import tomllib
 from qunti.common import ROOT, now, write_json
@@ -26,11 +27,14 @@ def main():
         raise RuntimeError('Complete release requires the complete matrix frozen before execution')
     from scripts.verify_provenance import main as verify_sources
     verify_sources()
+    tracked = set(subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0'))
     files = []
     for name in ROOTS:
         root = ROOT / name
         candidates = root.rglob('*') if root.is_dir() else [root]
         for path in candidates:
+            if str(path.relative_to(ROOT)) not in tracked:
+                continue
             if path.is_symlink() or not path.is_file() or '__pycache__' in path.parts or path.suffix in EXCLUDED_SUFFIXES:
                 continue
             if path.suffix=='.log' and 'paper' in path.relative_to(ROOT).parts:

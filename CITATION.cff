@@ -4,7 +4,7 @@ title: 'Grammar vs Bits: Format Contracts and Weight Precision in Small-Model To
 authors:
   - family-names: Mohith
     given-names: M.
-version: 0.1.2
+version: 0.1.3
 date-released: 2026-10-29
 url: https://github.com/mohi-devhub/grammar-vs-bits
 repository-code: https://github.com/mohi-devhub/grammar-vs-bits

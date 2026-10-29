@@ -40,7 +40,13 @@ def main():
             for member in source.infolist():
                 path=PurePosixPath(member.filename)
                 if path.is_absolute() or '..' in path.parts:raise RuntimeError('Unsafe TeX package path')
-                if not path.parts or path.parts[0]!='tex' or member.is_dir():continue
+                if member.is_dir():continue
+                if 'tex_members' in package:
+                    mapped=package['tex_members'].get(member.filename)
+                    if mapped is None:continue
+                    path=PurePosixPath(mapped)
+                    if path.is_absolute() or '..' in path.parts:raise RuntimeError('Unsafe TeX installation path')
+                elif not path.parts or path.parts[0]!='tex':continue
                 destination=target/'home'/str(path)
                 destination.parent.mkdir(parents=True,exist_ok=True)
                 destination.write_bytes(source.read(member))

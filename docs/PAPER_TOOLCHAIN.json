@@ -17,6 +17,18 @@
       "sha256": "cc565cf1bccdf6eae947e82ec036bf79795baf3dab17cbf0ba8f158d0f05c227",
       "url": "https://github.com/pgf-tikz/pgf/releases/download/3.1.11/pgf_3.1.11.tds.zip",
       "repo_local_install": "home/tex (TDS tex subtree only)"
+    },
+    {
+      "name": "placeins",
+      "version": "2.2",
+      "official_source": "CTAN placeins (public domain)",
+      "asset": "placeins-2.2.zip",
+      "sha256": "a0aac82121b9c8c83fd523c1e478243528210fc92d49466cad73725fc28d0802",
+      "url": "https://mirrors.ctan.org/macros/latex/contrib/placeins.zip",
+      "tex_members": {
+        "placeins/placeins.sty": "tex/latex/placeins/placeins.sty"
+      },
+      "repo_local_install": "home/tex (pinned official style only)"
     }
   ]
 }

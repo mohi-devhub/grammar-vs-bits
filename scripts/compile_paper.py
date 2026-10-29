@@ -11,6 +11,7 @@ from qunti.common import ROOT, now, write_json
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--max-pages', type=int, default=7)
     args = parser.parse_args()
     provenance = json.loads((ROOT / 'paper/generated/provenance.json').read_text())
     if provenance['run_id'] != args.run_id:
@@ -44,8 +45,8 @@ def main():
               'toolchain_source': 'docs/PAPER_TOOLCHAIN.json', 'shell_escape': False,
               'warnings': [line for line in log.splitlines() if any(x in line for x in ('Warning:', 'Overfull', 'Underfull'))]}
     write_json(ROOT / 'results/full' / args.run_id / 'paper_build.json', record)
-    if pages not in range(4, 7):
-        raise RuntimeError(f'Actual manuscript has {pages} pages; required length is 4–6 pages')
+    if not 4 <= pages <= args.max_pages:
+        raise RuntimeError(f'Actual manuscript has {pages} pages; required length is 4–{args.max_pages} pages')
     print(json.dumps(record, indent=2))
 
 

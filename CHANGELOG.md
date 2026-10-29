@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.3
+
+- Keep result figures and tables with the results and before References using float barriers.
+- Add the requested keywords after the abstract.
+- Rebuild the paper and comment-stripped arXiv submission ZIP; verify the clean pdflatex-only build against the release PDF.
+- No changes to scientific numbers, claims, figure contents or results; no new inference.
+
 ## v0.1.2
 
 - Add the one-column vector method overview, with the Pythonic sensitivity shown as a separate dashed branch.
