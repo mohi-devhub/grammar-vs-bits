@@ -3,6 +3,7 @@ import argparse
 import json
 import re
 from qunti.common import ROOT,now,write_json
+from scripts.presentation import headline,precision_comparison
 
 
 def pct(value,ci):
@@ -83,6 +84,9 @@ def main():
     display_cost=optional['costs']['project_reported_usd'] if optional else cost['reported_project_cost_usd']
     for key,value in {'observations':f"{summary['observations']:,}",'run_id':args.run_id,'reported_cost':f"{display_cost:.6f}"}.items():
         text=text.replace('{{'+key+'}}',value)
+    if optional:
+        text=text.replace('{{format_finding}}',headline(optional,intervals=True)).replace('{{precision_comparison}}',precision_comparison(optional))
+    if '{{' in text:raise RuntimeError('Unfilled public documentation field')
     readme.write_text(text)
     if optional:
         with readme.open('a') as stream:

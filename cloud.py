@@ -5,7 +5,7 @@ from pathlib import Path
 import modal
 
 ROOT = Path(__file__).resolve().parent
-app = modal.App("qunti-check-pilot", tags={"project": "qunti-check", "stage": "pilot"})
+app = modal.App("grammar-vs-bits-pilot", tags={"project": "grammar-vs-bits", "stage": "pilot"})
 artifacts = modal.Volume.from_name("qunti-check-artifacts", create_if_missing=True)
 
 base = None

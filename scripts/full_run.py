@@ -45,7 +45,7 @@ def billing(label):
     total=0.0;by_app={}
     for row in rows:
         tags=row.get('tags') or {};tags=json.loads(tags) if isinstance(tags,str) else tags
-        if tags.get('project')=='qunti-check' or row.get('description') in ('qunti-check-pilot','qunti-check-full','qunti-check-artifacts'):
+        if tags.get('project') in ('grammar-vs-bits','qunti-check') or row.get('description') in ('grammar-vs-bits-pilot','grammar-vs-bits-full','grammar-vs-bits-artifacts','qunti-check-pilot','qunti-check-full','qunti-check-artifacts'):
             value=float(row['cost']);total+=value;key=row['object_id'];by_app[key]=by_app.get(key,0)+value
     return total,by_app
 

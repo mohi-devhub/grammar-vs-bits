@@ -9,8 +9,8 @@ def main():
     archive=folder/release['archive']
     with archive.open('rb') as stream:
         if hashlib.file_digest(stream,'sha256').hexdigest()!=release['sha256']:raise RuntimeError('Archive checksum mismatch')
-    expected=json.loads((folder/f'qunti-check-{args.run_id}-files.json').read_text());hashes=expected['files_sha256']
-    required={'LICENSE','THIRD_PARTY_NOTICES.md','third_party/gorilla/LICENSE','third_party/gorilla/NOTICE.md','provenance/executed-workers/manifest.json','paper/main.pdf'}
+    expected=json.loads((folder/release['inventory']).read_text());hashes=expected['files_sha256']
+    required={'LICENSE','CITATION.cff','CHANGELOG.md','THIRD_PARTY_NOTICES.md','third_party/gorilla/LICENSE','third_party/gorilla/NOTICE.md','provenance/executed-workers/manifest.json','paper/main.pdf'}
     if not required<=hashes.keys():raise RuntimeError('Release lacks required licenses/provenance/manuscript')
     manifest=json.loads((ROOT/'provenance/executed-workers/manifest.json').read_text())
     for session in manifest['sessions']:
@@ -21,8 +21,8 @@ def main():
     seen=set()
     with tarfile.open(archive,'r:gz') as tar:
         for member in tar:
-            if not member.isfile() or not member.name.startswith('qunti-check/'):raise RuntimeError('Unsafe archive entry')
-            name=member.name[len('qunti-check/'):]
+            if not member.isfile() or not member.name.startswith('grammar-vs-bits/'):raise RuntimeError('Unsafe archive entry')
+            name=member.name[len('grammar-vs-bits/'):]
             if name in seen or '..' in name.split('/') or name.endswith(('.gguf','.safetensors')):raise RuntimeError('Duplicate/unsafe/weight entry')
             seen.add(name);stream=tar.extractfile(member)
             if name=='RELEASE_FILES.json':

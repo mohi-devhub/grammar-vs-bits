@@ -6,9 +6,10 @@ import json
 from pathlib import Path
 import re
 import tarfile
+import tomllib
 from qunti.common import ROOT, now, write_json
 
-ROOTS = ['README.md', 'BUDGET.md', 'DECISIONS.md', 'LEARNING.md', 'AUDIT.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', '.gitignore', '.python-version',
+ROOTS = ['README.md', 'CITATION.cff', 'CHANGELOG.md', 'BUDGET.md', 'DECISIONS.md', 'LEARNING.md', 'AUDIT.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', '.gitignore', '.python-version',
          'pyproject.toml', 'uv.lock', 'requirements.lock', 'requirements-build.lock', 'requirements-analysis.lock',
          'cloud.py', 'full_cloud.py', 'pythonic_cloud.py', 'configs', 'data', 'docs', 'qunti', 'scripts', 'tests', 'results', 'figures', 'paper', 'provenance', 'third_party']
 EXCLUDED_SUFFIXES = {'.pyc', '.gguf', '.safetensors', '.aux', '.out', '.bbl', '.blg'}
@@ -50,20 +51,22 @@ def main():
         raise RuntimeError('Credential-shaped strings require review in: ' + ', '.join(findings))
     destination = ROOT / 'dist'
     destination.mkdir(exist_ok=True)
-    inventory = destination / f'qunti-check-{args.run_id}-files.json'
-    write_json(inventory, {'run_id': args.run_id, 'files_sha256': hashes, 'credential_pattern_scan': 'passed',
+    project=tomllib.loads((ROOT/'pyproject.toml').read_text())['project']
+    stem=f"{project['name']}-v{project['version']}-{args.run_id}"
+    inventory = destination / (stem+'-files.json')
+    write_json(inventory, {'project':project['name'],'version':project['version'],'run_id': args.run_id, 'files_sha256': hashes, 'credential_pattern_scan': 'passed',
                           'scope': 'First-party source, frozen inputs, raw/scored results, provenance, figures and manuscript. Runtime caches and model weights excluded.'})
-    archive = destination / f'qunti-check-{args.run_id}.tar.gz'
+    archive = destination / (stem+'.tar.gz')
     with archive.open('wb') as stream, gzip.GzipFile(filename='', mode='wb', fileobj=stream, mtime=0) as compressed:
         with tarfile.open(fileobj=compressed, mode='w|') as tar:
             for path, name in [(p, str(p.relative_to(ROOT))) for p in sorted(files)] + [(inventory, 'RELEASE_FILES.json')]:
-                info = tar.gettarinfo(str(path), arcname='qunti-check/' + name)
+                info = tar.gettarinfo(str(path), arcname='grammar-vs-bits/' + name)
                 info.uid = info.gid = info.mtime = 0
                 info.uname = info.gname = ''
                 info.mode = 0o644
                 with path.open('rb') as source:
                     tar.addfile(info, source)
-    write_json(destination / 'release.json', {'created_at': now(), 'run_id': args.run_id, 'archive': archive.name,
+    write_json(destination / 'release.json', {'created_at': now(),'project':project['name'],'version':project['version'], 'run_id': args.run_id, 'archive': archive.name,'inventory':inventory.name,
                'bytes': archive.stat().st_size, 'sha256': hashlib.sha256(archive.read_bytes()).hexdigest(),
                'inventoried_files': len(files), 'published': False})
     print(str(archive))

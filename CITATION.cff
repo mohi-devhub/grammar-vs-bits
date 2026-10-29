@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: 'Please cite Grammar vs Bits when using the paper, code or frozen results.'
+title: 'Grammar vs Bits: Format Contracts and Weight Precision in Small-Model Tool Calling'
+authors:
+  - family-names: Mohith
+    given-names: M.
+version: 0.1.1
+date-released: 2026-10-29
+url: https://github.com/mohi-devhub/grammar-vs-bits
+repository-code: https://github.com/mohi-devhub/grammar-vs-bits
+license: MIT
+keywords:
+  - tool calling
+  - quantization
+  - constrained decoding
+  - conceptual replication

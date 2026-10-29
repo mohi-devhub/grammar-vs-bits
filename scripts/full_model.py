@@ -25,7 +25,7 @@ def main():
         with modal.enable_output():
             with app.run(detach=True):
                 app_id=app.app_id
-                app.set_tags({'project':'qunti-check','stage':'full','batch':args.batch_id,'model':args.slug})
+                app.set_tags({'project':'grammar-vs-bits','stage':'full','batch':args.batch_id,'model':args.slug})
                 write_json(ROOT/f'results/ops/{args.batch_id}_app.json',{'app_id':app_id,'date':now(),'model':spec['model']})
                 wait_for_evalnoise(args.batch_id,allow_studies)
                 with (folder/'events.jsonl').open('w') as f:

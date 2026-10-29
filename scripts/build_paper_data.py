@@ -2,6 +2,7 @@
 import argparse
 import json
 from qunti.common import ROOT, write_json, now
+from scripts.presentation import headline,precision_comparison,failure_table_tex,contract_rows,recovery_statement
 
 
 def tex(value):
@@ -24,6 +25,9 @@ def main():
     summary = json.loads((folder / 'summary.json').read_text())
     costs = json.loads((folder / 'costs.json').read_text())
     sensitivity = json.loads((folder / 'failure_sensitivity.json').read_text())
+    optional=ROOT/'results/sensitivity/pythonic-002/summary.json'
+    followup=json.loads(optional.read_text())
+    if not followup['complete']:raise RuntimeError('The reframed paper requires the complete saved sensitivity')
     import hashlib
     for name, expected in sensitivity['primary_files_sha256'].items():
         with (ROOT/name).open('rb') as stream:
@@ -100,7 +104,11 @@ def main():
         for status, count in row['status_counts'].items():
             status_counts[status] = status_counts.get(status, 0) + count
     status_text = '; '.join(tex(k) + ': ' + str(v) for k, v in sorted(status_counts.items()))
-    save('abstract_results', '; '.join(abstracts) + '. These paired pointwise intervals are unadjusted and apply only to this setup. No primary free-decoding precision-loss interval excludes zero.')
+    save('abstract_results','On the same '+str(contract_rows(followup)[0]['items'])+' parallel cases in a separate sensitivity, '+headline(followup,intervals=True).replace('%',r'\%')+' '+precision_comparison(followup)
+         +' This separate sensitivity changes the prompt, parser and grammar together; it is not a randomized crossover or a parser-only causal effect. '+recovery_statement(followup)+' Intervals are pointwise, unadjusted and specific to this setup. No primary free-decoding precision-loss interval excludes zero.')
+    save('intro_finding','On the same '+str(contract_rows(followup)[0]['items'])+' parallel items, the separate sensitivity identifies the serving contract as the larger observed contrast. '
+         +precision_comparison(followup)
+         +' This is a joint prompt/parser/grammar comparison, not a general law about quantization or an intrinsic Llama limitation.')
     save('results_text', '\n\n'.join(text) + '\n\nGeneration status counts are ' + status_text
          + '. Negative incremental recovery does not mean constraints lowered Q4 accuracy: they helped F16 more in these cells. Valid structure includes no-call responses; task correctness and irrelevance are scored separately. Other diagnostic rates, category endpoints, item-only sensitivity intervals, paired decoder contrasts and raw responses are released with the result tables. Intervals crossing zero do not establish equivalence.')
     lines = [r'\begin{table*}[t]\centering\scriptsize',
@@ -124,8 +132,9 @@ def main():
          + ', including retained setup and interrupted attempts, against the \\$'
          + f"{costs['cap_usd']:.2f}" + ' cap. Metering is reported to date, not a settled invoice. '
          + 'All final app and container states are saved separately from the billing snapshot.')
-    save('conclusion', 'This conceptual replication compares constraints under the declared serving contracts. Its pointwise, unadjusted intervals apply to this setup only. No primary free-decoding precision-loss interval excludes zero. '
-         + ' '.join(conclusions) + ' Structural recovery and the weight-precision interaction must therefore be reported separately; a raw constrained gain alone cannot identify recovered quantization damage.')
+    save('conclusion','The separate sensitivity shows that the tool-call format contract has a much larger observed accuracy contrast than weight precision in this setup. '
+         +headline(followup).replace('%',r'\%')
+         +' This changes the interpretation of the low primary Llama parallel scores, while leaving the primary matrix unchanged. The comparison changes prompt, parser and grammar together. '+recovery_statement(followup)+' The pointwise, unadjusted intervals do not establish recovered quantization damage. No primary free-decoding precision-loss interval excludes zero.')
     failure_text=[]
     for spec in specs:
         group=[r for r in sensitivity['failure_breakdown'] if r['model']==spec['model']]
@@ -158,6 +167,7 @@ def main():
         from scripts.report_pythonic import paper_text
         followup=json.loads(optional.read_text())
         save('pythonic_sensitivity',paper_text(followup))
+        save('sensitivity_token_limits',failure_table_tex(followup))
         extra=followup['costs']
         if extra['optional_reported_usd'] is not None:
             with (output/'cost.tex').open('a') as stream:

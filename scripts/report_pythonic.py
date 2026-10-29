@@ -5,6 +5,7 @@ import numpy as np
 from qunti.common import ROOT,now,read_jsonl,write_json,digest
 from qunti.pythonic import score_pythonic
 from scripts.report_full import interval
+from scripts.presentation import recovery_statement
 
 
 def pct(value,bounds):return f'{100*value:.1f} [{100*bounds[0]:.1f}, {100*bounds[1]:.1f}]'
@@ -21,23 +22,19 @@ def paper_text(summary):
         parts.append(label+' Q4 whole-strict parallel accuracy is '+pct(q['accuracy'],q['ci95'])+r'\%, versus '+f'{100*old:.1f}'+r'\% under the original JSON contract. Its Pythonic parallel incremental recovery is '
                      +pct(recovery['net_recovery'],recovery['ci95'])+' points; the paired change in recovery versus JSON is '
                      +pct(recovery['protocol_recovery_difference'],recovery['protocol_recovery_difference_ci95'])+' points')
-    status='; '.join(k.replace('_',r'\_')+': '+str(v) for k,v in summary['status_counts'].items())
     gains=[r for r in summary['protocol_contrasts'] if r['precision']=='Q4_K_M' and r['decoder']=='whole_strict']
-    changed=any(r['ci95'][0]>0 for r in gains)
-    interpretation=('These gains change the interpretation of the low primary Llama parallel scores: they are strongly contract-dependent, rather than evidence of an intrinsic inability to make parallel calls.' if changed else
-                    'This sensitivity does not resolve an improvement over the original parallel-call scores; it does not validate the original contract as uniquely appropriate.')
-    paired=[r for r in summary['recovery_effects'] if r['subset']=='parallel']
-    if all(r['ci95'][0]<=0<=r['ci95'][1] and r['protocol_recovery_difference_ci95'][0]<=0<=r['protocol_recovery_difference_ci95'][1] for r in paired):
-        interpretation+=' Neither parallel incremental recovery nor its protocol change is resolved from zero.'
+    changed=all(r['ci95'][0]>0 for r in gains)
+    interpretation=('The paired Q4 contract gains are positive. ' if changed else 'The contract gains are not resolved from zero. ')
+    interpretation+=recovery_statement(summary)
     interruption=summary.get('interruption_counts')
     restart=(f"Llama-3B was interrupted by the platform after {interruption['preserved']:,} durable outputs; only the missing {interruption['continued']:,} cells continued on another A10, with saved failures retained. " if interruption else '')
     return (r'\paragraph{Separate Pythonic-format sensitivity.} '
-            +f"We additionally collected {summary['observations']:,} responses on {summary['items']} frozen cases, "
-            +'using the original parallel subset plus a separately sampled parallel-multiple subset, both Llama models, both precisions, free/whole strict and the same operational labels. '
-            +'The prompt follows Meta call-list syntax, omits the HF tools injection, and uses [] for abstention. '+'; '.join(parts)+'. '
-            +interpretation+' This is a joint prompt/parser/grammar sensitivity, not a parser-only causal estimate. '
-            +'Only the original parallel items have a matched primary baseline; parallel-multiple results are reported separately. Sessions differ in time and host, so this is not a randomized crossover. '
-            +restart+'The primary matrix is unchanged. Additional status counts are '+status+'. These limits remain incorrect; no added exclusion analysis is claimed.')
+            +f"We collected {summary['observations']:,} responses on {summary['items']} cases: the original parallel subset and a separately sampled parallel-multiple subset, both Llama models, both precisions, free/whole strict and the same operational labels. "
+            +'The prompt uses Meta call-list syntax without the HF tools injection, with [] for abstention. '+'; '.join(parts)+'. '
+            +interpretation+' This joint prompt/parser/grammar comparison is matched only on the original parallel items. '
+            +'Parallel-multiple scores are separate. Sessions differ in time and host; this is not a randomized crossover. '
+            +restart+'The primary matrix is unchanged.')
+
 
 
 def main():
@@ -121,7 +118,7 @@ def main():
         project_cost=0.;by_app={}
         for row in json.loads(snapshot.read_text()):
             tags=row.get('tags') or {};tags=json.loads(tags) if isinstance(tags,str) else tags
-            if tags.get('project')=='qunti-check' or row.get('description') in ('qunti-check-pilot','qunti-check-full','qunti-check-artifacts'):
+            if tags.get('project') in ('grammar-vs-bits','qunti-check') or row.get('description') in ('grammar-vs-bits-pilot','grammar-vs-bits-full','grammar-vs-bits-artifacts','qunti-check-pilot','qunti-check-full','qunti-check-artifacts'):
                 value=float(row['cost']);project_cost+=value
                 by_app[row['object_id']]=by_app.get(row['object_id'],0)+value
     optional_batches=[r for r in json.loads((ROOT/'results/budget_ledger.json').read_text())['batches'] if r.get('stage')=='pythonic']

@@ -146,8 +146,8 @@ def main():
             wait_for_evalnoise(args.batch_id)
             with app.run(detach=True):
                 app_id = app.app_id
-                app.set_tags({"project": "qunti-check", "stage": "pilot", "batch": args.batch_id})
-                write_json(ROOT / ("results/ops/" + args.batch_id + "_app.json"), {"app_id": app_id, "started_at": now(), "tags": {"project": "qunti-check", "stage": "pilot", "batch": args.batch_id}})
+                app.set_tags({"project": "grammar-vs-bits", "stage": "pilot", "batch": args.batch_id})
+                write_json(ROOT / ("results/ops/" + args.batch_id + "_app.json"), {"app_id": app_id, "started_at": now(), "tags": {"project": "grammar-vs-bits", "stage": "pilot", "batch": args.batch_id}})
                 if args.reuse_model_artifacts:
                     metadata = json.loads((ROOT / "results/ops/model_artifacts.json").read_text())
                     if metadata["model"] != protocol["pilot"]["model"] or metadata["revision"] != "c1899de289a04d12100db370d81485cdf75e47ca":

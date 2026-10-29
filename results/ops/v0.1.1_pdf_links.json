@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-29T02:41:35.100011+00:00",
+  "pdf": "paper/main.pdf",
+  "pdf_sha256": "bdcd335f1dd6789e50ba5336935997c7a9828c8b204ff325a08ae3368bd17b81",
+  "unique_pdf_links": 18,
+  "all_pdf_links_resolve": true,
+  "links": [
+    {
+      "url": "https://arxiv.org/abs/2310.07075v3",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2310.07075v3",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2411.02355v4",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2411.02355v4",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2501.10868v3",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2501.10868v3",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.25605v1",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2606.25605v1",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.27275v1",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2607.27275v1",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.06564v5",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2608.06564v5",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.13959v2",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2608.13959v2",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.23742v1",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2609.23742v1",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.26693v1",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://arxiv.org/abs/2609.26693v1",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://github.com/Code-byte404/toolhound/tree/97666be79a2af2afb78b36a168a5f89f84be6d97",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://github.com/Code-byte404/toolhound/tree/97666be79a2af2afb78b36a168a5f89f84be6d97",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://github.com/Happynood/quant-mcp-bench/tree/fc98a47c6a0ef77bb8be3a915016b42d203faf45",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://github.com/Happynood/quant-mcp-bench/tree/fc98a47c6a0ef77bb8be3a915016b42d203faf45",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://github.com/Happynood/quant-toolcall-bench/tree/6b6e29e5c83a91a52bdfc68b5f3063de172c0e55",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://github.com/Happynood/quant-toolcall-bench/tree/6b6e29e5c83a91a52bdfc68b5f3063de172c0e55",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/tree/8542e94350f0ade01644db6f1d1520da3814dafd",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://github.com/ggml-org/llama.cpp/tree/8542e94350f0ade01644db6f1d1520da3814dafd",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://github.com/meta-llama/llama-models/blob/0e0b8c519242d5833d8c11bffc1232b77ad7f301/models/llama3_2/text_prompt_format.md",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://github.com/meta-llama/llama-models/blob/0e0b8c519242d5833d8c11bffc1232b77ad7f301/models/llama3_2/text_prompt_format.md",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://github.com/mohi-devhub/grammar-vs-bits",
+      "ok": true,
+      "status": 206,
+      "final_url": "https://github.com/mohi-devhub/grammar-vs-bits",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-0.6B/tree/c1899de289a04d12100db370d81485cdf75e47ca",
+      "ok": true,
+      "status": 200,
+      "final_url": "https://huggingface.co/Qwen/Qwen3-0.6B/tree/c1899de289a04d12100db370d81485cdf75e47ca",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://ijcai.org/proceedings/2026/267",
+      "ok": true,
+      "status": 200,
+      "final_url": "https://ijcai.org/proceedings/2026/267",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    },
+    {
+      "url": "https://proceedings.mlr.press/v267/patil25a.html",
+      "ok": true,
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v267/patil25a.html",
+      "redirects": [],
+      "method": "HEAD",
+      "earlier_failures": []
+    }
+  ],
+  "old_url_redirect": {
+    "url": "https://github.com/mohi-devhub/qunti-check",
+    "ok": true,
+    "status": 206,
+    "final_url": "https://github.com/mohi-devhub/grammar-vs-bits",
+    "redirects": [
+      {
+        "status": 301,
+        "from": "https://github.com/mohi-devhub/qunti-check",
+        "to": "https://github.com/mohi-devhub/grammar-vs-bits"
+      }
+    ],
+    "method": "HEAD",
+    "earlier_failures": []
+  },
+  "old_url_redirects_to_canonical_repository": true
+}

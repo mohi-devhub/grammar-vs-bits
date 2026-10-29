@@ -56,7 +56,7 @@ def official():
     # Upstream imports the provider registry to read this single normalization
     # flag. Avoid importing unrelated API clients; checker code is unchanged.
     registry = types.ModuleType("bfcl_eval.constants.model_config")
-    registry.MODEL_CONFIG_MAPPING = {"qunti-check": types.SimpleNamespace(underscore_to_dot=False)}
+    registry.MODEL_CONFIG_MAPPING = {"grammar-vs-bits": types.SimpleNamespace(underscore_to_dot=False)}
     sys.modules[registry.__name__] = registry
     checker = importlib.import_module("bfcl_eval.eval_checker.ast_eval.ast_checker").ast_checker
     enums = importlib.import_module("bfcl_eval.constants.enums")
@@ -100,11 +100,11 @@ def score(item, text, family="qwen", completed=True):
                 if parse_error:
                     raise ValueError(parse_error)
                 return decoded
-        result = official_irrelevance()(Handler(), item["id"], text, item["input"], "qunti-check", "irrelevance")
+        result = official_irrelevance()(Handler(), item["id"], text, item["input"], "grammar-vs-bits", "irrelevance")
         # Publish official irrelevance scoring AND our separate format/finish flags.
         return {"correct": bool(result["valid"]) and completed, "official": result, **diagnostics, "parse_error": parse_error}
     if parse_error or len(decoded) != len(calls) or not completed:
         return {"correct": False, "official": None, **diagnostics, "parse_error": parse_error, "completed": completed}
     checker, language = official()
-    result = checker(item["input"]["function"], decoded, item["expected"], language, item["source_category"], "qunti-check")
+    result = checker(item["input"]["function"], decoded, item["expected"], language, item["source_category"], "grammar-vs-bits")
     return {"correct": bool(result["valid"]), "official": result, **diagnostics, "parse_error": None, "completed": completed}

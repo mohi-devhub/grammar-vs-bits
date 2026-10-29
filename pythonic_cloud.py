@@ -4,7 +4,7 @@ from pathlib import Path
 import modal
 from full_cloud import app as shared_app,base as shared_base,artifacts,prepare_model
 base=shared_base.add_local_file(Path(__file__).resolve().parent/'full_cloud.py','/root/full_cloud.py',copy=True) if modal.is_local() else None
-app=modal.App('qunti-check-pythonic',tags={'project':'qunti-check','stage':'pythonic'})
+app=modal.App('grammar-vs-bits-pythonic',tags={'project':'grammar-vs-bits','stage':'pythonic'})
 app.include(shared_app)
 
 @app.function(image=base,gpu='A10',cpu=(2,2),memory=(16384,16384),volumes={'/artifacts':artifacts},

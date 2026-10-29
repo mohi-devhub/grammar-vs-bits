@@ -1,12 +1,18 @@
-# Quantization and tool-call recovery
+# Grammar vs Bits
 
-Public repository: https://github.com/mohi-devhub/qunti-check. This is a conceptual replication. The original code is MIT licensed; see LICENSE and THIRD_PARTY_NOTICES.md for benchmark attribution.
+Public repository: https://github.com/mohi-devhub/grammar-vs-bits. This is a conceptual replication. The original code is MIT licensed; see LICENSE and THIRD_PARTY_NOTICES.md for benchmark attribution.
+
+[Changelog](CHANGELOG.md) · [Citation metadata](CITATION.cff)
+
+**Main finding:** the tool-call format contract has a much larger observed accuracy contrast than weight precision in this setup. {{format_finding}} {{precision_comparison}}
+
+This finding comes from the **separate sensitivity analysis** using Meta's documented Pythonic call-list format, with a matching grammar. It changes the prompt, parser and grammar together and is not pooled into the primary matrix. Sessions differ in time and host. Sensitivity incremental recovery and its protocol change remain inconclusive; the pointwise, unadjusted intervals apply to this setup only.
 
 **Completed study:** {{observations}} generations in the design frozen before execution across three small models, two weight precisions, four decoder arms and five operational runs. Gross project metering reported to date is **${{reported_cost}}**, including setup failures and interrupted collections, against a **$12 cap**. Metering may lag.
 
 [Results and interpretation](docs/FULL_REPORT.md) · [All scores and paired 95% CIs](results/full/{{run_id}}/REPORT.md) · [Cost accounting](results/full/{{run_id}}/COSTS.md) · [Paper PDF](paper/main.pdf) · [Learning notes](LEARNING.md)
 
-The question is whether whole-response schema enforcement recovers a quantization gap that permissive or trigger-gated grammars fail to recover. This is a conceptual replication. Its estimand subtracts the effect constraints already have at F16; it does not causally divide quantization damage into syntax and meaning. Direction 2 remains the planned, unevaluated follow-up.
+The primary question is whether whole-response schema enforcement recovers a quantization gap that permissive or trigger-gated grammars fail to recover. Its estimand subtracts the effect constraints already have at F16; it does not causally divide quantization damage into syntax and meaning. Direction 2 remains the planned, unevaluated follow-up.
 
 ## Study design
 
@@ -105,6 +111,8 @@ This is a small single-turn BFCL conceptual replication, not a complete leaderbo
 
 provenance/executed-workers/ contains exact worker snapshots and their original hashes for all primary sessions. The root qunti/ code is the maintained implementation. Historical launcher revisions were not retained; commands and runtime metadata are preserved.
 
+The public project and package metadata are named `grammar-vs-bits`. The Python import name **`qunti` is retained** because the executed worker snapshots and replay commands depend on that namespace. Immutable raw records and snapshots also retain their original operational identifiers. Existing Modal volume addresses and historical billing selectors remain compatible so provenance and cost totals can be reproduced; new apps use the new project name. These are execution identifiers, not active repository links. See [the rename record](docs/RENAMING.md).
+
 The separately approved Pythonic sensitivity uses 60 original parallel cases plus 60 frozen parallel_multiple cases, both Llama models, F16/Q4_K_M, free/whole strict and all five run labels. Its $3 additional cap remains within the project $12 cap. It is never pooled into the primary matrix. [Contract and analysis details](docs/PYTHONIC_SENSITIVITY.md) distinguish the matched parallel comparison from the new parallel_multiple endpoint. Prepare and validate with `.venv/bin/python -m scripts.prepare_pythonic`; paid execution is `.venv/bin/python -m scripts.run_pythonic --run-id UNIQUE_AUTHORIZED_ID`. These commands enforce the original October cutoff. Analyze saved completed outputs with `.venv/bin/python -m scripts.report_pythonic --run-id pythonic-002`.
 
-The raw outputs are also distributed in the repository release archive. Published releases and checksums are listed at https://github.com/mohi-devhub/qunti-check/releases. Historical audit findings and their resolution are in AUDIT.md and docs/AUDIT_RESOLUTION.md.
+The raw outputs are also distributed in the repository release archive. Published releases and checksums are listed at https://github.com/mohi-devhub/grammar-vs-bits/releases. Historical audit findings and their resolution are in AUDIT.md and docs/AUDIT_RESOLUTION.md.

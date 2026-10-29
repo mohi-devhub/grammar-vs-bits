@@ -11,7 +11,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--run-id',default='pythonic-002');args=p.parse_args()
     folder=ROOT/'results/sensitivity'/args.run_id;state=json.loads((folder/'state.json').read_text())
     if not state['complete']:raise RuntimeError('Finish or explicitly close collection before a final archive')
-    if any(a['state']!='stopped' and a['description'].startswith('qunti-check') for a in app_snapshot()):raise RuntimeError('Our apps are still active')
+    if any(a['state']!='stopped' and a['description'].startswith(('grammar-vs-bits','qunti-check')) for a in app_snapshot()):raise RuntimeError('Our apps are still active')
     batches=[s['batch_id'] for s in state['sessions']]
     batches += [PurePosixPath(source).stem for s in state['sessions'] for source in s.get('continuation_sources',[])]
     volume=modal.Volume.from_name('qunti-check-artifacts',create_if_missing=False);inventory=[];entries=[]

@@ -16,7 +16,7 @@ def main():
         tags = row.get('tags') or {}
         if isinstance(tags, str):
             tags = json.loads(tags)
-        if tags.get('project') == 'qunti-check' or row.get('description') in ('qunti-check-pilot', 'qunti-check-artifacts'):
+        if tags.get('project') in ('grammar-vs-bits','qunti-check') or row.get('description') in ('grammar-vs-bits-pilot', 'grammar-vs-bits-artifacts', 'qunti-check-pilot', 'qunti-check-artifacts'):
             own.append(row)
     app_costs = {}
     for row in own:

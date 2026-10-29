@@ -5,21 +5,21 @@
 \usepackage[hyphens]{url}
 \usepackage[hidelinks]{hyperref}
 \input{generated/macros.tex}
-\title{Does Strict Decoding Recover Quantized Tool Calls?\\A Paired Small-Model Conceptual Replication}
+\title{Grammar vs Bits:\\Format Contracts and Weight Precision in Small-Model Tool Calling}
 \author{M. Mohith}
 \date{}
 \begin{document}
 \maketitle
 \begin{abstract}
-A well-formed tool call can select the wrong function or value. We compare small Qwen and Llama models at full and quantized precision using a common GGUF engine and four decoder interventions: free generation, an unrestricted-text escape, a schema after call initiation, and whole-response enforcement. The frozen BFCL subset uses official AST and irrelevance scoring with paired item/run bootstrap intervals. \input{generated/abstract_results.tex} We release responses, grammar checks, runtime probes, code and costs. This conceptual replication distinguishes structural guarantees from task accuracy and quantization-specific recovery.
+Tool-call format contracts can dominate observed weight-precision gaps in small-model evaluations. \input{generated/abstract_results.tex} The primary BFCL conceptual replication remains unchanged; the sensitivity uses Meta's documented Pythonic call-list format with a matching grammar. We release frozen inputs, responses, code and paired uncertainty estimates.
 \end{abstract}
 
 \section{Introduction}
-Local models must produce a supported representation and choose functions and arguments that answer the request. Weight compression can perturb any of these decisions. A schema removes invalid continuations but still admits incorrect actions: both Paris and London can satisfy a weather tool's city-string requirement.
+\input{generated/intro_finding.tex}
 
 TOOLDEC already enforces tool syntax without fine-tuning~\cite{tooldec}. Prior work also separates structural and content failures and studies grammar mitigation in quantized models. Our question is narrower: does strict enforcement change the \emph{incremental precision gap} differently from permissive or trigger-gated grammars? An intervention can improve a quantized model simply because it improves every precision. Conversely, a grammar with an arbitrary-text branch cannot establish a guarantee of schema-valid output. These observations motivate matched full-precision controls and an explicit check of the language each decoder admits.
 
-We compare four interventions with paired uncertainty, retaining abstention, parallel calls and operational failures. This conceptual replication makes no priority claim about quantization damage, syntax repair or structural--semantic distinctions. The benchmark is single-turn prediction; no generated call is executed.
+The benchmark is single-turn prediction; no generated call is executed. The separate sensitivity is not pooled into the primary matrix or interpreted as a parser-only causal experiment~\cite{metaprompt}.
 
 \section{Related work and replication scope}
 Broad quantization studies emphasize dependence on the recipe and workload~\cite{bf16}. Agent diagnostics show that aggregate success can obscure process failures~\cite{flat}; decision-level analyses already investigate which tool-use decisions low-bit weights disrupt~\cite{wu}. These motivate a precision interaction, rather than a general claim that compressed models can make tool errors.
@@ -31,7 +31,7 @@ StructureBench and Chavan study structural validity and content accuracy with sm
 \section{Experimental design}
 \subsection{Frozen tasks, models and precision}
 \input{generated/setup.tex}
-The same original items and accepted answers are retained across all conditions. Selection does not depend on baseline success, validity or a model prediction. The pilot subset was used for runtime and cost calibration, not to choose favorable tasks. Full-run prompts are frozen from publisher tokenizers and chat templates; the Llama template date is fixed. The common Qwen pilot prompts and whole-response grammars match the corresponding full-run inputs.
+Original items and accepted answers are shared across conditions; selection does not use model predictions. The pilot calibrates runtime and cost. Prompts are frozen from pinned publisher templates, with a fixed Llama template date.
 
 Weights are exported once to F16 GGUF and the quantized artifact is generated directly from that export. This reference is an F16 export, not the original checkpoint's possibly different storage dtype. Both K and V caches stay F16. Qwen thinking is disabled~\cite{qwencard}. Model revisions, source/output hashes, conversion commands, server arguments and the pinned llama.cpp source~\cite{llamacpp} are recorded. All arms and precisions for a model use one A10 worker. The Modal allocation selector is fixed. Device-reported A10/A10G labels and drivers are retained rather than normalized away; model sessions need not share a physical host.
 
@@ -79,6 +79,7 @@ Primary percentile intervals use crossed paired resampling of original item IDs 
 \end{figure*}
 \input{generated/effect_table.tex}
 \input{generated/pythonic_sensitivity.tex}
+\input{generated/sensitivity_token_limits.tex}
 
 \section{Cost, limitations and practical implications}
 \input{generated/cost.tex}

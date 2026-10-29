@@ -13,7 +13,7 @@ def main():
     batch=args.run_id+'-3'
     if (folder/(batch+'_app.json')).exists():raise RuntimeError('Never repeat a submitted continuation')
     apps=app_snapshot()
-    if active_evalnoise(apps,True) or any(a['state']!='stopped' and a['description'].startswith('qunti-check') for a in apps):raise RuntimeError('Scheduling interlock')
+    if active_evalnoise(apps,True) or any(a['state']!='stopped' and a['description'].startswith(('grammar-vs-bits','qunti-check')) for a in apps):raise RuntimeError('Scheduling interlock')
     protocol=json.loads((ROOT/'configs/pythonic_protocol.json').read_text())
     cutoff=datetime.fromisoformat(protocol['execution']['finish_by_utc'])
     if (cutoff-datetime.now(timezone.utc)).total_seconds()<7500:raise RuntimeError('October cutoff')

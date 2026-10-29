@@ -28,7 +28,7 @@ def main():
             sha=hashlib.file_digest(stream,'sha256').hexdigest()
         if path.stat().st_size!=record['bytes'] or sha!=record['sha256']:
             raise RuntimeError('Local provenance archive failed verification')
-    if any(a['state']!='stopped' and a.get('description','').startswith('qunti-check') for a in app_snapshot()):
+    if any(a['state']!='stopped' and a.get('description','').startswith(('grammar-vs-bits','qunti-check')) for a in app_snapshot()):
         raise RuntimeError('Stop this project before removing its model caches')
     volume=modal.Volume.from_name('qunti-check-artifacts',create_if_missing=False)
     targets=[]

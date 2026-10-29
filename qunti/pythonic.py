@@ -81,5 +81,5 @@ def score_pythonic(item,text,completed=True):
         fn,args=next(iter(call.items()))
         valid &= fn in offered and not list(Draft202012Validator(normalize(offered[fn]['parameters'])).iter_errors(args))
     checker,language=official()
-    result=checker(item['input']['function'],calls,item['expected'],language,item['source_category'],'qunti-check') if completed else None
+    result=checker(item['input']['function'],calls,item['expected'],language,item['source_category'],'grammar-vs-bits') if completed else None
     return {'correct':bool(result and result['valid']),'format_valid':True,'schema_valid':bool(valid),'official':result}

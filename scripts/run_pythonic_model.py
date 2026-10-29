@@ -22,7 +22,7 @@ def main():
     app_id=None
     try:
         with modal.enable_output(),app.run(detach=True):
-            app_id=app.app_id;app.set_tags({'project':'qunti-check','stage':'pythonic','batch':args.batch_id})
+            app_id=app.app_id;app.set_tags({'project':'grammar-vs-bits','stage':'pythonic','batch':args.batch_id})
             write_json(folder/(args.batch_id+'_app.json'),{'app_id':app_id,'date':now()})
             call=orchestrate.spawn(requests,protocol,spec,app_id,args.batch_id,resume)
             write_json(folder/(args.batch_id+'_job.json'),{'call_id':call.object_id,'date':now(),'mode':'spawn'})

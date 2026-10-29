@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-29T02:45:24.670085+00:00",
+  "version": "0.1.1",
+  "repository": "https://github.com/mohi-devhub/grammar-vs-bits",
+  "no_new_model_inference": true,
+  "primary_correctness_recheck": {
+    "date": "2026-10-29T02:43:06.091699+00:00",
+    "observations": 24000,
+    "accuracy_mismatches": 0,
+    "no_primary_files_rewritten": true
+  },
+  "tests_passed": 36,
+  "pip_audit": "clean",
+  "all_third_party_dependency_versions_urls_hashes_unchanged": true,
+  "original_evidence_files_checked": 1853,
+  "changed_original_evidence_files": [
+    "results/full/full-002/documentation_build.json",
+    "results/full/full-002/paper_build.json"
+  ],
+  "primary_result_sha256": {
+    "results/full/full-002/summary.json": "476004e7ef242977ef5a930941cb60008eaa62c6f27bfdf256a082dc520b7107",
+    "results/full/full-002/scored.jsonl": "c2f986b51af7606052bd02a2d5fdb6bc7fffd6e056ea36d5ae2b289085cccdd2",
+    "results/full/full-002-1/events.jsonl": "6b0486896de373b953341dec01a0ea10172b33db9d54ddde349eeeec16cb7cab",
+    "results/full/full-002-2-concurrent1/events.jsonl": "d31c5c033a0be484eeb1c1845f982db3d86c208f49e316ca758cffdbf40b1fa5",
+    "results/full/full-002-3-concurrent1/events.jsonl": "fd37b0c160c9d7475587ead7edb897f4a38a7c7cf125afa5db40efa49bf78d4a"
+  },
+  "primary_tables_byte_identical": true,
+  "executed_source_files_verified": 56,
+  "paper": {
+    "created_at": "2026-10-29T02:40:49.236833+00:00",
+    "run_id": "full-002",
+    "pages": 6,
+    "pdf_sha256": "bdcd335f1dd6789e50ba5336935997c7a9828c8b204ff325a08ae3368bd17b81",
+    "toolchain_source": "docs/PAPER_TOOLCHAIN.json",
+    "shell_escape": false,
+    "warnings": [
+      "Package epstopdf Warning: Shell escape feature is not enabled.",
+      "Underfull \\hbox (badness 1009) in paragraph at lines 24--24",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 27--28",
+      "Underfull \\hbox (badness 1117) in paragraph at lines 27--28",
+      "Underfull \\hbox (badness 6316) in paragraph at lines 1--35",
+      "Underfull \\hbox (badness 1024) in paragraph at lines 39--40",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 3364) in paragraph at lines 1--1",
+      "Underfull \\vbox (badness 6893) has occurred while \\output is active []",
+      "Underfull \\hbox (badness 6316) in paragraph at lines 3--4",
+      "Underfull \\hbox (badness 5726) in paragraph at lines 5--6",
+      "Underfull \\hbox (badness 1292) in paragraph at lines 5--6",
+      "Underfull \\hbox (badness 4660) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 7--1",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 4--7",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 4--7",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 9--12",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 9--12",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 9--12",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 14--17",
+      "Underfull \\hbox (badness 3158) in paragraph at lines 19--22",
+      "Underfull \\hbox (badness 1184) in paragraph at lines 36--40",
+      "Underfull \\hbox (badness 1810) in paragraph at lines 48--52",
+      "Underfull \\hbox (badness 1184) in paragraph at lines 48--52",
+      "Underfull \\hbox (badness 2277) in paragraph at lines 60--63",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 60--63",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 60--63",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 71--74",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 71--74"
+    ]
+  },
+  "pdf_link_check": "results/ops/v0.1.1_pdf_links.json",
+  "all_pdf_links_resolve": true,
+  "old_repository_redirects": true,
+  "contract_comparison": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "label": "1B",
+      "items": 60,
+      "json": 0.01,
+      "pythonic": 0.6233333333333333,
+      "pythonic_ci95": [
+        0.5,
+        0.7433333333333333
+      ],
+      "gain": 0.6133333333333333,
+      "gain_ci95": [
+        0.4866666666666667,
+        0.7333333333333333
+      ],
+      "pythonic_precision_gap": 0.06000000000000005
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "label": "3B",
+      "items": 60,
+      "json": 0.0,
+      "pythonic": 0.8833333333333333,
+      "pythonic_ci95": [
+        0.7999999999999999,
+        0.9566666666666667
+      ],
+      "gain": 0.8833333333333333,
+      "gain_ci95": [
+        0.7999999999999999,
+        0.9566666666666667
+      ],
+      "pythonic_precision_gap": 0.033333333333333326
+    }
+  ],
+  "token_limit_breakdown": [
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 454,
+        "token_limit": 146
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 535,
+        "token_limit": 65
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 316,
+        "token_limit": 284
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 536,
+        "token_limit": 64
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 595,
+        "token_limit": 5
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "F16",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 595,
+        "token_limit": 5
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "free",
+      "observations": 600,
+      "statuses": {
+        "ok": 596,
+        "token_limit": 4
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "precision": "Q4_K_M",
+      "decoder": "whole_strict",
+      "observations": 600,
+      "statuses": {
+        "ok": 595,
+        "token_limit": 5
+      }
+    }
+  ],
+  "all_578_limits_retained_as_incorrect": true,
+  "own_project_apps_active": 0,
+  "other_projects_preserved": true
+}

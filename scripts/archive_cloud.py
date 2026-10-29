@@ -15,7 +15,7 @@ def main():
     state=json.loads((ROOT/'results/full'/args.run_id/'state.json').read_text())
     if not args.plan_only and not state.get('complete'):
         raise RuntimeError('Complete collection before archiving its final provenance')
-    if not args.plan_only and any(a['state']!='stopped' and a.get('description','').startswith('qunti-check') for a in app_snapshot()):
+    if not args.plan_only and any(a['state']!='stopped' and a.get('description','').startswith(('grammar-vs-bits','qunti-check')) for a in app_snapshot()):
         raise RuntimeError('Stop this project before archiving mutable cloud outputs')
     volume=modal.Volume.from_name('qunti-check-artifacts',create_if_missing=False)
     entries=[];excluded_bytes=0

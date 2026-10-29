@@ -8,7 +8,7 @@ def test_queued_evalnoise_blocks_even_without_containers():
 
 def test_stopped_noise_and_unrelated_apps_do_not_block():
     apps = [{'description': 'evalnoise-pilot', 'state': 'stopped', 'tasks': '0'},
-            {'description': 'qunti-check-pilot', 'state': 'ephemeral', 'tasks': '1'}]
+            {'description': 'grammar-vs-bits-pilot', 'state': 'ephemeral', 'tasks': '1'}]
     assert active_evalnoise(apps) == []
 
 
