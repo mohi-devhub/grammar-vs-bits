@@ -2,7 +2,7 @@
 import argparse
 import json
 from qunti.common import ROOT, write_json, now
-from scripts.presentation import headline,precision_comparison,failure_table_tex,contract_rows,recovery_statement
+from scripts.presentation import headline,precision_comparison,failure_table_tex,contract_rows,recovery_statement,paper_abstract,paper_introduction
 
 
 def tex(value):
@@ -81,12 +81,12 @@ def main():
         free = cell(spec['model'], 'Q4_K_M', 'free')['scores']['required']
         strict = cell(spec['model'], 'Q4_K_M', 'whole_strict')['scores']['required']
         label = tex(spec['slug'].replace('-Instruct', ''))
-        paragraph.append(label + ': Q4 required-call accuracy changes from '+percent(free['accuracy'])
-                         +r'\% free to '+percent(strict['accuracy'])+r'\% whole strict. Its incremental recovery is '
+        paragraph.append('For '+label + ', Q4 required-call accuracy rises from '+percent(free['accuracy'])
+                         +r'\% with free decoding to '+percent(strict['accuracy'])+r'\% with whole-response constraints. Its incremental recovery is '
                          +estimate(whole['net_recovery'],whole['net_recovery_ci95'])+' percentage points.')
         structural=cell(spec['model'],'Q4_K_M','whole_strict')['diagnostics']['schema_valid']
         all_score=cell(spec['model'],'Q4_K_M','whole_strict')['scores']['all']
-        paragraph.append('Across all cases for '+label+', Q4 whole-strict response-structure validity is '
+        paragraph.append('Across all cases, Q4 whole-strict response-structure validity is '
                     +estimate(structural['rate'],structural['ci95'])+r'\%, while official accuracy is '
                     +estimate(all_score['accuracy'],all_score['ci95'])+r'\%.')
         category_scores=cell(spec['model'],'Q4_K_M','whole_strict')['scores']
@@ -103,13 +103,11 @@ def main():
     for row in scores:
         for status, count in row['status_counts'].items():
             status_counts[status] = status_counts.get(status, 0) + count
-    status_text = '; '.join(tex(k) + ': ' + str(v) for k, v in sorted(status_counts.items()))
-    save('abstract_results','On the same '+str(contract_rows(followup)[0]['items'])+' parallel cases in a separate sensitivity, '+headline(followup,intervals=True).replace('%',r'\%')+' '+precision_comparison(followup)
-         +' This separate sensitivity changes the prompt, parser and grammar together; it is not a randomized crossover or a parser-only causal effect. '+recovery_statement(followup)+' Intervals are pointwise, unadjusted and specific to this setup. No primary free-decoding precision-loss interval excludes zero.')
-    save('intro_finding','On the same '+str(contract_rows(followup)[0]['items'])+' parallel items, the separate sensitivity identifies the serving contract as the larger observed contrast. '
-         +precision_comparison(followup)
-         +' This is a joint prompt/parser/grammar comparison, not a general law about quantization or an intrinsic Llama limitation.')
-    save('results_text', '\n\n'.join(text) + '\n\nGeneration status counts are ' + status_text
+    status_text=(f"{status_counts['ok']:,} generations completed normally, {status_counts['token_limit']:,} reached the {execution['max_output_tokens']}-token cap, and one failed during grammar replay")
+    if status_counts['grammar_trigger_replay_error']!=1:raise RuntimeError('Update the prose for the changed replay-error count')
+    save('abstract_results',paper_abstract(followup).replace('%',r'\%'))
+    save('intro_finding',paper_introduction(followup).replace('%',r'\%'))
+    save('results_text', '\n\n'.join(text) + '\n\n' + status_text
          + '. Negative incremental recovery does not mean constraints lowered Q4 accuracy: they helped F16 more in these cells. Valid structure includes no-call responses; task correctness and irrelevance are scored separately. Other diagnostic rates, category endpoints, item-only sensitivity intervals, paired decoder contrasts and raw responses are released with the result tables. Intervals crossing zero do not establish equivalence.')
     lines = [r'\begin{table*}[t]\centering\scriptsize',
              r'\caption{Required-call signed precision loss and incremental recovery, in percentage points [95\% CI]. The final column is the normalized share (\%) when its denominator is stable.}',
@@ -124,14 +122,14 @@ def main():
                          + ' & '+share+r' \\')
     lines += [r'\bottomrule\end{tabular}\end{table*}']
     save('effect_table', '\n'.join(lines))
-    save('cost', 'The pilot planning scenario for the primary campaign was \\$'
+    save('cost', 'The pilot-based cost forecast for the primary campaign was \\$'
          + f"{costs['pilot_forecast_total_range_usd'][0]:.2f}" + '--\\$'
          + f"{costs['pilot_forecast_total_range_usd'][1]:.2f}"
-         + '. Gross tagged project cost reported at the pre-follow-up snapshot is \\$'
+         + '. Before the follow-up, reported gross project spending was \\$'
          + f"{costs['reported_project_cost_usd']:.4f}"
-         + ', including retained setup and interrupted attempts, against the \\$'
-         + f"{costs['cap_usd']:.2f}" + ' cap. Metering is reported to date, not a settled invoice. '
-         + 'All final app and container states are saved separately from the billing snapshot.')
+         + ', including setup and interrupted attempts, against the \\$'
+         + f"{costs['cap_usd']:.2f}" + ' cap. These are reported charges, not a settled invoice. '
+         + 'Final app and container shutdown records are stored separately from the billing snapshot.')
     save('conclusion','The separate sensitivity shows that the tool-call format contract has a much larger observed accuracy contrast than weight precision in this setup. '
          +headline(followup).replace('%',r'\%')
          +' This changes the interpretation of the low primary Llama parallel scores, while leaving the primary matrix unchanged. The comparison changes prompt, parser and grammar together. '+recovery_statement(followup)+' The pointwise, unadjusted intervals do not establish recovered quantization damage. No primary free-decoding precision-loss interval excludes zero.')
@@ -152,16 +150,16 @@ def main():
     changes=sum(r['interval_interpretation_changed'] for r in sensitivity['recovery_effects'])
     contrast_changes=sum(r['interval_interpretation_changed'] for r in sensitivity['decoder_contrasts'])
     save('failure_sensitivity', r'\paragraph{Primary failures and post-hoc exclusion.} '
-         +'; '.join(failure_text)+'. Failures concentrate in particular decoder/task cells; exclusion cannot be assumed independent of treatment or difficulty. '
-         +'The analysis frozen before execution counts them as incorrect. We additionally exclude failures within each cell, '
-         +'exclude a model/item/run from all precision--decoder cells whenever any cell failed, and exclude whole items '
-         +'with any failure across conditions/runs. The middle rule preserves a common observed cohort; its required-call '
+         +'; '.join(failure_text)+'. Failures cluster by decoder and task; exclusion may depend on treatment or difficulty. '
+         +'The analysis frozen before execution counts failures as incorrect. Three sensitivity checks exclude failures per cell, '
+         +'remove a model--item--run from all precision--decoder cells if any cell failed, or remove whole items '
+         +'with any failure. The second rule preserves a common observed cohort; its required-call '
          +'whole-strict recovery is '+ '; '.join(matched_text)+r' percentage points [95\% CI]. '
-         +'Directional interval classifications change in '+str(changes)+' recovery effects and '
-         +str(contrast_changes)+' decoder contrasts across all three rules and both endpoints. '
-         +'Cell-only exclusion compares different completed populations; every exclusion selects on a post-treatment outcome '
-         +'and can favor easier items. None identifies performance with unlimited generation or a repaired engine. '
-         +'The released failure report includes every cell count, retained denominator and supplementary interval; primary results remain unchanged.')
+         +'Across all three rules and both endpoints, directional interval classifications change for '+str(changes)+' recovery effects and '
+         +str(contrast_changes)+' decoder contrasts. '
+         +'Cell-only exclusion changes the completed population; all three select on a post-treatment outcome '
+         +'and may favor easier items. None estimates performance with unlimited generation or a repaired engine. '
+         +'The failure report gives every cell count, retained denominator and supplementary interval; primary results remain unchanged.')
     optional=ROOT/'results/sensitivity/pythonic-002/summary.json'
     if optional.exists():
         from scripts.report_pythonic import paper_text
@@ -171,9 +169,9 @@ def main():
         extra=followup['costs']
         if extra['optional_reported_usd'] is not None:
             with (output/'cost.tex').open('a') as stream:
-                stream.write('The separate Pythonic sensitivity adds \\$'+f"{extra['optional_reported_usd']:.4f}"
-                             +', including failed/interrupted apps, for latest reported project cost \\$'+f"{extra['project_reported_usd']:.4f}"
-                             +' against the additional \\$'+f"{extra['optional_cap_usd']:.2f}"+' and total \\$'+f"{extra['project_cap_usd']:.2f}"+' caps.\n')
+                stream.write('The separate Pythonic sensitivity added \\$'+f"{extra['optional_reported_usd']:.4f}"
+                             +', including failed and interrupted apps, bringing reported project spending to \\$'+f"{extra['project_reported_usd']:.4f}"
+                             +', within the additional \\$'+f"{extra['optional_cap_usd']:.2f}"+' and total \\$'+f"{extra['project_cap_usd']:.2f}"+' caps.\n')
     else:
         save('pythonic_sensitivity','% Separate optional study has not yet produced a complete result.')
     sources=[folder/name for name in ('summary.json','costs.json','failure_sensitivity.json')]

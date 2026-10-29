@@ -9,7 +9,7 @@ import tarfile
 import tomllib
 from qunti.common import ROOT, now, write_json
 
-ROOTS = ['README.md', 'CITATION.cff', 'CHANGELOG.md', 'BUDGET.md', 'DECISIONS.md', 'LEARNING.md', 'AUDIT.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', '.gitignore', '.python-version',
+ROOTS = ['README.md', 'CITATION.cff', 'CHANGELOG.md', 'BUDGET.md', 'DECISIONS.md', 'LEARNING.md', 'AUDIT.md', 'AUDIT-v0.1.1.md', 'AUDIT-edits.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', '.gitignore', '.python-version',
          'pyproject.toml', 'uv.lock', 'requirements.lock', 'requirements-build.lock', 'requirements-analysis.lock',
          'cloud.py', 'full_cloud.py', 'pythonic_cloud.py', 'configs', 'data', 'docs', 'qunti', 'scripts', 'tests', 'results', 'figures', 'paper', 'provenance', 'third_party']
 EXCLUDED_SUFFIXES = {'.pyc', '.gguf', '.safetensors', '.aux', '.out', '.bbl', '.blg'}

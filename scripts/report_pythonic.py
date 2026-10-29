@@ -27,11 +27,11 @@ def paper_text(summary):
     interpretation=('The paired Q4 contract gains are positive. ' if changed else 'The contract gains are not resolved from zero. ')
     interpretation+=recovery_statement(summary)
     interruption=summary.get('interruption_counts')
-    restart=(f"Llama-3B was interrupted by the platform after {interruption['preserved']:,} durable outputs; only the missing {interruption['continued']:,} cells continued on another A10, with saved failures retained. " if interruption else '')
+    restart=(f"A platform interruption left {interruption['preserved']:,} saved Llama-3B outputs. Another A10 collected the remaining {interruption['continued']:,} responses, retaining all saved failures. " if interruption else '')
     return (r'\paragraph{Separate Pythonic-format sensitivity.} '
-            +f"We collected {summary['observations']:,} responses on {summary['items']} cases: the original parallel subset and a separately sampled parallel-multiple subset, both Llama models, both precisions, free/whole strict and the same operational labels. "
-            +'The prompt uses Meta call-list syntax without the HF tools injection, with [] for abstention. '+'; '.join(parts)+'. '
-            +interpretation+' This joint prompt/parser/grammar comparison is matched only on the original parallel items. '
+            +f"We collected {summary['observations']:,} responses on {summary['items']} cases: the original parallel and a separately sampled parallel-multiple subset. Both Llama models used both precisions, free and whole-strict decoding, and the same operational labels. "
+            +r"The prompt uses Meta's call-list syntax, omits the HF tools instruction and uses \texttt{[]} for abstention. "+'. '.join(parts)+'. '
+            +interpretation+' Only the original parallel items are matched across the changed prompt, parser and grammar. '
             +'Parallel-multiple scores are separate. Sessions differ in time and host; this is not a randomized crossover. '
             +restart+'The primary matrix is unchanged.')
 

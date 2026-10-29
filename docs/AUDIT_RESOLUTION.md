@@ -2,6 +2,8 @@
 
 The dated AUDIT.md is preserved as the review record. This document describes the changes made in response; it does not replace or rewrite the original primary results.
 
+The later wording findings in `AUDIT-edits.md` are addressed separately in [the v0.1.2 editing-audit resolution](AUDIT_EDITS_RESOLUTION.md). Earlier audit records remain unchanged.
+
 | Finding | Resolution | Evidence |
 | --- | --- | --- |
 | H1 | The paper identifies the pinned HF tokenizer_config.json JSON branch, tools_in_user_message=True, template hash, added system JSON-array convention and conflicting later single-object instruction. Llama conclusions are scoped to that contract. Meta's documented Pythonic list is cited. | paper/main.tex §3.2; settings appendix; frozen original prompts remain unchanged. |

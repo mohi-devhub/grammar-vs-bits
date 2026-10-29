@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.2
+
+- Add the one-column vector method overview, with the Pythonic sensitivity shown as a separate dashed branch.
+- Improve readability throughout the paper and add the author's affiliation and email.
+- Apply the editing audit: qualify the Llama comparison as primary JSON-contract point estimates, describe format accuracy without causal wording, and restore the throughput caveat.
+- Rebuild the six-page paper and verified release archive. No new results, model inference or changes to scientific numbers or figure data.
+
 ## v0.1.1
 
 - Rename the project and repository to Grammar vs Bits; update links, citation metadata, package metadata and archive names.

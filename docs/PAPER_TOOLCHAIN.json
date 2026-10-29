@@ -7,5 +7,16 @@
   "official_digest": "sha256:e40c294efae81026d8cc8d12c09d2dd456d268efe7fe092410478bc1973fd40f",
   "url": "https://github.com/rstudio/tinytex-releases/releases/download/v2026.10/TinyTeX-1-darwin-v2026.10.tar.xz",
   "local_only": true,
-  "network_package_installation": false
+  "network_package_installation": false,
+  "packages": [
+    {
+      "name": "pgf",
+      "version": "3.1.11",
+      "official_repository": "pgf-tikz/pgf",
+      "asset": "pgf_3.1.11.tds.zip",
+      "sha256": "cc565cf1bccdf6eae947e82ec036bf79795baf3dab17cbf0ba8f158d0f05c227",
+      "url": "https://github.com/pgf-tikz/pgf/releases/download/3.1.11/pgf_3.1.11.tds.zip",
+      "repo_local_install": "home/tex (TDS tex subtree only)"
+    }
+  ]
 }

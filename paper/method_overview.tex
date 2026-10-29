@@ -1,0 +1,38 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  every node/.style={font=\scriptsize,align=center,inner sep=2pt},
+  box/.style={draw=black,line width=.5pt,rounded corners=1pt,fill=white},
+  stagebox/.style={box,text width=2.1cm,minimum height=1.05cm},
+  flow/.style={->,>=stealth,draw=black,line width=.6pt},
+  separate/.style={flow,dash pattern=on 2pt off 2pt}]
+\node[box,text width=7.2cm] (matrix) {
+  \textbf{3 models $\times$ \{F16, Q4\_K\_M\} $\times$ 4 decoder arms}\\
+  Qwen3-0.6B; Llama-3.2-1B and Llama-3.2-3B\\
+  Free, Loose, Trigger-strict, Whole strict};
+\node[stagebox,text width=2.5cm,below=4mm of matrix] (checker) {
+  \textbf{\mbox{Official BFCL}}\\
+  \textbf{\mbox{AST checker}}\\
+  \mbox{+ irrelevance helper}};
+\node[stagebox,text width=2.6cm,left=2mm of checker] (items) {
+  \textbf{\mbox{200 BFCL items}}\\
+  \mbox{$\times$ 5 operational runs}\\
+  \mbox{24,000 outputs total}};
+\node[stagebox,text width=1.85cm,right=2mm of checker] (recovery) {
+  \textbf{Incremental}\\
+  \textbf{recovery}\\
+  $R_d=L_f-L_d$};
+\node[box,dash pattern=on 2pt off 2pt,text width=7.2cm,below=4mm of checker] (sensitivity) {
+  \textbf{Separate Pythonic format sensitivity; not pooled}\\
+  2 Llama models (1B/3B); F16/Q4\_K\_M; Free/Whole strict\\
+  120 items: 60 parallel + 60 \mbox{parallel-multiple}\\
+  $2\times2\times2\times120\times5$ runs = 4,800 outputs\\
+  Own AST scores/$R_d$; matched JSON contrast: 60 parallel};
+\draw[flow] (matrix.south -| items.north) -- (items.north);
+\draw[flow] (items.east) -- (checker.west);
+\draw[flow] (checker.east) -- (recovery.west);
+\draw[separate] (matrix.east) -- ++(.35,0) |- (sensitivity.east);
+\end{tikzpicture}
+\caption{Primary matrix (solid) and separate format sensitivity (dashed). Primary accuracy uses 180 required-call items; 20 irrelevance cases are scored separately.}
+\label{fig:method-overview}
+\end{figure}

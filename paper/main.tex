@@ -2,52 +2,64 @@
 \usepackage[letterpaper,margin=0.75in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,graphicx,booktabs,amsmath}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\floatsep}{4pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{4pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\let\methodOverviewBibliography\thebibliography
+\renewcommand{\thebibliography}[1]{\methodOverviewBibliography{#1}\setlength{\itemsep}{0pt}}
 \usepackage[hyphens]{url}
 \usepackage[hidelinks]{hyperref}
 \input{generated/macros.tex}
 \title{Grammar vs Bits:\\Format Contracts and Weight Precision in Small-Model Tool Calling}
-\author{M. Mohith}
+\author{M. Mohith\\
+\small Chinmaya Vishwa Vidyapeeth, Kerala, India\\
+\small\href{mailto:achumohith14@gmail.com}{\nolinkurl{achumohith14@gmail.com}}}
 \date{}
 \begin{document}
 \maketitle
 \begin{abstract}
-Tool-call format contracts can dominate observed weight-precision gaps in small-model evaluations. \input{generated/abstract_results.tex} The primary BFCL conceptual replication remains unchanged; the sensitivity uses Meta's documented Pythonic call-list format with a matching grammar. We release frozen inputs, responses, code and paired uncertainty estimates.
+\input{generated/abstract_results.tex}
 \end{abstract}
 
 \section{Introduction}
 \input{generated/intro_finding.tex}
 
-TOOLDEC already enforces tool syntax without fine-tuning~\cite{tooldec}. Prior work also separates structural and content failures and studies grammar mitigation in quantized models. Our question is narrower: does strict enforcement change the \emph{incremental precision gap} differently from permissive or trigger-gated grammars? An intervention can improve a quantized model simply because it improves every precision. Conversely, a grammar with an arbitrary-text branch cannot establish a guarantee of schema-valid output. These observations motivate matched full-precision controls and an explicit check of the language each decoder admits.
+TOOLDEC already enforces tool syntax without fine-tuning~\cite{tooldec}. Prior work separates structural and content failures and tests grammar mitigation in quantized models. We ask whether strict enforcement changes the \emph{incremental precision gap} differently from permissive or trigger-gated grammars. A quantized model can gain simply because an intervention helps every precision. A grammar admitting arbitrary text cannot guarantee schema-valid output. We therefore use matched full-precision controls and check what each decoder admits.
 
 The benchmark is single-turn prediction; no generated call is executed. The separate sensitivity is not pooled into the primary matrix or interpreted as a parser-only causal experiment~\cite{metaprompt}.
 
-\section{Related work and replication scope}
-Broad quantization studies emphasize dependence on the recipe and workload~\cite{bf16}. Agent diagnostics show that aggregate success can obscure process failures~\cite{flat}; decision-level analyses already investigate which tool-use decisions low-bit weights disrupt~\cite{wu}. These motivate a precision interaction, rather than a general claim that compressed models can make tool errors.
+\section{Related work}
+Quantization studies show dependence on recipe and workload~\cite{bf16}. Aggregate agent success can obscure process failures~\cite{flat}; decision-level analyses already study which tool-use decisions low-bit weights disrupt~\cite{wu}. These motivate a precision interaction, beyond the general observation that compressed models can make tool errors.
 
-The closest software reports are QuantCall, QuantMCP and Toolhound~\cite{quantcall,quantmcp,toolhound}. Their inspected scopes differ in engine, precision controls, tasks and replication. QuantCall's default grammar unions a schema-shaped call with unrestricted text. QuantMCP describes a related escape and a forced-envelope probe with stalling. Toolhound reports trigger-gated comparisons on MLX and a custom suite. These are substantive prior experiments. Table~\ref{tab:replication} states which mechanisms we retest and what agreement would mean.
+The closest software reports, QuantCall, QuantMCP and Toolhound~\cite{quantcall,quantmcp,toolhound}, differ in engine, precision controls, tasks and replication. QuantCall's default grammar unions a schema-shaped call with unrestricted text. QuantMCP describes a related escape and a forced-envelope probe with stalling. Toolhound reports trigger-gated comparisons on MLX and a custom suite. These substantive prior experiments motivate the mechanisms and confirmation criteria in Table~\ref{tab:replication}.
 
-StructureBench and Chavan study structural validity and content accuracy with small models~\cite{structure,chavan}. Repair, Not Improvement isolates stopping and tool-name restrictions in a routing setting and already uses repeated runs and paired inference~\cite{repair}. JSONSchemaBench emphasizes schema coverage and efficiency~\cite{schema}. Constraint Tax highlights a separate hazard: a final-response grammar can exclude a serving protocol's tool calls~\cite{constrainttax}. We therefore constrain the declared call envelope and distinguish configuration, initiation, completion and correctness. Serving-stack differences can independently change apparent tool fidelity~\cite{serving}. Our conceptual replication retests mechanisms, without reproducing another engine or live MCP task execution.\input{replication_table.tex}
+StructureBench and Chavan study small-model structural validity and content accuracy~\cite{structure,chavan}. Repair, Not Improvement isolates stopping and tool-name restrictions in routing, using repeated runs and paired inference~\cite{repair}. JSONSchemaBench studies schema coverage and efficiency~\cite{schema}. Constraint Tax shows that final-response grammars can exclude a serving protocol's tool calls~\cite{constrainttax}. We therefore constrain the declared call envelope and distinguish configuration, initiation, completion and correctness. Serving-stack differences can independently change apparent tool fidelity~\cite{serving}. Our conceptual replication retests mechanisms without reproducing another engine or live MCP execution.\input{replication_table.tex}
 
 \section{Experimental design}
+\input{method_overview.tex}
 \subsection{Frozen tasks, models and precision}
 \input{generated/setup.tex}
-Original items and accepted answers are shared across conditions; selection does not use model predictions. The pilot calibrates runtime and cost. Prompts are frozen from pinned publisher templates, with a fixed Llama template date.
+All conditions share original items and accepted answers, selected without model predictions. The pilot calibrates runtime and cost. Prompts are frozen from pinned publisher templates with a fixed Llama template date.
 
-Weights are exported once to F16 GGUF and the quantized artifact is generated directly from that export. This reference is an F16 export, not the original checkpoint's possibly different storage dtype. Both K and V caches stay F16. Qwen thinking is disabled~\cite{qwencard}. Model revisions, source/output hashes, conversion commands, server arguments and the pinned llama.cpp source~\cite{llamacpp} are recorded. All arms and precisions for a model use one A10 worker. The Modal allocation selector is fixed. Device-reported A10/A10G labels and drivers are retained rather than normalized away; model sessions need not share a physical host.
+Weights are exported once to F16 GGUF and the quantized artifact is generated directly from that export. The checkpoint's storage dtype may differ from the F16 reference. Both K and V caches stay F16. Qwen thinking is disabled~\cite{qwencard}. Model revisions, source and output hashes, conversion commands, server arguments and the pinned llama.cpp source~\cite{llamacpp} are recorded. Each model uses one A10 worker for all arms and precisions, with a fixed Modal allocation selector. Records retain device-reported A10/A10G labels and drivers; model sessions may use different physical hosts.
 
 \subsection{Decoder languages and prompt contract}
-Every arm for a given model sees exactly the same rendered prompt and offered tools. The primary Llama prompts use the single-object JSON tool branch of \texttt{tokenizer\_config.json}'s embedded HF chat template, with \texttt{tools\_in\_user\_message=True}. Both selected revisions have the same template hash, recorded in Appendix~\ref{app:settings}. We added a JSON-array convention for parallel calls in the system message, while that HF template inserts a later user-message instruction requesting one JSON object. These instructions conflict on parallel tasks. Meta separately documents a Pythonic list of calls~\cite{metaprompt}; our primary JSON contract does not evaluate that format. Llama findings are conditional on this declared contract, rather than claims about its best supported interface. Qwen uses tagged call objects with \texttt{name} and \texttt{arguments}; Llama uses objects with \texttt{name} and \texttt{parameters}, or arrays for parallel calls. All arms use \texttt{NO\_CALL} when no offered tool applies. The grammar never uses the expected function, accepted values or gold call count.
+Each model's arms share rendered prompts and offered tools. The primary Llama prompts use the single-object JSON tool branch of \texttt{tokenizer\_config.json}'s embedded HF chat template, with \texttt{tools\_in\_user\_message=True}. Both revisions share the template hash in Appendix~\ref{app:settings}. We added a system-message JSON-array convention for parallel calls, but the HF template's later user-message instruction requests one JSON object. These instructions conflict on parallel tasks. Meta documents Pythonic call lists~\cite{metaprompt}, which the primary JSON contract does not evaluate. Llama findings concern this declared contract, not its best supported interface. Qwen uses tagged call objects with \texttt{name} and \texttt{arguments}; Llama uses objects with \texttt{name} and \texttt{parameters}, or arrays for parallel calls. All arms use \texttt{NO\_CALL} when no offered tool applies. The grammar never uses the expected function, accepted values or gold call count.
 
 \textbf{Free} applies no grammar. \textbf{Loose} unions the schema-shaped language with arbitrary text, reproducing the escape as a control. \textbf{Trigger-strict} leaves initiation unconstrained and activates the call language at the declared prefix. Qwen uses its preserved call token; Llama uses one pattern matching the earliest object or array opener, including an opener merged into a token. \textbf{Whole strict} admits only a documented call sequence or the explicit no-call form. Parallel-call count and order are not fixed to the reference. Lazy activation can encounter a merged trigger-containing token whose remainder violates the call language. Known replay errors are retained as failed attempts, rather than retried or admitted through a grammar escape.
 
-The compiler permits arbitrary ordering of documented object keys while enforcing required/unique keys. Known property sets are closed as an explicit API policy. Free-form dictionaries remain free-form. A nested BFCL dictionary that names required fields without field types retains those names with unconstrained values; types are not guessed from answers. These normalization choices are part of the intervention and are released.
+The compiler allows documented object keys in any order, requires specified keys and forbids duplicates. As an explicit API policy, known property sets are closed; free-form dictionaries stay free-form. For nested BFCL dictionaries with untyped required fields, names are retained but values are unconstrained; answers never supply types. These normalization choices are released as part of the intervention.
 
-Finite character-level membership checks cover the selected schemas, malformed strings, unknown functions, missing/extra arguments, types, key order, parallel calls and abstention. They are evidence of tested coverage, not a proof of every JSON Schema feature or token-level behavior. Separate synthetic runtime probes force a known trigger and verify literal replay and the server's configured lazy mode before benchmark collection. These probes are setup, not benchmark successes. No engine patch is used.
+Finite character-level membership checks test selected schemas, malformed strings, unknown functions, missing or extra arguments, types, key order, parallel calls and abstention. These show tested coverage, without proving every JSON Schema feature or token-level behavior. Before collection, synthetic runtime probes force a known trigger to verify literal replay and the server's configured lazy mode. These are setup checks, not benchmark successes. No engine patch is used.
 
 \subsection{Execution and scoring}
-Temperature is zero, with seed/schedule labels frozen before execution and shuffled requests. Identical greedy outputs are retained as operational repeats; they are not new independent items. Configured context/output caps, server slots, cache settings and stop strings match across arms. Grammar acceptance itself changes when termination is legal. Llama prompts use publisher token IDs to avoid duplicating the beginning-of-text marker already present in its template. An earlier collection with that duplication is retained as an aborted setup attempt, before task-accuracy inspection. Qwen uses its original string transport with publisher settings that disable added BOS. Cache-reuse timings and actual generation settings are logged. The cloud supervisor checkpoints events, enforces queue/runtime bounds and enforces the scheduling rule frozen before execution. The researcher permitted concurrent full studies after the separate pilots; this does not establish isolated cross-model throughput.
+Decoding uses temperature zero and shuffled requests, with seed and schedule labels frozen before execution. Identical greedy outputs remain operational repeats, not independent items. Context and output limits, slots, cache settings and stop strings match across arms. Grammar acceptance itself changes when termination is legal. Llama uses publisher token IDs to avoid duplicating the template's beginning-of-text marker. An earlier collection with that duplication remains an aborted setup attempt, stopped before accuracy inspection. Qwen prompts remain strings, using publisher settings that disable an added beginning-of-text token. Logs retain cache-reuse timings and actual generation settings. The cloud supervisor checkpoints events and enforces queue, runtime and scheduling limits frozen before execution. The researcher permitted concurrent full studies after separate pilots; these runs do not establish isolated cross-model throughput.
 
-Official BFCL AST matching is the correctness authority~\cite{bfcl}. We adapt the declared JSON envelope into calls without executing outputs. The pinned checker is unmodified; a minimal registry entry supplies its name-normalization flag without importing unrelated API clients. The unchanged official irrelevance helper is used through the same parsing adapter. Irrelevance can credit an output with no parsed call while our format diagnostic rejects its prose; those outcomes are reported separately. Required-call accuracy is the primary endpoint.
+Official BFCL AST matching determines correctness~\cite{bfcl}. We parse the declared JSON envelope into calls without executing them. The pinned checker is unmodified; a minimal registry entry supplies its name-normalization flag without importing unrelated API clients. The unchanged official irrelevance helper uses the same parsing adapter. Irrelevance can credit outputs with no parsed call even when our format diagnostic rejects their prose; we report these separately. Required-call accuracy is the primary endpoint.
 
 Our deterministic diagnostics retain multiple flags and an ordered primary label: format failure, wrong or hallucinated function, missing/extra or hallucinated arguments, wrong type and wrong value, plus missing/extra calls and operational statuses. A schema-valid parallel mismatch is not labeled a known value error without evidence from the checker. Incomplete output and runtime failures remain visible. Unstarted budget-censored cells are reported as incomplete, rather than filled with synthetic predictions.
 
@@ -60,7 +72,7 @@ Let $A_{p,d}$ be official item accuracy at precision $p$ and decoder $d$, with $
 \end{align}
 $R_d$ removes the decoder effect already present at F16. We also compare $R_{\mathrm{whole}}-R_{\mathrm{loose}}$ and the corresponding trigger contrast on paired observations. These are intervention effects, not an identified fraction of purely syntactic knowledge loss: schemas restrict names, keys and types, and can redirect subsequent value choices.
 
-Primary percentile intervals use crossed paired resampling of original item IDs and operational-run labels, sharing draws across all conditions and models. Item-only intervals are saved as a sensitivity check. Category rates use their original item subsets. Intervals are pointwise and unadjusted for multiple comparisons; exploratory contrasts are labeled accordingly. At a boundary with no observed failures, empirical bootstrap intervals can degenerate; this is not a bound on rare unobserved population failures. A recovery-share point estimate $R_d/L_f$ is undefined when observed free loss is nonpositive. Its interval is withheld when bootstrap denominators are unstable; values are not clipped into a manufactured partition.
+Primary percentile intervals use crossed paired resampling of original item IDs and operational-run labels, sharing draws across all conditions and models. Item-only intervals provide a sensitivity check. Category rates use their original item subsets. Intervals are pointwise and unadjusted for multiple comparisons; exploratory contrasts are labeled. Without observed failures, empirical bootstrap intervals can degenerate and cannot bound rare unobserved population failures. The recovery share $R_d/L_f$ is undefined for nonpositive observed free loss. We withhold its interval when bootstrap denominators are unstable and never clip values into a partition.
 
 \section{Results}
 \input{generated/results_text.tex}
@@ -83,15 +95,15 @@ Primary percentile intervals use crossed paired resampling of original item IDs 
 
 \section{Cost, limitations and practical implications}
 \input{generated/cost.tex}
-Forecasts are assumptions rather than observations. Timed estimates omit untimed platform stages; metering can lag and does not establish storage completeness. Earlier failures remain in the release.
+Forecasts are assumptions. Timings omit unmeasured platform stages; metering can lag and cannot establish storage completeness. Earlier failures remain released.
 
-This small frozen BFCL sample is not a complete leaderboard evaluation. AST correctness does not establish safe execution, successful multi-turn agents, or correctness on unseen APIs. Irrelevance has a small diagnostic sample. The inference stack, cache dtype, weight recipe, output envelope and schema normalization are fixed; results do not automatically extend to other quantizers, KV-cache compression, larger catalogs or different engines. Prefix triggering is an operational rule, not a direct measure of internal intent. Log-derived activation is distinguished from a direct trace of sampler state.
+The frozen BFCL sample is not a complete leaderboard evaluation. AST correctness establishes neither safe execution, successful multi-turn agents nor correctness on unseen APIs. The irrelevance sample is small. Fixed inference, cache dtype, weight recipe, envelope and schema normalization limit generalization to other quantizers, KV-cache compression, larger catalogs or engines. Prefix triggering is an operational rule, not a direct measure of internal intent; log-derived activation is not a direct sampler-state trace.
 
 \input{generated/failure_sensitivity.tex}
 
-Closed schemas can forbid useful undocumented arguments; typed allowed values can still be wrong. Parser policy affects prose, abstention and parallel-call scoring. Operational repeats do not resample training runs, quantization builds or templates, or establish generalization across hardware. Intervals crossing zero do not prove equality.
+Closed schemas can forbid useful undocumented arguments; typed values can still be wrong. Parser policy affects prose, abstention and parallel-call scoring. Operational repeats cover neither new training runs, quantization builds or templates nor generalization across hardware. Intervals crossing zero do not prove equality.
 
-Operators need task accuracy under the same serving contract and a matched high-precision control. Structural guarantees remain useful without accuracy gains. The planned Direction 2 follow-up compares schema-audit/precision fallback with ordinary retries; it is not evaluated here.
+Operators need task accuracy under the same serving contract and a matched high-precision control. Structural guarantees remain useful without accuracy gains. The planned follow-up compares schema-audit and precision-fallback methods with ordinary retries; these methods are not evaluated here.
 
 \section{Conclusion}
 \input{generated/conclusion.tex}
